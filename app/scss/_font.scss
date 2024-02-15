@@ -1,0 +1,75 @@
+
+@font-face {
+	@include font-include('SF Pro Display', 400, swap, normal, 'SF-Pro-Display-Regular');
+}
+
+@font-face {
+	@include font-include('SF Pro Display', 500, swap, normal, 'SF-Pro-Display-Medium');
+}
+
+@font-face {
+	@include font-include('SF Pro Display', 600, swap, normal, 'SF-Pro-Display-Semibold');
+}
+
+@font-face {
+	@include font-include('SF Pro Display', 700, swap, normal, 'SF-Pro-Display-Bold');
+}
+
+.main-title {
+	font-family: var(--title-font);
+	font-weight: 700;
+	line-height: 133%;
+
+	font-size: 2rem; // 32px
+
+	mark {
+		color: var(--accent);
+		background: transparent;
+	}
+
+	@include _550 {
+		font-size: 2.5rem; // 40px
+	}
+
+	@include _992 {
+		font-size: 3.4375rem; // 55px
+	}
+}
+
+.title {
+	
+	font-family: var(--title-font);
+	font-weight: 700;
+
+	font-size: 1.125rem;
+
+	@include _768 {
+		font-size: 1.5rem;
+	}
+
+	@include _992 {
+		font-size: 1.875rem;
+	}
+
+}
+
+.section-title {
+
+	font-family: var(--title-font);
+	font-weight: 600;
+	line-height: 35px;
+	text-align: center;
+	//padding-right: 15px;
+
+	font-size: 1.5rem; // 24px
+
+	@include _550 {
+		font-size: 1.875rem; // 30px
+	}
+	
+	@include _992 {
+		font-size: 2.25rem; // 36px
+		line-height: 55px;
+	}
+
+}

@@ -1,0 +1,22 @@
+@import 'mixin';
+@import 'vars';
+@import 'libs';
+@import 'null';
+@import 'global';
+@import 'font';
+@import 'form';
+//@import 'popup';
+
+@import 'components/header';
+
+@import 'pages/index/hero';
+@import 'pages/index/partners';
+@import 'pages/index/top-proxy';
+@import 'pages/index/advantages';
+@import 'pages/index/plans';
+@import 'pages/index/add-advantages';
+@import 'pages/index/cases';
+@import 'pages/index/faq';
+@import 'pages/index/popular_cases';
+
+@import 'components/footer';

@@ -1,0 +1,357 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<section class="index_hero container">
+			<div class="index_hero__decor decor-circle"></div>
+			<div class="index_hero__decor decor-circle is-mode-2 visible-on-desktop"></div>
+			<div class="index_hero__image">
+				<picture>
+					<source srcset="img/index/hero/index-hero-image.avif" type="image/avif">
+					<source srcset="img/index/hero/index-hero-image.webp" type="image/webp">
+					<img src="img/index/hero/index-hero-image.png" class="image-aspect-ratio" alt="" width="949" height="536" loading="lazy">
+				</picture>
+			</div>
+			<div class="index_hero__content">
+				<div class="index_hero__rating">
+					<img src="img/g2-rating.svg" width="181" height="70" loading="lazy" alt="">
+				</div>
+				<h1 class="index_hero__title main-title">
+					Gather Data at Scale With Market-Leading <mark>Proxy Solutions</mark>
+				</h1>
+				<div class="index_hero__text">
+					<p>
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+					</p>
+				</div>
+				<div class="index_hero__buttons">
+					<a href="#" class="index_hero__button button is-accent-transparent">
+						View Pricing
+					</a>
+					<a href="#" class="index_hero__button button">
+						Start $1.99 Trial
+					</a>
+				</div>
+				<ul class="index_hero__advantages">
+					<li>
+						<svg width="21" height="21">
+							<use href="img/sprites.svg#check"></use>
+						</svg>
+						3 day trial
+					</li>
+					<li>
+						<svg width="21" height="21">
+							<use href="img/sprites.svg#check"></use>
+						</svg>
+						No set-up costs
+					</li>
+					<li>
+						<svg width="21" height="21">
+							<use href="img/sprites.svg#check"></use>
+						</svg>
+						Cancel anytime
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="partners container">
+			<h2 class="visually-hidden">Partners</h2>
+			<ul class="partners__list">
+				<li>
+					<img src="img/index/partners/partners-logo-1.svg" width="128" height="48" loading="lazy" alt="">
+				</li>
+				<li>
+					<img src="img/index/partners/partners-logo-2.svg" width="162" height="48" loading="lazy" alt="">
+				</li>
+				<li>
+					<img src="img/index/partners/partners-logo-3.svg" width="128" height="48" loading="lazy" alt="">
+				</li>
+				<li>
+					<img src="img/index/partners/partners-logo-4.svg" width="154" height="48" loading="lazy" alt="">
+				</li>
+				<li>
+					<img src="img/index/partners/partners-logo-5.svg" width="135" height="48" loading="lazy" alt="">
+				</li>
+				<li>
+					<img src="img/index/partners/partners-logo-6.svg" width="162" height="48" loading="lazy" alt="">
+				</li>
+			</ul>
+		</section>
+		<section class="top-proxy container">
+			<h2 class="top-proxy__title section-title">
+				Top residential proxy locations
+			</h2>
+			<div class="top-proxy__wrapper">
+				<div class="top-proxy__background">
+					<picture>
+						<source srcset="img/index/top-proxy/top-proxy-decor-background.avif" type="image/avif">
+						<source srcset="img/index/top-proxy/top-proxy-decor-background.webp" type="image/webp">
+						<img src="img/index/top-proxy/top-proxy-decor-background.png" alt="" width="0" height="0" loading="lazy">
+					</picture>
+				</div>
+				<ul class="top-proxy__list">
+					@@loop("html/_top-proxy-item.html", [
+
+						{},
+						{},
+						{},
+
+						{},
+						{},
+						{},
+
+						{},
+						{},
+						{},
+
+						{},
+						{},
+						{},
+
+					])
+				</ul>
+				<div class="top-proxy__footer">
+					<a href="#" class="top-proxy__button button">
+						View all proxy locations
+					</a>
+				</div>
+			</div>
+		</section>
+		<section class="advantages container is-min">
+			<h2 class="advantages__title section-title">Why Choose Soax</h2>
+			<ul class="advantages__list">
+				@@loop("html/_advantages-item.html", [
+					{
+						"icon": "1",
+						"title": "Unlimited Concurrent Sessions",
+						"text": "Nith SOAX proxies, you can have as many connections as you need, all at the same time. No more limitations or estrictions",
+					},
+					{
+						"icon": "2",
+						"title": "Ethically Sourced Proxies",
+						"text": "When it comes to proxies, we believe in providing you with the best of both worlds - reliability and ethics.",
+					},
+					{
+						"icon": "3",
+						"title": "99.9% Network Uptime",
+						"text": "Nith SOAX proxies, you can have as many connections as you need, all at the same time. No more limitations or estrictions",
+					},
+					{
+						"icon": "4",
+						"title": "Automatic IP Rotation",
+						"text": "Nith SOAX proxies, you can have as many connections as you need, all at the same time. No more limitations or estrictions",
+					},
+					{
+						"icon": "5",
+						"title": "Multiple Protocols",
+						"text": "When it comes to proxies, we believe in providing you with the best of both worlds - reliability and ethics.",
+					},
+					{
+						"icon": "6",
+						"title": "API Access",
+						"text": "Nith SOAX proxies, you can have as many connections as you need, all at the same time. No more limitations or estrictions",
+					},
+				])
+			</ul>
+		</section>
+		<section class="plans container">
+			<div class="plans__background" aria-hidden="true">
+				<div class="plans__decor_circle decor-circle visible-on-desktop"></div>
+			</div>
+			<h2 class="plans__title section-title">Choose Your Proxy Plan</h2>
+			<table class="plans__table visible-on-desktop">
+				<colgroup>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th><span>Plan</span></th>
+						<th><span>Talfic</span></th>
+						<th><span>Price per GB</span></th>
+						<th><span>Monthly</span></th>
+						<th><span>Gustomer Success Manager</span></th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					@@loop("html/_plans-table-item.html", [
+						{
+							"icon_mode": "is-cancel",
+							"icon": "cancel",
+						},
+						{
+							"icon_mode": "is-cancel",
+							"icon": "cancel",
+						},
+						{
+							"icon_mode": "is-cancel",
+							"icon": "cancel",
+						},
+						{
+							"icon_mode": "is-success",
+							"icon": "success",
+						},
+						{
+							"icon_mode": "is-success",
+							"icon": "success",
+						},
+					])
+				</tbody>
+			</table>
+			<ul class="plans__list visible-on-mob">
+				@@loop("html/_plan-item.html", [
+					{},
+					{},
+					{},
+					{},
+					{},
+				])
+			</ul>
+		</section>
+		<section class="add_advantages container">
+			<h2 class="add_advantages__title section-title">
+				The category leader in proxies and data collection
+			</h2>
+			<ul class="add_advantages__list">
+				@@loop("html/_add-advantages-item.html", [
+					{
+						"image": "1",
+						"text": "650TB of public data collected every day ",
+					},
+					{
+						"image": "2",
+						"text": "New feature <br> releases every day",
+					},
+					{
+						"image": "3",
+						"text": " Serving 7/10 of the world's leading universities ",
+					},
+					{
+						"image": "4",
+						"text": "4.5/5 highest Trustpilot rating in the industry",
+					},
+				])
+			</ul>
+		</section>
+		<section class="cases container">
+			<h2 class="cases__title section-title">
+				Residential proxies use cases
+			</h2>
+			<ul class="cases__list">
+				<li>
+					<img src="img/index/cases/cases-icon-1.svg" width="65" height="65" loading="lazy" alt="">
+					eCommerce
+				</li>
+				<li>
+					<img src="img/index/cases/cases-icon-2.svg" width="66" height="66" loading="lazy" alt="">
+					Ad Tech
+				</li>
+				<li>
+					<img src="img/index/cases/cases-icon-3.svg" width="58" height="58" loading="lazy" alt="">
+					Social Media for Marketing
+				</li>
+
+				<li>
+					<img src="img/index/cases/cases-icon-4.svg" width="65" height="65" loading="lazy" alt="">
+					SERP & SEO
+				</li>
+				<li>
+					<img src="img/index/cases/cases-icon-5.svg" width="63" height="63" loading="lazy" alt="">
+					Financial Services Data
+				</li>
+				<li>
+					<img src="img/index/cases/cases-icon-6.svg" width="61" height="61" loading="lazy" alt="">
+					Healthcare
+				</li>
+
+				<li>
+					<img src="img/index/cases/cases-icon-7.svg" width="67" height="67" loading="lazy" alt="">
+					Market Research
+				</li>
+				<li>
+					<img src="img/index/cases/cases-icon-8.svg" width="52" height="52" loading="lazy" alt="">
+					Data Security
+				</li>
+				<li>
+					<img src="img/index/cases/cases-icon-9.svg" width="47" height="47" loading="lazy" alt="">
+					Real Estate
+				</li>
+			</ul>
+		</section>
+		<section class="faq container">
+			<div class="faq__decor_circle decor-circle visible-on-desktop" aria-hidden="true"></div>
+			<div class="faq__decor_circle decor-circle is-mode-2 visible-on-desktop" aria-hidden="true"></div>
+			<h2 class="faq__title section-title">
+				Residential proxies FAQ
+			</h2>
+			<ul class="faq__list">
+				@@loop("html/_faq-item.html", [
+					{
+						"text": "What is a Residential Proxy?",
+					},
+					{
+						"text": "What are the benefits of using a Residential Proxy network?",
+					},
+					{
+						"text": "What can I use a Residential Proxy network for?",
+					},
+					{
+						"text": "How much does a Residential Proxy Network cost?",
+					},
+					{
+						"text": "Where can I get free Residential Proxies with Bright data?",
+					},
+					{
+						"text": "Why do Residential Proxies cost more?",
+					},
+				])
+			</ul>
+		</section>
+		<section class="popular_cases container">
+			<h2 class="popular_cases__title section-title">
+				Explore Popular Use Cases
+			</h2>
+			<div class="popular_cases__text">
+				<p>
+					SOAX offers a wide pool of legitimate and stable IPv6/IPv4 addresses
+				</p>
+			</div>
+			<ul class="popular_cases__list">
+				@@loop("html/_popular-cases-item.html", [
+
+					{
+						"title": "Data Collection",
+						"text": "Scrape public data without interruptions from CAPTCHAs or blocks.",
+					},
+					{
+						"title": "Social Media",
+						"text": "Scrape public data without interruptions from CAPTCHAs or blocks.",
+					},
+					{
+						"title": "Price Comparison and Monitoring",
+						"text": "Scrape public data without interruptions from CAPTCHAs or blocks.",
+					},
+
+					{
+						"title": "Consumer Trends",
+						"text": "Scrape public data without interruptions from CAPTCHAs or blocks.",
+					},
+					{
+						"title": "SEO Monitoring",
+						"text": "Scrape public data without interruptions from CAPTCHAs or blocks.",
+					},
+					{
+						"title": "Brand Protection",
+						"text": "Scrape public data without interruptions from CAPTCHAs or blocks.",
+					},
+
+				])
+			</ul>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

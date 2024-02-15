@@ -1,0 +1,120 @@
+.popular_cases {
+
+	padding-top: 42px; padding-bottom: 67px;
+	
+	@include _992 {
+		padding-top: 91px; padding-bottom: 128px;
+	}
+
+	background: #F3F5FB;
+
+	// .popular_cases__title
+
+	&__title {
+	}
+
+	// .popular_cases__text
+
+	&__text {
+		text-align: center;
+
+		font-size: 0.875rem;
+		line-height: 155%;
+
+		@include _550 {
+			font-size: 1.25rem;
+			padding-top: 24px;
+		}
+
+		padding-top: 10px;
+	}
+
+	// .popular_cases__list
+
+	&__list {
+		padding-top: 21px;
+
+		display: grid;
+		grid-auto-rows: 1fr;
+		gap: 16px 20px;
+
+		@include _992 {
+			padding-top: 51px;
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	// .popular_cases__item
+
+	&__item {
+		position: relative;
+		min-height: 100%;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		padding: 11px 65px 11px 20px;
+
+		@include _550 {
+			padding: 40px 90px 28px 50px;
+		}
+
+		background: var(--white);
+		color: var(--text-color);
+
+		border-radius: 6px;
+
+		box-shadow: 0px 11px 13.9px rgba(78, 85, 148, 0.07);		
+
+		h3 {
+			font-size: 0.875rem;
+			line-height: 150%;
+			font-weight: 700;
+
+			@include _550 {
+				font-size: 1.5rem;
+			}
+		}
+
+		p {
+			@include _550 {
+				font-size: 1.25rem;
+			}
+
+			font-size: 0.875rem;
+			line-height: 150%;
+		}
+
+		@media (any-hover: hover) {
+
+			transition: color .3s ease;
+
+			&:hover {
+				color: var(--accent);
+			}
+			
+			&:active {
+				color: var(--accent-active);
+			}
+		}
+	}
+
+	// .popular_cases__item_arrow
+
+	&__item_arrow {
+		position: absolute;
+		right: 0; top: 0;
+
+		width: 54px; height: 100%;
+
+		color: var(--white);
+		background: var(--accent);
+
+		border-radius: 0 6px 6px 0;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}

@@ -1,0 +1,156 @@
+.index_hero {
+
+	@include _992 {
+		display: grid;
+		grid-template-columns: 1fr 1.2fr;
+
+		padding-top: calc(var(--static-height-header, 163px) + 75px);
+	}
+
+	@include _container {
+		grid-template-columns: 1fr 1.8fr;
+	}
+
+	padding-top: var(--static-height-header, 93px);
+
+	// .index_hero__decor
+
+	&__decor {
+		&:nth-child(1) {
+			left: 0; top: 0;
+			transform: translate(-55%,-50%);
+			@include _992 {
+				transform: translate(-50%,-25%);
+			}
+		}
+
+		&:nth-child(2) {
+			right: 0; left: auto;
+			transform: translate(20%,25%);
+
+		}
+	}
+
+	// .index_hero__image
+
+	&__image {
+
+		img {
+			transform: scale(1.1) translate(5%,15%);
+			@include _992 {
+				transform: scale(1);
+			}
+		}
+
+		margin-left: -100px; margin-right: -100px; margin-top: -30px;
+		margin-bottom: -50px;
+		
+		@include _992 {
+			grid-column: 2; grid-row: 1;
+
+			margin-right: -250px;
+			transform: translate(-105px,30px);
+			align-self: center;
+		}
+
+		@include _container {
+			margin-right: -120px;
+			transform: translate(-55px,30px);
+		}
+	}
+
+	// .index_hero__content
+
+	&__content {
+		grid-column: 1; grid-row: 1;
+		z-index: 2;
+		position: relative;
+		//padding-top: 50px;
+	}
+
+	// .index_hero__rating
+
+	&__rating {
+		img {
+			box-shadow: 11.25px 7.875px 22.5px rgba(0, 0, 0, 0.08);
+		}
+	}
+
+	// .index_hero__title
+
+	&__title {
+		padding-top: 20px;
+
+		max-width: 622px;
+	}
+
+	// .index_hero__text
+
+	&__text {
+		padding-top: 11px;
+		line-height: 164.285714%;
+		color: var(--text-color-3);
+		font-size: 0.875rem;
+
+		@include _550 {
+			font-size: 1rem;
+			line-height: 200%;
+		}
+
+		max-width: 513px;
+
+		@include _992 {
+			padding-top: 30px;
+		}
+	}
+
+	// .index_hero__buttons
+
+	&__buttons {
+		padding-top: 11px;
+		max-width: 513px;
+
+		display: grid;
+		@include _550 {
+			grid-template-columns: 1fr 1fr;
+		}
+		gap: 12px;
+
+		@include _992 {
+			padding-top: 43px;
+		}
+	}
+
+	// .index_hero__button
+
+	&__button {
+	}
+
+	// .index_hero__advantages
+
+	&__advantages {
+		padding-top: 32px;
+
+		@include _992 {
+			padding-top: 54px;
+			gap: 15px 33px;
+		}
+
+		display: flex;
+		flex-wrap: wrap;
+		gap: 15px 28px;
+
+		li {
+			display: inline-flex;
+			align-items: center;
+			gap: 6px;
+
+			svg {
+				color: var(--accent);
+			}
+
+			color: #8A8BA0;
+		}
+
+	}
+}

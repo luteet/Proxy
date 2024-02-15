@@ -1,0 +1,231 @@
+@use 'sass:math';
+
+:root {
+	--title-font: 'SF Pro Display', sans-serif;
+	--main-font: 'SF Pro Display', sans-serif;
+	
+	--accent: #2D6AFF;
+	--accent-hover: #4377fb;
+	--accent-active: #1e5cfa;
+
+	--white: #FFF;
+	--text-color: #000;
+	--text-color-2: #232323;
+	--text-color-3: #828282;
+	--secondary: #A9A9A9;
+	--secondary-2: #D2D2D2;
+
+	--cancel-color: #C54E1B;
+	--success-color: #2D6AFF;
+
+	--container-padding: 20px;
+}
+
+html {
+	font-size: 16px;
+	min-height: 100%;
+	min-width: 320px;
+}
+
+body {
+
+	min-height: 100%;
+	min-width: 320px;
+
+	font-family: var(--main-font);
+	font-weight: 400;
+	line-height: 150%;
+
+	display: flex;
+	flex-direction: column;
+
+	&.is-mobile-menu-active {
+		overflow: hidden;
+	}
+	
+}
+
+.image-aspect-ratio {
+	width: 100%; height: auto;
+	@supports (aspect-ratio: 1) {
+		aspect-ratio: var(--aspect-ratio);
+	}
+}
+
+section {
+	position: relative;
+	z-index: 2;
+
+	&:last-child {
+		padding-bottom: 67px;
+		
+		@include _992 {
+			padding-bottom: 128px;
+		}
+	}
+}
+
+.wrapper {
+	flex: 1 1 auto;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	overflow: hidden;
+
+	flex: 1 0 auto;
+	position: relative;
+}
+
+.container {
+	padding-left: var(--container-padding);
+	padding-right: var(--container-padding);
+	
+	@media (min-width: #{$containerMin}px) {
+		padding-left: max(var(--container-padding), calc(50% - #{math.div($container, 2)}px));
+		padding-right: max(var(--container-padding), calc(50% - #{math.div($container, 2)}px));
+
+		&.is-min {
+			padding-left: max(var(--container-padding), calc(50% - #{math.div($containerMin, 2)}px));
+			padding-right: max(var(--container-padding), calc(50% - #{math.div($containerMin, 2)}px));
+		}
+	}
+}
+
+.button {
+	cursor: pointer;
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+
+	text-align: center;
+	
+	padding: 17.5px 15px;
+	font-size: 1.1875rem;
+	line-height: 1;
+	border: 1px solid var(--accent);
+
+	&.is-transparent {
+
+		background: transparent;
+		color: var(--text-color);
+		border-color: var(--secondary-2);
+
+		@media (any-hover: hover) {
+			&:hover {
+				background: var(--accent);
+				border-color: var(--accent);
+				color: var(--white);
+			}
+			
+			&:active {
+				background: var(--accent-active);
+				border-color: var(--accent-active);
+				color: var(--white);
+			}
+		}
+	}
+
+	&.is-accent-transparent {
+		background: transparent;
+		color: var(--accent);
+		border-color: var(--accent);
+	}
+
+	&.is-min {
+		gap: 6px;
+		padding: 13.5px 23px;
+	}
+
+	background: var(--accent);
+	color: var(--white);
+
+	border-radius: 7px;
+
+	transition: background .2s ease, color .2s ease, border-color .2s ease;
+
+	@media (any-hover: hover) {
+
+		&:hover {
+			color: var(--white);
+			background: var(--accent-hover);
+			border-color: var(--accent-hover);
+		}
+		
+		&:active {
+			transition: background .3s ease, color .3s ease, border-color .3s ease;
+
+			color: var(--white);
+			background: var(--accent-active);
+			border-color: var(--accent-active);
+		}
+	}
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px; height: 1px;
+	margin: -1px; padding: 0;
+	border: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.visible-on-mob {
+	@include _992 {
+		display: none !important;
+	}
+}
+
+.visible-on-desktop {
+	@media (max-width: 991px) {
+		display: none !important;
+	}
+}
+
+.decor-circle {
+	@supports (aspect-ratio: 1) {
+		position: absolute;
+		width: 494px; aspect-ratio: 1;
+		border-radius: 50%;
+		opacity: .09;
+
+		@include _992 {
+			width: min(1084px, 60vw);
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0; top: 0;
+			width: 100%; height: 100%;
+			border: 64px solid transparent;
+			@include _992 {
+				border: min(112px, 5.833333vw) solid transparent;
+			}
+			border-radius: 50%;
+			background: linear-gradient(200deg, #2D6AFF 0%, #2D6AFF00 100%) border-box;
+			-webkit-mask:
+				linear-gradient(#fff 0 0) padding-box, 
+				linear-gradient(#fff 0 0);
+			-webkit-mask-composite: xor;
+			mask-composite: exclude;
+		}
+
+		&.is-mode-2::before {
+			background: linear-gradient(200deg, rgba(194, 194, 194, 1) 0%, rgba(171, 171, 171, 0) 100%) border-box;
+		}
+	}
+	
+	
+}
+
+[aria-hidden="true"] {
+	pointer-events: none; user-select: none;
+}
