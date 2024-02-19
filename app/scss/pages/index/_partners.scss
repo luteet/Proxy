@@ -43,15 +43,9 @@
 			}
 
 			@include _992 {
-				flex: 0 1 calc(100% / 4 - 6.6875rem / 1.4);
-			}
-
-			text-align: center;
-
-			@media (min-width: 1520px) {
-				
+				//flex: 0 1 calc(100% / 4 - 6.6875rem / 1.4);
 				flex: 0 1 calc(100% / 6 - 6.6875rem / 1.2);
-				
+
 				&:not(:nth-child(6n + 7)), &:not(:nth-child(6)), &:not(:nth-child(6n)) {
 					text-align: center;
 				}
@@ -64,6 +58,23 @@
 					text-align: end;
 				}
 			}
+
+			text-align: center;
+
+			/* @media (min-width: 1520px) {
+				
+				&:not(:nth-child(6n + 7)), &:not(:nth-child(6)), &:not(:nth-child(6n)) {
+					text-align: center;
+				}
+
+				&:first-child, &:nth-child(6n + 7) {
+					text-align: start;
+				}
+
+				&:nth-child(6) {
+					text-align: end;
+				}
+			} */
 
 			img {
 				object-fit: contain;
