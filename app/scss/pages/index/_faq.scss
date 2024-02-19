@@ -1,8 +1,9 @@
 .faq {
 
-	padding-top: 40px; padding-bottom: 58px;
+	padding-top: 2.5rem; padding-bottom: 3.625rem;
+
 	@include _992 {
-		padding-top: 108px; padding-bottom: 144px;
+		padding-top: 6.75rem; padding-bottom: 9rem;
 	}
 
 	overflow: hidden;
@@ -11,7 +12,7 @@
 
 	&__decor_circle {
 		&:nth-child(1) {
-			top: 54px;
+			top: 3.375rem;
 			transform: translate(-50%,0%);
 		}
 
@@ -29,17 +30,17 @@
 	// .faq__list
 
 	&__list {
-		padding-top: 36px;
+		padding-top: 2.25rem;
 
 		position: relative;
 		z-index: 2;
 
-		max-width: 1177px;
+		max-width: 73.5625rem;
 		margin: 0 auto;
 
 		display: flex;
 		flex-direction: column;
-		gap: 18px 24px;
+		gap: 1.125rem 1.5rem;
 	}
 
 	// .faq__item
@@ -52,21 +53,22 @@
 	&__item_target {
 		position: relative;
 
-		min-height: 55px;
+		min-height: 3.4375rem;
+
 		@include _550 {
-			min-height: 101px;
-			padding: 38px 90px 38px 43px;
+			min-height: 6.3125rem;
+			padding: 2.375rem 5.625rem 2.375rem 2.6875rem;
 
 			font-size: 1.5rem;
 			letter-spacing: 0.08rem;
 		}
 
-		padding: 10px 90px 10px 20px;
+		padding: 0.625rem 5.625rem 0.625rem 1.25rem;
 
 		background: var(--white);
-		border-radius: 6px;
+		border-radius: 0.375rem;
 
-		box-shadow: 0px 11px 13.9px rgba(78, 85, 148, 0.07);
+		box-shadow: 0px 0.6875rem 0.8688rem rgba(78, 85, 148, 0.07);
 
 		width: 100%;
 
@@ -96,19 +98,20 @@
 
 	&__item_target_arrow {
 		position: absolute;
-		right: 11px; top: 50%;
+		right: 0.6875rem; top: 50%;
 		transform: translate(0,-50%);
 
-		width: 35px; height: 35px;
+		width: 2.1875rem; height: 2.1875rem;
+
 		@include _550 {
-			right: 20px;
-			width: 60px; height: 60px;
+			right: 1.25rem;
+			width: 3.75rem; height: 3.75rem;
 		}
 		
 		background: var(--accent);
 		color: var(--white);
 
-		border-radius: 4px;
+		border-radius: 0.25rem;
 
 		display: flex;
 		align-items: center;
@@ -138,28 +141,29 @@
 		transition: grid-template-rows .4s ease;
 
 		p {
-			padding: 12px 0px 23px 18px;
+			padding: 0.75rem 0px 1.4375rem 1.125rem;
 			font-size: 0.75rem;
 
 			&:first-child {
-				padding: 20px 0 0 18px;
+				padding: 1.25rem 0 0 1.125rem;
 			}
 
 			&:last-child {
-				padding-bottom: 15px;
+				padding-bottom: 0.9375rem;
 			}
 
 			@include _550 {
 				font-size: 1rem;
 
-				padding: 15px 43px 23px;
+				padding: 0.9375rem 2.6875rem 1.4375rem;
 				line-height: 193.75%;
+
 				&:first-child {
-					padding: 26px 43px 0;
+					padding: 1.625rem 2.6875rem 0;
 				}
 
 				&:last-child {
-					padding-bottom: 15px;
+					padding-bottom: 0.9375rem;
 				}
 			}
 		}

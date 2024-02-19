@@ -57,9 +57,8 @@
 
 	font-family: var(--title-font);
 	font-weight: 600;
-	line-height: 35px;
+	line-height: 2.1875rem;
 	text-align: center;
-	//padding-right: 15px;
 
 	font-size: 1.5rem; // 24px
 
@@ -69,7 +68,7 @@
 	
 	@include _992 {
 		font-size: 2.25rem; // 36px
-		line-height: 55px;
+		line-height: 3.4375rem;
 	}
 
 }

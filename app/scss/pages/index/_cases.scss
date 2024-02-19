@@ -1,8 +1,9 @@
 .cases {
 
-	padding-top: 41px; padding-bottom: 62px;
+	padding-top: 2.5625rem; padding-bottom: 3.875rem;
+
 	@include _992 {
-		padding-top: 91px; padding-bottom: 116px;
+		padding-top: 5.6875rem; padding-bottom: 7.25rem;
 	}
 
 	background: rgba(197,205,237,0.21);
@@ -16,27 +17,28 @@
 
 	&__list {
 
-		padding-top: 20px;
+		padding-top: 1.25rem;
+
 		@include _992 {
-			padding-top: 40px;
+			padding-top: 2.5rem;
 		}
 
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 
-		gap: 17px 19px;
+		gap: 1.0625rem 1.1875rem;
 
 		li {
 			flex: 1 1 100%;
 
 			@include _768 {
 				flex: 1 1 auto;
-				min-width: calc(50% - 11px);
+				min-width: calc(50% - 0.6875rem);
 			}
 
-			@include _container {
-				min-width: calc(33% - 8px);
+			@media (min-width: 1100px) {
+				min-width: calc(33% - 0.5rem);	
 			}
 
 			display: flex;
@@ -44,20 +46,20 @@
 			flex-wrap: wrap;
 			flex-direction: column;
 			text-align: center;
-			gap: 16px 20px;
+			gap: 1rem 1.25rem;
 
 			@media (min-width: 420px) {
 				flex-direction: row;
 				text-align: start;
 			}
 
-			min-height: 101px;
+			min-height: 6.3125rem;
 
-			box-shadow: 0px 11px 13.9px rgba(78, 85, 148, 0.07);
+			box-shadow: 0px 0.6875rem 0.8688rem rgba(78, 85, 148, 0.07);
 			background: var(--white);
 
-			padding: 16px 20px;
-			border-radius: 6px;
+			padding: 1rem 1.25rem;
+			border-radius: 0.375rem;
 
 			font-size: 1.25rem;
 			line-height: 155%;

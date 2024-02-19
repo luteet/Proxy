@@ -18,11 +18,29 @@
 	--cancel-color: #C54E1B;
 	--success-color: #2D6AFF;
 
-	--container-padding: 20px;
+	--container-padding: 1.25rem;
 }
 
 html {
+
 	font-size: 16px;
+
+	@include _992 {
+		font-size: 1vw;
+	}
+
+	@media (min-width: 1200px) {
+		font-size: 0.8vw;
+	}
+
+	@media (min-width: 1500px) {
+		font-size: 0.833333vw;
+	}
+
+	@media (min-width: 1920px) {
+		font-size: 16px;
+	}
+
 	min-height: 100%;
 	min-width: 320px;
 }
@@ -35,6 +53,8 @@ body {
 	font-family: var(--main-font);
 	font-weight: 400;
 	line-height: 150%;
+
+	font-size: 1rem;
 
 	display: flex;
 	flex-direction: column;
@@ -57,10 +77,10 @@ section {
 	z-index: 2;
 
 	&:last-child {
-		padding-bottom: 67px;
+		padding-bottom: 4.1875rem;
 		
 		@include _992 {
-			padding-bottom: 128px;
+			padding-bottom: 8rem;
 		}
 	}
 }
@@ -84,12 +104,23 @@ section {
 	padding-right: var(--container-padding);
 	
 	@media (min-width: #{$containerMin}px) {
-		padding-left: max(var(--container-padding), calc(50% - #{math.div($container, 2)}px));
-		padding-right: max(var(--container-padding), calc(50% - #{math.div($container, 2)}px));
+		
+		padding-left: max(var(--container-padding), calc(50% - #{math.div(105, 2)}rem));
+		padding-right: max(var(--container-padding), calc(50% - #{math.div(105, 2)}rem));
 
 		&.is-min {
-			padding-left: max(var(--container-padding), calc(50% - #{math.div($containerMin, 2)}px));
-			padding-right: max(var(--container-padding), calc(50% - #{math.div($containerMin, 2)}px));
+			padding-left: max(var(--container-padding), calc(50% - #{math.div($containerMin, 2)}rem));
+			padding-right: max(var(--container-padding), calc(50% - #{math.div($containerMin, 2)}rem));
+		}
+	}
+
+	@media (min-width: 1500px) {
+		padding-left: max(var(--container-padding), calc(50% - #{math.div(95, 2)}rem));
+		padding-right: max(var(--container-padding), calc(50% - #{math.div(95, 2)}rem));
+
+		&.is-min {
+			padding-left: max(var(--container-padding), calc(50% - #{math.div($containerMin, 2)}rem));
+			padding-right: max(var(--container-padding), calc(50% - #{math.div($containerMin, 2)}rem));
 		}
 	}
 }
@@ -100,14 +131,14 @@ section {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	gap: 10px;
+	gap: 0.625rem;
 
 	text-align: center;
 	
-	padding: 17.5px 15px;
+	padding: 1.0938rem 0.9375rem;
 	font-size: 1.1875rem;
 	line-height: 1;
-	border: 1px solid var(--accent);
+	border: 0.0625rem solid var(--accent);
 
 	&.is-transparent {
 
@@ -137,14 +168,14 @@ section {
 	}
 
 	&.is-min {
-		gap: 6px;
-		padding: 13.5px 23px;
+		gap: 0.375rem;
+		padding: 0.8438rem 1.4375rem;
 	}
 
 	background: var(--accent);
 	color: var(--white);
 
-	border-radius: 7px;
+	border-radius: 0.4375rem;
 
 	transition: background .2s ease, color .2s ease, border-color .2s ease;
 
@@ -168,8 +199,8 @@ section {
 
 .visually-hidden {
 	position: absolute;
-	width: 1px; height: 1px;
-	margin: -1px; padding: 0;
+	width: 0.0625rem; height: 0.0625rem;
+	margin: -0.0625rem; padding: 0;
 	border: 0;
 	white-space: nowrap;
 	clip-path: inset(100%);
@@ -192,12 +223,12 @@ section {
 .decor-circle {
 	@supports (aspect-ratio: 1) {
 		position: absolute;
-		width: 494px; aspect-ratio: 1;
+		width: 30.875rem; aspect-ratio: 1;
 		border-radius: 50%;
 		opacity: .09;
 
 		@include _992 {
-			width: min(1084px, 60vw);
+			width: min(67.75rem, 60vw);
 		}
 
 		&::before {
@@ -205,9 +236,9 @@ section {
 			position: absolute;
 			left: 0; top: 0;
 			width: 100%; height: 100%;
-			border: 64px solid transparent;
+			border: 4rem solid transparent;
 			@include _992 {
-				border: min(112px, 5.833333vw) solid transparent;
+				border: min(7rem, 5.833333vw) solid transparent;
 			}
 			border-radius: 50%;
 			background: linear-gradient(200deg, #2D6AFF 0%, #2D6AFF00 100%) border-box;

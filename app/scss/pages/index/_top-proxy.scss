@@ -1,9 +1,9 @@
 .top-proxy {
 
-	padding-top: 28px;
+	padding-top: 1.75rem;
 	
 	@include _992 {
-		padding-top: 110px;
+		padding-top: 6.875rem;
 	}
 
 	// .top-proxy__title
@@ -17,10 +17,10 @@
 
 	&__wrapper {
 		position: relative;
-		margin-top: 10px; padding-bottom: 40px;
+		margin-top: 0.625rem; padding-bottom: 2.5rem;
 
 		@include _992 {
-			margin-top: 67px; padding-bottom: 74px;
+			margin-top: 4.1875rem; padding-bottom: 4.625rem;
 		}
 	}
 
@@ -39,7 +39,7 @@
 			position: absolute;
 			left: 50%; bottom: 0;
 			transform: translate(-50%,0);
-			width: calc(100% + var(--container-padding) * 2); height: 1px;
+			width: calc(100% + var(--container-padding) * 2); height: 0.0625rem;
 			background: #BBBBBB;
 
 			@include _992 {
@@ -76,16 +76,16 @@
 			flex-wrap: wrap;
 			justify-content: center;
 
-			gap: 34px 56px;
+			gap: 2.125rem 3.5rem;
 		}
 
-		gap: 34px;
+		gap: 2.125rem;
 
-		padding-left: calc(66px / 2);
+		padding-left: calc(4.125rem / 2);
 
 		@include _550 {
-			padding-left: calc(77px / 2);
-			gap: 34px 50px;
+			padding-left: calc(4.8125rem / 2);
+			gap: 2.125rem 3.125rem;
 		}
 
 	}
@@ -94,47 +94,46 @@
 
 	&__item {
 
-		//flex: 0 1 calc(100% / 3 - 77px / 1.75);
-		padding: 0 10px 0 0;
+		padding: 0 0.625rem 0 0;
 
 		@include _550 {
-			gap: 10px;
-			grid-template-columns: calc(77px / 2) auto;
+			gap: 0.625rem;
+			grid-template-columns: calc(4.8125rem / 2) auto;
 		}
 
 		@include _992 {
-			flex: 0 1 calc(100% / 3 - 77px / 1.75);
+			flex: 0 1 calc(100% / 3 - 4.8125rem / 1.75);
 		}
 
 		@media (min-width: 1100px) {
-			flex: 0 1 calc(100% / 4 - 77px / 1.75);
+			flex: 0 1 calc(100% / 4 - 4.8125rem / 1.75);
 		}
 
-		@include _container {
-			flex: 0 1 calc(100% / 6 - 77px / 1.6);
+		@media (min-width: 1520px) {
+			flex: 0 1 calc(100% / 6 - 4.8125rem / 1.6);
 		}
 
 		display: grid;
-		grid-template-columns: calc(48px / 2) auto;
-		gap: 5px;
+		grid-template-columns: calc(3rem / 2) auto;
+		gap: 0.3125rem;
 
-		padding: 0 5px 0 0;
+		padding: 0 0.3125rem 0 0;
 
 		background: rgba(255,255,255,0.69);
-		backdrop-filter: blur(19.3px);
+		backdrop-filter: blur(19.3008px);
 
-		border-radius: 6px;
+		border-radius: 0.375rem;
 	}
 
 	// .top-proxy__item_country
 
 	&__item_country {
-		width: 48px; height: 66px;
-		margin-left: calc(-48px / 2);
+		width: 3rem; height: 4.125rem;
+		margin-left: calc(-3rem / 2);
 
 		@include _550 {
-			width: 77px; height: 106px;
-			margin-left: calc(-77px / 2);
+			width: 4.8125rem; height: 6.625rem;
+			margin-left: calc(-4.8125rem / 2);
 		}
 
 		grid-row: 2 span;
@@ -144,23 +143,23 @@
 
 		svg {
 			opacity: .2;
-			width: 48px; height: 66px;
+			width: 3rem; height: 4.125rem;
 
 			@include _550 {
-				width: 77px; height: 106px;
+				width: 4.8125rem; height: 6.625rem;
 			}
 		}
 
 		img {
 			position: absolute;
-			left: 50%; top: 6px;
+			left: 50%; top: 0.375rem;
 			transform: translate(-50%,0);
 			border-radius: 50%;
 			object-fit: cover;
 
-			width: 39px; height: 39px;
+			width: 2.4375rem; height: 2.4375rem;
 			@include _550 {
-				width: 63px; height: 63px;
+				width: 3.9375rem; height: 3.9375rem;
 			}
 		}
 	}
@@ -202,9 +201,9 @@
 	// .top-proxy__footer
 
 	&__footer {
-		padding-top: 40px;
+		padding-top: 2.5rem;
 		@include _992 {
-			padding-top: 73px;
+			padding-top: 4.5625rem;
 		}
 		
 		position: relative;
@@ -217,6 +216,6 @@
 	// .top-proxy__button
 
 	&__button {
-		max-width: 308px; width: 100%;
+		max-width: 19.25rem; width: 100%;
 	}
 }
