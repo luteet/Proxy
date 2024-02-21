@@ -4,14 +4,14 @@
 		display: grid;
 		grid-template-columns: 1fr 1.2fr;
 
-		padding-top: calc(var(--static-height-header, 10.1875rem) + 4.6875rem);
+		padding-top: calc(10.1875rem + 4.6875rem);
 	}
 
 	@media (min-width: 1520px) {
 		grid-template-columns: 1fr 1.8fr;
 	}
 
-	padding-top: var(--static-height-header, 5.8125rem);
+	padding-top: 5.8125rem;
 
 	// .index_hero__decor
 
