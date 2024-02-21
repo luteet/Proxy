@@ -97,9 +97,50 @@ section {
 
 	flex: 1 0 auto;
 	position: relative;
+
+	&__decor {
+
+		&:nth-child(1) {
+			left: 0; top: 0;
+			transform: translate(-55%,-50%);
+			@include _992 {
+				transform: translate(-50%,-40%);
+			}
+		}
+
+		&:nth-child(2) {
+			right: 0; left: auto;
+			transform: translate(20%,45%);
+		}
+	}
+}
+
+header, section, footer {
+
+	padding: 0 var(--container-padding);
+	
+	@media (min-width: #{$containerMin}px) {
+		
+		padding: 0 max(var(--container-padding), calc(50% - #{math.div(105, 2)}rem));
+
+		&.is-min {
+			padding-left: max(var(--container-padding), calc(50% - #{math.div($containerMin, 2)}rem));
+			padding-right: max(var(--container-padding), calc(50% - #{math.div($containerMin, 2)}rem));
+		}
+	}
+
+	@media (min-width: 1500px) {
+		padding: 0 max(var(--container-padding), calc(50% - #{math.div(95, 2)}rem));
+
+		&.is-min {
+			padding-left: max(var(--container-padding), calc(50% - #{math.div($containerMin, 2)}rem));
+			padding-right: max(var(--container-padding), calc(50% - #{math.div($containerMin, 2)}rem));
+		}
+	}
 }
 
 .container {
+
 	padding-left: var(--container-padding);
 	padding-right: var(--container-padding);
 	
@@ -221,7 +262,12 @@ section {
 }
 
 .decor-circle {
+
+	display: none;
+
 	@supports (aspect-ratio: 1) {
+		display: block;
+
 		position: absolute;
 		width: 30.875rem; aspect-ratio: 1;
 		border-radius: 50%;

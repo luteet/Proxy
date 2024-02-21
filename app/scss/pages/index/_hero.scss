@@ -16,19 +16,6 @@
 	// .index_hero__decor
 
 	&__decor {
-		&:nth-child(1) {
-			left: 0; top: 0;
-			transform: translate(-55%,-50%);
-			@include _992 {
-				transform: translate(-50%,-25%);
-			}
-		}
-
-		&:nth-child(2) {
-			right: 0; left: auto;
-			transform: translate(20%,25%);
-
-		}
 	}
 
 	// .index_hero__image

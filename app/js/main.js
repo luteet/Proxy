@@ -1,3 +1,4 @@
+import sliders from './sliders.js'
 
 const 
 	body = document.querySelector('body'),
@@ -158,7 +159,7 @@ scrollPage();
 
 // =-=-=-=-=-=-=-=-=-=-=-=- <slider> -=-=-=-=-=-=-=-=-=-=-=-=
 
-
+sliders();
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </slider> -=-=-=-=-=-=-=-=-=-=-=-=
 

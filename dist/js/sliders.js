@@ -1,0 +1,1 @@
+export default function sliders(){document.querySelectorAll(".pricing__slider").forEach(e=>{new Splide(e,{perPage:4,perMove:1,speed:700,gap:"1.3125rem",arrows:!1,pagination:!1,breakpoints:{992:{perPage:2},768:{gap:"1rem",perPage:1}}}).mount()})}

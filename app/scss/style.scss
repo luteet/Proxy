@@ -8,6 +8,7 @@
 //@import 'popup';
 
 @import 'components/header';
+@import 'components/breadcrumbs';
 
 @import 'pages/index/hero';
 @import 'pages/index/partners';
@@ -18,5 +19,7 @@
 @import 'pages/index/cases';
 @import 'pages/index/faq';
 @import 'pages/index/popular_cases';
+
+@import 'pages/pricing/main';
 
 @import 'components/footer';

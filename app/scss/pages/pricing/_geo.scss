@@ -1,0 +1,184 @@
+.geo {
+
+	padding-top: 4.5rem;
+
+	@include _992 {
+		padding-top: 6.0625rem;
+	}
+
+	background: rgba(197,205,237,0.21);
+
+	// .geo__title
+
+	&__title {
+	}
+
+	// .geo__table
+
+	&__table {
+		margin-top: 1.5rem;
+		@include _992 {
+			margin-top: 2.8125rem;
+		}
+
+		width: 100%;
+		border-spacing: 0;
+
+		display: block;
+
+		colgroup {
+			display: none;
+			@include _992 {
+				display: table-column-group;
+			}
+		}
+
+		@include _992 {
+			display: table;
+		}
+
+		col {
+			&:nth-child(1) {
+				width: 13.5%;
+			}
+
+			&:nth-child(2) {
+				width: 18%;
+			}
+
+			&:nth-child(3) {
+				width: 12%;
+			}
+
+			&:nth-child(4) {
+				width: 16%;
+			}
+
+			&:nth-child(5) {
+				width: 7%;
+			}
+		}
+
+		th {
+			padding-top: 1.3125rem; padding-bottom: 1.3125rem;
+
+			text-align: start;
+			font-weight: 400;
+			font-size: 1rem;
+			line-height: 112.5%;
+
+			border-bottom: 1px solid #DCE0EC;
+
+			&:nth-child(1) {
+				padding-left: 4.6875rem;
+			}
+		}
+
+		tbody {
+			width: 100%;
+			display: block;
+			@include _992 {
+				display: table-row-group;
+			}
+		}
+
+		tbody tr {
+
+			display: flex;
+			flex-direction: column;
+
+			border-bottom: 1px solid #c3c3c3;
+
+			@include _992 {
+				display: table-row;
+
+			}
+		}
+
+		td {
+			padding-top: 1rem; padding-bottom: 1rem;
+
+			color: #4E4E4E;
+			span:first-child {
+				font-weight: 600;
+				text-align: start;
+			}
+			
+			text-align: end;
+			line-height: 125%;
+
+			border-bottom: 1px solid #DCE0EC;
+			&:last-child {
+				border-bottom: 0;
+			}
+
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 1rem;
+
+			width: 100%;
+
+			@include _992 {
+
+				padding-top: 1.22rem; padding-bottom: 1.22rem;
+
+				text-align: start;
+			
+				width: auto;
+				display: table-cell;
+
+				line-height: 150%;
+
+				&:nth-child(1) {
+					padding-left: 3.75rem;
+				}
+
+				&:last-child {
+					border-bottom: 1px solid #DCE0EC;
+				}
+
+			}
+		}
+	}
+
+	// .geo__country
+
+	&__country {
+		display: grid;
+		align-items: center;
+		grid-template-columns: 2rem auto;
+		gap: 1rem;
+
+		font-weight: 600;
+
+		@include _992 {
+			grid-template-columns: 3rem auto;
+		}
+	}
+
+	// .geo__country_flag
+
+	&__country_flag {
+		img {
+			object-fit: contain;
+			width: 2rem; height: 1.5rem;
+			@include _992 {
+				width: 3rem; height: 2rem;
+			}
+		}
+	}
+
+	// .geo__country_name
+
+	&__country_name {
+	}
+
+	&__footer {
+		padding-top: 4rem;
+		color: #333;
+		line-height: 125%;
+
+		text-align: center;
+	}
+}

@@ -92,7 +92,7 @@ function images() {
 
 function scriptsLib() {
 	return src([
-		//'node_modules/@splidejs/splide/dist/js/splide.min.js', // Слайдер | npm i @splidejs/splide --save | https://splidejs.com/guides/getting-started/
+		'node_modules/@splidejs/splide/dist/js/splide.min.js', // Слайдер | npm i @splidejs/splide --save | https://splidejs.com/guides/getting-started/
 		//'node_modules/@splidejs/splide-extension-auto-scroll/dist/js/splide-extension-auto-scroll.min.js', // autoscroll для слайдера | $ npm install @splidejs/splide-extension-auto-scroll --save | https://splidejs.com/guides/getting-started/
 		//'node_modules/@splidejs/splide-extension-grid/dist/js/splide-extension-grid.min.js', // Сетка для слайдера | npm install @splidejs/splide-extension-grid --save | https://splidejs.com/guides/getting-started/
 		//'node_modules/vanilla-lazyload/dist/lazyload.min.js', // Lazyload img | npm i vanilla-lazyload --save | https://www.npmjs.com/package/vanilla-lazyload
@@ -170,7 +170,7 @@ function styles() {
 function stylesLib() {
 	return src([
 		'node_modules/normalize.css/normalize.css',
-		//'node_modules/@splidejs/splide/dist/css/splide.min.css', // Слайдер
+		'node_modules/@splidejs/splide/dist/css/splide.min.css', // Слайдер
 		//'node_modules/@splidejs/splide/dist/css/splide-core.min.css', // Слайдер
 		//'node_modules/swiper/swiper-bundle.min.css', // Слайдер
 		//'node_modules/slim-select/dist/slimselect.css', // Select
@@ -278,5 +278,5 @@ exports.zipDel = zipDel;
 exports.fonts = series(ttf2woff2Convert, fonts);
 exports.folder = series(delFolder, createFolder);
 exports.zip = series(createFolder, createZip, zipDel);
-exports.start = parallel(stylesLib, styles, watching, scripts, /* scriptsLib, */ htmlCompilation, json, sprites, browsersyncStart);
-exports.default = parallel(stylesLib, styles, watching, scripts, /* scriptsLib, */ htmlCompilation, json, sprites, browsersync);
+exports.start = parallel(stylesLib, styles, watching, scripts, scriptsLib, htmlCompilation, json, sprites, browsersyncStart);
+exports.default = parallel(stylesLib, styles, watching, scripts, scriptsLib, htmlCompilation, json, sprites, browsersync);

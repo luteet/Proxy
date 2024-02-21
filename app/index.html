@@ -1,14 +1,15 @@
 @@include("html/_header.html")
 
 	<main class="main">
-		<section class="index_hero container">
-			<div class="index_hero__decor decor-circle"></div>
-			<div class="index_hero__decor decor-circle is-mode-2 visible-on-desktop"></div>
+		<div class="main__decor decor-circle"></div>
+		<div class="main__decor decor-circle is-mode-2 visible-on-desktop"></div>
+		<section class="index_hero">
+			<!-- <div class="index_hero__decor decor-circle is-mode-2 visible-on-desktop"></div> -->
 			<div class="index_hero__image">
 				<picture>
 					<source srcset="img/index/hero/index-hero-image.avif" type="image/avif">
 					<source srcset="img/index/hero/index-hero-image.webp" type="image/webp">
-					<img src="img/index/hero/index-hero-image.png" class="image-aspect-ratio" alt="" width="949" height="536" loading="lazy">
+					<img src="img/index/hero/index-hero-image.png" class="image-aspect-ratio" alt="" width="949" height="536" loading="lazy" style="--aspect-ratio: 949/536;">
 				</picture>
 			</div>
 			<div class="index_hero__content">
@@ -53,7 +54,7 @@
 				</ul>
 			</div>
 		</section>
-		<section class="partners container">
+		<section class="partners">
 			<h2 class="visually-hidden">Partners</h2>
 			<ul class="partners__list">
 				<li>
@@ -76,7 +77,7 @@
 				</li>
 			</ul>
 		</section>
-		<section class="top-proxy container">
+		<section class="top-proxy">
 			<h2 class="top-proxy__title section-title">
 				Top residential proxy locations
 			</h2>
@@ -116,7 +117,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="advantages container is-min">
+		<section class="advantages is-min">
 			<h2 class="advantages__title section-title">Why Choose Soax</h2>
 			<ul class="advantages__list">
 				@@loop("html/_advantages-item.html", [
@@ -153,7 +154,7 @@
 				])
 			</ul>
 		</section>
-		<section class="plans container">
+		<section class="plans">
 			<div class="plans__background" aria-hidden="true">
 				<div class="plans__decor_circle decor-circle visible-on-desktop"></div>
 			</div>
@@ -212,7 +213,7 @@
 				])
 			</ul>
 		</section>
-		<section class="add_advantages container">
+		<section class="add_advantages">
 			<h2 class="add_advantages__title section-title">
 				The category leader in proxies and data collection
 			</h2>
@@ -237,7 +238,7 @@
 				])
 			</ul>
 		</section>
-		<section class="cases container">
+		<section class="cases">
 			<h2 class="cases__title section-title">
 				Residential proxies use cases
 			</h2>
@@ -282,7 +283,7 @@
 				</li>
 			</ul>
 		</section>
-		<section class="faq container">
+		<section class="faq">
 			<div class="faq__decor_circle decor-circle visible-on-desktop" aria-hidden="true"></div>
 			<div class="faq__decor_circle decor-circle is-mode-2 visible-on-desktop" aria-hidden="true"></div>
 			<h2 class="faq__title section-title">
@@ -311,7 +312,7 @@
 				])
 			</ul>
 		</section>
-		<section class="popular_cases container">
+		<section class="popular_cases">
 			<h2 class="popular_cases__title section-title">
 				Explore Popular Use Cases
 			</h2>
