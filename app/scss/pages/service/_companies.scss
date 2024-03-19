@@ -1,0 +1,113 @@
+.companies {
+
+	padding-top: 2.0625rem; //padding-bottom: 8.5rem;
+
+	@include _550 {
+		padding-top: 5rem;
+	}
+
+	@include _992 {
+		padding-top: 8.5rem;
+	}
+
+	// .companies__decor
+
+	&__decor {
+		position: absolute;
+		left: 0; bottom: 0;
+		transform: translate(-50%,47%);
+
+		display: none;
+
+		@include _992 {
+			display: block;
+		}
+	}
+
+	// .companies__title
+
+	&__title {
+		text-align: center;
+		font-size: 1.5rem;
+		line-height: 142%;
+
+		max-width: 44.25rem; margin: 0 auto;
+
+		@include _550 {
+			font-size: 2rem;
+		}
+
+		@include _992 {
+			font-size: 2.75rem;
+			line-height: 130%;
+		}
+	}
+
+	// .companies__list
+
+	&__list {
+		padding-top: 1.0625rem;
+
+		@include _992 {
+			padding-top: 3.8125rem;
+			gap: 1.5rem;
+		}
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1.0625rem;
+
+		position: relative;
+		z-index: 2;
+	}
+
+	// .companies__card
+
+	&__card {
+		flex: 1 1 100%;
+
+		@include _550 {
+			flex: 0 1 calc(50% - 0.75rem);
+		}
+
+		@include _992 {
+			flex: 0 1 calc(25% - 1.5rem);
+		}
+	}
+}
+
+.companies_card {
+
+	border-radius: 1.5625rem;
+	background: var(--white);
+
+	padding: 1.375rem 1.5rem 1.75rem 1.5rem;
+
+	box-shadow: 0px 1.25rem 3.125rem rgba(19, 15, 53, 0.1);
+	border-radius: 1.5625rem;
+
+	@include _768 {
+		padding: 2.9375rem 2.625rem 4.625rem 1.5rem;
+	}
+	
+	p {
+		width: 100%;
+	}
+
+	a {
+		display: block;
+		margin-top: 0.6875rem;
+
+		color: var(--accent);
+		font-size: 0.875rem;
+		line-height: 150%;
+		font-weight: 600;
+	}
+
+	// .companies_card__icon
+
+	&__icon {
+		margin-bottom: 1.25rem;
+	}
+}

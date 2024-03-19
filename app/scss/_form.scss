@@ -8,3 +8,53 @@ input, textarea {
 		opacity: 0;
 	}
 }
+
+.checkbox {
+
+	display: flex;
+	gap: 0.875rem;
+
+	// .checkbox__input
+
+	&__input {
+		position: absolute;
+		width: 1px; height: 1px;
+		margin: -1px; padding: 0;
+		border: 0;
+		
+		white-space: nowrap;
+		clip-path: inset(100%);
+		clip: rect(0 0 0 0);
+		overflow: hidden;
+	}
+
+	&__input:checked + &__element {
+		color: var(--accent);
+	}
+
+	// .checkbox__element
+
+	&__element {
+		width: 1.6875rem; height: 1.6875rem; flex: 0 0 1.6875rem;
+		border-radius: 0.3125rem;
+
+		background: var(--white);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		color: transparent;
+		transition: color .3s ease;
+
+		svg {
+			width: 65%; height: auto;
+		}
+	}
+
+	// .checkbox__text
+
+	&__text {
+	}
+}
+

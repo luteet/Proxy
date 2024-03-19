@@ -1,0 +1,66 @@
+.tabs_wrapper {
+}
+
+.tabs_nav {
+
+	display: flex;
+	flex-wrap: wrap;
+
+	ul {
+		display: inline-grid;
+		grid-template-columns: repeat(5,1fr);
+
+		gap: 1.6875rem;
+
+		a {
+			font-size: 1rem;
+			line-height: 150%;
+			color: #8A94B4;
+			text-align: center;
+
+			padding: 1rem;
+			display: block;
+
+			background: #F3F5FB;
+			border-radius: 0.875rem;
+
+			border: 0.1875rem solid #F3F5FB;
+
+			transition: color .2s ease, border-color .2s ease;
+
+			@media (any-hover: hover) {
+
+				&:not(.is-active):hover {
+					color: var(--accent);
+				}
+			
+				&:not(.is-active):active {
+					color: var(--accent-active);
+				}
+			}
+
+			&.is-active {
+				color: var(--accent);
+				border-color: var(--accent);
+			}
+		}
+	}
+}
+
+.tabs_inner {
+}
+
+.tabs_block {
+
+	display: none;
+	opacity: 0; visibility: hidden;
+	transition: opacity .3s ease, visibility .3s ease;
+
+	&.is-active {
+		display: block;
+	}
+
+	&.is-visible {
+		opacity: 1; visibility: visible;
+	}
+}

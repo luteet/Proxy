@@ -1,0 +1,68 @@
+@@include("html/_account-header.html")
+
+	<section class="account_block">
+		<h2 class="account_block__title">
+			Реферальная программа
+		</h2>
+		<div class="account_block__row">
+			<div class="account_referral_link">
+				<h3 class="account_referral_link__title account_block__min_title">
+					Ваша реферальная ссылка
+				</h3>
+				<div class="account_referral_link__label">
+					<input type="text" class="copy_input" id="referral_link" value="https://proxyma.io?ref=5zNu6f1od8q0Os4e" readonly>
+					<button class="copy_target" type="button" aria-label="Copy" data-clipboard-target="#referral_link">
+						<svg width="24" height="24">
+							<use href="img/sprites.svg#copy"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="account_referral_link__note">
+					<p>
+						Это ваша реферальная ссылка, отправьте ее своему другу, чтобы он зарегистрировался.
+					</p>
+				</div>
+			</div>
+			<div class="account_referral_profit">
+				<h3 class="account_referral_profit__title account_block__min_title">
+					Доход от реферальной программы <b>$5</b>
+				</h3>
+				<ul class="account_referral_profit__info">
+					<li>
+						<span>Реферальное вознаграждение:</span>
+						<b>10%</b>
+					</li>
+				</ul>
+				<div class="account_referral_profit__footer">
+					<p>Ваш реферальный доход за все время</p>
+				</div>
+			</div>
+			<div class="account_referral_users">
+				<svg width="0" height="0" aria-hidden="true">
+					<use href="img/sprites.svg#users"></use>
+				</svg>
+				<b>2</b>
+				<span>Всего рефералов</span>
+			</div>
+			<div class="account_referral_best">
+				<h3 class="account_referral_best__title account_block__min_title">
+					Мои лучшие рефералы
+				</h3>
+				<table class="account_referral_best__table">
+					<thead>
+						<tr>
+							<th>ID реферала</th>
+							<th>Общий доход</th>
+							<th>Дата регистрации</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+				<div class="account_referral_best__footer">
+					<p>Нету дохода от рефералов</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+@@include("html/_account-footer.html")

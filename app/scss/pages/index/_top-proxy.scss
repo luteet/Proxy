@@ -6,6 +6,35 @@
 		padding-top: 6.875rem;
 	}
 
+	&.is-alt {
+		background: rgba(236, 239, 251, 0.5);
+		
+		padding-top: 1.75rem; padding-bottom: 3.0625rem;
+	
+		@include _992 {
+			margin-top: 7rem;
+			padding-top: 5.5rem; padding-bottom: 6.625rem;
+		}
+	}
+
+	&.is-alt & {
+		&__wrapper {
+			padding-bottom: 0;
+
+			@include _992 {
+				padding-bottom: 0;
+			}
+		}
+
+		&__wrapper {
+			margin-top: 1rem;
+
+			@include _992 {
+				margin-top: 4.1875rem;
+			}
+		}
+	}
+
 	// .top-proxy__title
 
 	&__title {

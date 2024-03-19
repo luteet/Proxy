@@ -1,0 +1,69 @@
+<section class="reviews disabled-container">
+	<div class="reviews__hero container">
+		<h2 class="reviews__title section-title is-light">
+			What Customers Say about us
+		</h2>
+		<div class="reviews__text">
+			<p>
+				Our residential proxy users come from different backgrounds and create both small- and large-scale projects, utilizing millions of real IPs. Whatever your project may be, we would be pleased to have you as our client.
+			</p>
+		</div>
+	</div>
+	<div class="reviews__inner">
+		<div class="reviews__block reviews_block">
+			<div class="reviews_block__body">
+				<div class="reviews_block__text">
+					<q>
+						I tried many providers of mobile proxies, I chose infatica as the favorite, because the price is adequate, the reviews are good and they showed themselves well during the test period, I recommend it for cooperation.
+					</q>
+				</div>
+				<div class="reviews_block__footer">
+					<div class="reviews_block__person">
+						<div class="reviews_block__avatar">
+							<picture>
+								<source srcset="img/service/reviews/reviews-avatar.avif" type="image/avif">
+								<source srcset="img/service/reviews/reviews-avatar.webp" type="image/webp">
+								<img src="img/service/reviews/reviews-avatar.png" alt="" width="56" height="56" loading="lazy">
+							</picture>
+						</div>
+						<h3 class="reviews_block__name">Nora Fay</h3>
+						<small class="reviews_block__from">Canada</small>
+					</div>
+					<div class="reviews_block__logo">
+						<img src="img/service/reviews/trustpilot.svg" width="120" height="30" loading="lazy" alt="">
+					</div>
+				</div>
+			</div>
+			<a href="#" class="reviews_block__link" target="_blank">
+				Explore More Reviews
+			</a>
+		</div>
+		<div class="reviews__slider reviews_slider splide">
+			<div class="reviews_slider__controls splide__arrows">
+				<button class="reviews_slider__arrow slider_arrow splide__arrow splide__arrow--prev" type="button">
+					<svg width="13" height="19">
+						<use href="img/sprites.svg#slider-arrow-prev"></use>
+					</svg>
+				</button>
+				<button class="reviews_slider__arrow slider_arrow splide__arrow splide__arrow--next" type="button">
+					<svg width="13" height="19">
+						<use href="img/sprites.svg#slider-arrow-next"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="reviews_slider__track splide__track">
+				<ul class="reviews_slider__list splide__list">
+					@@loop("_reviews_card.html", [
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+					])
+				</ul>
+			</div>
+			<div class="reviews_slider__pagination splide__pagination"></div>
+		</div>
+	</div>
+</section>

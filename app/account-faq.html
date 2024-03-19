@@ -1,0 +1,37 @@
+@@include("html/_account-header-2.html")
+
+	<section class="account_faq">
+		<h2 class="account_faq__title account_block__title">
+			Residential proxies FAQ
+		</h2>
+		<div class="account_faq__row">
+			<ul class="account_faq__list">
+				@@loop("html/_account-faq-item.html", [
+					{
+						"target": "What is a Residential Proxy?",
+					},
+					{
+						"target": "What are the benefits of using a Residential Proxy network?",
+					},
+					{
+						"target": "What can I use a Residential Proxy network for?",
+					},
+				])
+			</ul>
+			<ul class="account_faq__list">
+				@@loop("html/_account-faq-item.html", [
+					{
+						"target": "How much does a Residential Proxy Network cost?",
+					},
+					{
+						"target": "Where can I get free Residential Proxies with Bright data?",
+					},
+					{
+						"target": "Why do Residential Proxies cost more?",
+					},
+				])
+			</ul>
+		</div>
+	</section>
+
+@@include("html/_account-footer.html")

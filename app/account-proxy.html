@@ -1,0 +1,137 @@
+@@include("html/_account-header.html")
+
+	<section class="account_block">
+		<h2 class="account_block__title">
+			Список прокси
+		</h2>
+		<div class="account_block__body">
+			<form class="account_block__create_proxy create_proxy">
+				<h3 class="account_block__min_title">Создать прокси</h3>
+				<fieldset class="create_proxy__fieldset">
+					<div class="create_proxy__field form_field">
+						<span>Название этого списка</span>
+						<input type="text" name="proxy-name" placeholder="Список MIX">
+					</div>
+					<div class="create_proxy__field form_field">
+						<span>Формат ссылки прокси</span>
+						<input type="text" name="format-ip-address" placeholder="IP адрес">
+					</div>
+					<div class="create_proxy__field form_field">
+						<span>Авторизация через</span>
+						<input type="text" name="login-or-password" placeholder="Логин/Пароль">
+					</div>
+				</fieldset>
+				<fieldset class="create_proxy__fieldset is-auto">
+					<div class="create_proxy__field form_field">
+						<span>Логин</span>
+						<input type="text" name="login" placeholder="8r7Z5BoMIWAacKpEd3sz">
+					</div>
+					<div class="create_proxy__field form_field">
+						<span>Пароль</span>
+						<input type="password" name="password" placeholder="RNW78Fm5">
+					</div>
+				</fieldset>
+				<fieldset class="create_proxy__fieldset">
+					<div class="create_proxy__field form_field">
+						<span>Местоположение</span>
+						<input type="text" name="locatin" placeholder="Никнейм">
+					</div>
+					<div class="create_proxy__field form_field">
+						<span>Страна</span>
+						<div class="custom_select__wrapper">
+							<select name="country" required class="custom_select" multiple data-placeholder="Выберите страну">
+								<option value="US">Соединенные Штаты Америки</option>
+								<option value="CA">Канада</option>
+								<option value="GB">Великобритания</option>
+								<option value="DE">Германия</option>
+								<option value="FR">Франция</option>
+								<option value="AU">Австралия</option>
+								<option value="JP">Япония</option>
+								<option value="NL">Нидерланды</option>
+								<option value="CH">Швейцария</option>
+								<option value="SE">Швеция</option>
+								<option value="NO">Норвегия</option>
+								<option value="DK">Дания</option>
+								<option value="AT">Австрия</option>
+								<option value="FI">Финляндия</option>
+								<option value="BE">Бельгия</option>
+							</select>
+							<button class="custom_select__all" type="button">All</button>
+						</div>
+					</div>
+					<div class="create_proxy__field form_field">
+						<span>Регион</span>
+						<input type="text" name="region" placeholder="Никнейм">
+					</div>
+					<div class="create_proxy__field form_field">
+						<span>Город</span>
+						<input type="text" name="city" placeholder="Никнейм">
+					</div>
+					<div class="create_proxy__field form_field">
+						<span>ISP</span>
+						<input type="text" name="isp" placeholder="Никнейм">
+					</div>
+					<div class="create_proxy__field form_field">
+						<span>Период ротации</span>
+						<input type="text" name="rotation-period" placeholder="Никнейм">
+					</div>
+					<div class="create_proxy__field form_field">
+						<span>Формат прокси</span>
+						<select name="proxy-format" class="custom_select">
+							<option value="login:password@host:port">login:password@host:port</option>
+							<option value="login2:password@host:port">login2:password@host:port</option>
+							<option value="login3:password@host:port">login3:password@host:port</option>
+						</select>
+					</div>
+					<div class="create_proxy__field form_field">
+						<span>Количество портов</span>
+						<input type="text" inputmode="numeric" name="ports-length" placeholder="1-1000">
+					</div>
+				</fieldset>
+				<div class="create_proxy__footer">
+					<button class="button" type="submit">
+						Создать
+					</button>
+					<a href="#" class="button is-accent-transparent" type="submit">
+						API TOOLS
+					</a>
+				</div>
+			</form>
+		</div>
+		<div class="account_block__body">
+			<h3 class="account_block__min_title">Статистика трафика</h3>
+			<div class="account_block__statistic statistic">
+				<b class="statistic__expires">
+					Срок действия истекает: <mark>2024-04-09</mark>
+				</b>
+				<div class="statistic__value">
+					<div class="statistic__value_labels">
+						<span>0%</span>
+						<span>25%</span>
+						<span>50%</span>
+						<span>75%</span>
+						<span>100%</span>
+					</div>
+					<div class="statistic__value_bar" style="--progress: 25%"></div>
+				</div>
+				<ul class="statistic__legends">
+					<li>
+						<span class="statistic__legends_dot" style="--theme: var(--accent);"></span>
+						<span class="statistic__legends_text">Использовано: 0 GB</span>
+					</li>
+					<li>
+						<span class="statistic__legends_dot" style="--theme: var(--white);"></span>
+						<span class="statistic__legends_text">Доступно: 1 GB</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="account_block__body">
+			<h3 class="account_block__min_title">Удалить тариф</h3>
+			<button class="remove_proxy_button button" type="button">
+				Удалить
+			</button>
+		</div>
+	</section>
+
+@@include("html/_account-footer.html")

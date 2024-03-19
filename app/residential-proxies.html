@@ -1,0 +1,264 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="main__decor decor-circle"></div>
+		<div class="main__decor decor-circle is-mode-2 visible-on-desktop"></div>
+		<section class="index_hero is-min-mode">
+			<div class="index_hero__breadcrumbs breadcrumbs">
+				<a href="index.html" class="breadcrumbs__link">
+					<svg width="20" height="20">
+						<use href="img/sprites.svg#home"></use>
+					</svg>
+					Home  
+				</a>
+				<span class="breadcrumbs__separator">|</span>
+				<span class="breadcrumbs__current">Residential Proxies</span>
+			</div>
+			<div class="index_hero__image">
+				<picture>
+					<source srcset="img/service/hero/residential-proxies-hero-image.avif" media="(min-width: 992px)" type="image/avif">
+					<source srcset="img/service/hero/residential-proxies-hero-image.webp" media="(min-width: 992px)" type="image/webp">
+					<source srcset="img/service/hero/residential-proxies-hero-image-mobile.avif" type="image/avif">
+					<source srcset="img/service/hero/residential-proxies-hero-image-mobile.webp" type="image/webp">
+					<img src="img/service/hero/residential-proxies-hero-image.png" class="image-aspect-ratio" alt="" width="781" height="598" loading="lazy" style="--aspect-ratio: 781/598;">
+				</picture>
+			</div>
+			<div class="index_hero__content">
+				<h1 class="index_hero__title main-title">
+					Residential Proxies
+				</h1>
+				<div class="index_hero__text">
+					<p>
+						Data is key in all business areas – and HTTP/SOCKS5 residential proxies can provide secure and anonymous access to the data of any major platform. If you’re looking to buy residential IP addresses that are optimized for reliability, high performance, and maximum uptime, contact Infatica today!
+					</p>
+				</div>
+				<div class="index_hero__buttons">
+					<a href="#" class="index_hero__button button is-accent-transparent">
+						View Pricing
+					</a>
+					<a href="#" class="index_hero__button button">
+						Start $1.99 Trial
+					</a>
+				</div>
+				<ul class="index_hero__advantages">
+					<li>
+						<svg width="21" height="21">
+							<use href="img/sprites.svg#check"></use>
+						</svg>
+						3 day trial
+					</li>
+					<li>
+						<svg width="21" height="21">
+							<use href="img/sprites.svg#check"></use>
+						</svg>
+						No set-up costs
+					</li>
+					<li>
+						<svg width="21" height="21">
+							<use href="img/sprites.svg#check"></use>
+						</svg>
+						Cancel anytime
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="residential_proxy">
+			<div class="residential_proxy__decor" aria-hidden="true">
+				<picture>
+					<source srcset="img/index/top-proxy/top-proxy-decor-background.avif" type="image/avif">
+					<source srcset="img/index/top-proxy/top-proxy-decor-background.webp" type="image/webp">
+					<img src="img/index/top-proxy/top-proxy-decor-background.png" alt="" width="0" height="0" loading="lazy">
+				</picture>
+			</div>
+			<ul class="residential_proxy__list">
+				<li class="residential_proxy__list_item">
+					<div class="residential_proxy__list_item_icon">
+						<img src="img/service/advantages-service/advantages-service-icon-1.svg" width="44" height="44" loading="lazy" alt="">
+					</div>
+					<h3>Additional security</h3>
+					<p>
+						Chose between HTTP, fully encrypted HTTPS, or the fast and dependable SOCKS5 protocol.
+					</p>
+				</li>
+				<li class="residential_proxy__list_item">
+					<div class="residential_proxy__list_item_icon">
+						<img src="img/service/advantages-service/advantages-service-icon-2.svg" width="44" height="44" loading="lazy" alt="">
+					</div>
+					<h3>Ethically sourced proxies</h3>
+					<p>
+						Oxylabs Residential Proxies are high quality and come from <a href="#">legitimate sources</a>
+					</p>
+				</li>
+			</ul>
+			<div class="residential_proxy__content">
+				<h2>Largest and most reliable Residential Proxy network</h2>
+				<p>
+					Power your web scraping projects with rotating Residential Proxies from a pool of 100M+ IPs. With a worldwide coverage of Residential IP addresses, you can easily overcome geo-location blocks.
+				</p>
+			</div>
+		</section>
+		<section class="features is-min">
+			<div class="features__hero content_block">
+				<h2>What you get with our Residential proxy network</h2>
+				<p>
+					Residential proxies are a network of intermediaries that enhance your anonymity and online security. Each IP address is sourced from local all across the globe – this allows you global access to any website for easy data collection.
+				</p>
+			</div>
+			<ul class="features__list">
+				@@loop("html/_features_card.html", [
+					{
+						"icon": "1",
+						"title": "99,9% uptime and maximum performance",
+						"text": "Enjoy a reliable and fast connection and unlimited concurrent sessions that never let you down. Infatica’s fastest residential proxies guarantee a 99,9% uptime and deliver maximum performance for your web scraping needs.",
+					},
+					{
+						"icon": "2",
+						"title": "Avoid CAPTCHAs, IP address bans, and other anti-scraping measures",
+						"text": "Access any website without triggering any anti-scraping measures. You can avoid CAPTCHAs, IP bans, and other obstacles by using real IPs from real users across the globe.",
+					},
+					{
+						"icon": "3",
+						"title": "Millions of IPs in major cities across Americas, Europe, and Asia",
+						"text": "Utilize a wide range of IPs from millions of devices in major cities across Americas, Europe, and Asia. You can choose the best location for your target website and switch IPs as often as you want.",
+					},
+				])
+			</ul>
+		</section>
+		<section class="top-proxy is-alt">
+			<h2 class="top-proxy__title section-title">
+				Top residential proxy locations
+			</h2>
+			<div class="top-proxy__wrapper">
+				<ul class="top-proxy__list">
+					@@loop("html/_top-proxy-item.html", [
+
+						{"flag": "1"},
+						{"flag": "1"},
+						{"flag": "1"},
+
+						{"flag": "2"},
+						{"flag": "2"},
+						{"flag": "2"},
+
+						{"flag": "3"},
+						{"flag": "3"},
+						{"flag": "3"},
+
+						{"flag": "4"},
+						{"flag": "4"},
+						{"flag": "4"},
+
+					])
+				</ul>
+				<div class="top-proxy__footer">
+					<a href="#" class="top-proxy__button button">
+						View all proxy locations
+					</a>
+				</div>
+			</div>
+		</section>
+		<section class="benefits">
+			<h2 class="benefits__title section-title">
+				Why Customers Prefer Infatica Residential Proxies
+			</h2>
+			<ul class="benefits__list">
+				@@loop("html/_benefits_item.html", [
+					{
+						"icon": "1",
+						"title": "Go global",
+						"text": "<p>Actionable public web data is spread across different regions, countries, and cities – but procuring it is sometimes impossible due to various geo-restrictions. For e-commerce businesses and price aggregators, entering local markets is vital – but their opportunities for collecting public web data are often limited.</p><p>Infatica’s residential proxies solve this issue via geo-targeting, offering a set of major cities in the Americas, Europe, and Asia – now you can scrape local data using real user IPs to create marketing strategies, perform search engine optimization, and more.</p>",
+					},
+					{
+						"icon": "2",
+						"title": "Easy-to-use – yet powerful",
+						"text": "<p>Proxies are used by countless companies worldwide – and they have to be accessible to both regular business owners and power users who buy residential IPs to work with crucial public web data.</p><p>Infatica residential proxy network can be managed via an easy-to-use web interface, which features traffic dashboards, quickstart guides, product & service overviews, and more. For power users requiring more fine-tuning capacities, Infatica offers a proxy management API for better scalability and refined control.</p>",
+					},
+					{
+						"icon": "3",
+						"title": "Less CAPTCHAs, more data",
+						"text": "<p>All major tech ecosystems understand the importance of their data – and their security practices are built around safeguarding it. A good example is anti-bot systems like reCAPTCHA and Cloudflare, which use a number of factors (including IP addresses) to categorize real users and scrapers. The former enjoy zero IP blocks – and the latter face all sorts of roadblocks, including CAPTCHAs and region blocks.</p>",
+					},
+					{
+						"icon": "4",
+						"title": "Reliability you can count on",
+						"text": "<p>Data collection, cybersecurity tests, search engine optimization, and similar activities all have to run without interruptions to stay efficient. A single proxy error may lead to missed data points and fail the entire operation. <br> Infatica engineers work to improve our stable residential proxy service even further: We’ve managed to build a reliable server infrastructure that boasts 99,9% uptime, low response time, and high request success rate – this allows our clients to gather data using real user IPs without a hiccup.</p>",
+					},
+				])
+			</ul>
+		</section>
+		<section class="languages">
+			<h2 class="languages__title section-title is-light">Languages that go with our residential proxies</h2>
+			<ul class="languages__list">
+				<li>
+					<img src="img/service/languages/languages-icon-1.svg" alt="" width="60" height="40" loading="lazy">
+					Go
+				</li>
+				<li>
+					<img src="img/service/languages/languages-icon-2.svg" alt="" width="40" height="40" loading="lazy">
+					React
+				</li>
+				<li>
+					<img src="img/service/languages/languages-icon-3.svg" alt="" width="40" height="40" loading="lazy">
+					Javascript
+				</li>
+				<li>
+					<img src="img/service/languages/languages-icon-4.svg" alt="" width="40" height="40" loading="lazy">
+					Python
+				</li>
+				<li>
+					<img src="img/service/languages/languages-icon-5.svg" alt="" width="40" height="40" loading="lazy">
+					NodeJS
+				</li>
+				<li>
+					<img src="img/service/languages/languages-icon-6.svg" alt="" width="40" height="40" loading="lazy">
+					C/C++
+				</li>
+				<li>
+					<img src="img/service/languages/languages-icon-7.svg" alt="" width="40" height="40" loading="lazy">
+					C#
+				</li>
+				<li>
+					<img src="img/service/languages/languages-icon-8.svg" alt="" width="40" height="40" loading="lazy">
+					Ruby
+				</li>
+			</ul>
+			<div class="languages__note">
+				<p>
+					Whether you prefer Python, Java, Node.js, or any other popular programming language, you can easily integrate Infatica’s real residential IPs into your web scraping projects with our simple and well-documented API.
+				</p>
+			</div>
+		</section>
+		<section class="companies is-min">
+			<div class="companies__decor decor-circle" aria-hidden="true"></div>
+			<h2 class="companies__title">Companies boost their business with Residential Proxies</h2>
+			<ul class="companies__list">
+				@@loop("html/_companies-card.html", [
+					{
+						"icon": "1",
+						"title": "Review monitoring",
+						"text": "Use Oxylabs stable and reliable Residential Proxy network to monitor reviews all over the world without any IP blocks.",
+					},
+					{
+						"icon": "2",
+						"title": "Ad verification",
+						"text": "Rotating residential proxies is the most effective tool to check how ads are displayed to different audiences globally.",
+					},
+					{
+						"icon": "3",
+						"title": "Cybersecurity",
+						"text": "Residential IPs are great for identifying threats, testing applications, or monitoring websites in different locations.",
+					},
+					{
+						"icon": "4",
+						"title": "Travel fare aggregation",
+						"text": "Buy Residential Proxies, harvest real-time localized data, and provide your customers only with new and relevant travel offers.",
+					},
+				])
+			</ul>
+		</section>
+		@@include("html/_reviews_section.html")
+		@@include("html/_pricing_section.html")
+		@@include("html/_faq_section.html")
+	</main>
+
+@@include("html/_footer.html")

@@ -16,7 +16,7 @@
 				<div class="index_hero__rating">
 					<img src="img/g2-rating.svg" width="181" height="70" loading="lazy" alt="">
 				</div>
-				<h1 class="index_hero__title main-title">
+				<h1 class="index_hero__title main-title is-large">
 					Gather Data at Scale With Market-Leading <mark>Proxy Solutions</mark>
 				</h1>
 				<div class="index_hero__text">
@@ -283,35 +283,7 @@
 				</li>
 			</ul>
 		</section>
-		<section class="faq">
-			<div class="faq__decor_circle decor-circle visible-on-desktop" aria-hidden="true"></div>
-			<div class="faq__decor_circle decor-circle is-mode-2 visible-on-desktop" aria-hidden="true"></div>
-			<h2 class="faq__title section-title">
-				Residential proxies FAQ
-			</h2>
-			<ul class="faq__list">
-				@@loop("html/_faq-item.html", [
-					{
-						"text": "What is a Residential Proxy?",
-					},
-					{
-						"text": "What are the benefits of using a Residential Proxy network?",
-					},
-					{
-						"text": "What can I use a Residential Proxy network for?",
-					},
-					{
-						"text": "How much does a Residential Proxy Network cost?",
-					},
-					{
-						"text": "Where can I get free Residential Proxies with Bright data?",
-					},
-					{
-						"text": "Why do Residential Proxies cost more?",
-					},
-				])
-			</ul>
-		</section>
+		@@include("html/_faq_section.html")
 		<section class="popular_cases">
 			<h2 class="popular_cases__title section-title">
 				Explore Popular Use Cases

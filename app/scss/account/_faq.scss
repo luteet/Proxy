@@ -1,0 +1,161 @@
+.account_faq {
+
+	padding-left: 0; padding-right: 0;
+
+	// .account_faq__title
+
+	&__title {
+	}
+
+	// .account_faq__list
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	// .account_faq__row
+
+	&__row {
+		padding-top: 1.25rem;
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.875rem;
+	}
+
+	// .account_faq__item
+
+	&__item {
+	}
+}
+
+.account_faq_item {
+
+	// .account_faq_item__target
+
+	&__target {
+		position: relative;
+
+		min-height: 3.4375rem;
+
+		@include _550 {
+			min-height: 6.3125rem;
+			padding: 2.375rem 5.625rem 2.375rem 2.6875rem;
+
+			font-size: 1.25rem;
+		}
+
+		padding: 0.625rem 5.625rem 0.625rem 1.25rem;
+
+		background: var(--white);
+		border-radius: 0.375rem;
+
+		box-shadow: 0px 0.6875rem 0.8688rem rgba(78, 85, 148, 0.07);
+
+		width: 100%;
+
+		color: var(--text-color-2);
+		font-size: 0.875rem;
+		line-height: normal;
+		font-weight: 600;
+		text-align: start;
+		letter-spacing: 0.03rem;
+
+		@media (any-hover: hover) {
+			
+			transition: color .3s ease;
+
+			&:hover {
+				color: var(--accent);
+			}
+			
+			&:active {
+				color: var(--accent-active);
+			}
+		}
+	}
+
+	// .account_faq_item__target_arrow
+
+	&__target_arrow {
+		position: absolute;
+		right: 0.6875rem; top: 50%;
+		transform: translate(0,-50%);
+
+		width: 2.1875rem; height: 2.1875rem;
+
+		@include _550 {
+			right: 1.25rem;
+			width: 3.75rem; height: 3.75rem;
+		}
+		
+		background: var(--accent);
+		color: var(--white);
+
+		border-radius: 0.25rem;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		svg {
+			width: 40%; height: auto;
+			transition: transform .3s ease;
+		}
+	}
+
+	&__target.is-active &__target_arrow svg {
+		transform: scaleY(-1);
+	}
+
+	&__target.is-active + &__block {
+		grid-template-rows: 1fr;
+	}
+
+	// .account_faq_item__block
+
+	&__block {
+		display: grid;
+		grid-template-rows: 0fr;
+		
+		transition: grid-template-rows .4s ease;
+
+		p {
+			padding: 0.75rem 0px 1.4375rem 1.125rem;
+			font-size: 0.875rem;
+
+			&:first-child {
+				padding: 1.25rem 0 0 1.125rem;
+			}
+
+			&:last-child {
+				padding-bottom: 0.9375rem;
+			}
+
+			@include _550 {
+				font-size: 1rem;
+
+				padding: 0.9375rem 2rem 1.4375rem 2.6875rem;
+				line-height: 193.75%;
+
+				&:first-child {
+					padding: 1.625rem 2rem 0 2.6875rem;
+				}
+
+				&:last-child {
+					padding-bottom: 0.9375rem;
+				}
+			}
+		}
+
+		color: var(--text-color-3);
+		line-height: 155%;
+
+		> div {
+			overflow: hidden;
+			
+		}
+	}
+}

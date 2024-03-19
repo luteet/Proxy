@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#2D6AFF">
+	<title>Proxy</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<section class="login">
+			<div class="login__decor decor-circle" aria-hidden="true"></div>
+			<div class="login__decor decor-circle is-mode-2" aria-hidden="true"></div>
+			<div class="login__logo">
+				LOGO
+			</div>
+			<form class="login__body">
+				<h2 class="login__title section-title">Регистрация</h2>
+				<ul class="login__social_auth">
+					<li>
+						<a href="#" style="--theme-background: #FFF; --theme-border: #ECF3F7; --theme-color: #38313F;">
+							<img src="img/google-logo.svg" width="30" height="30" loading="lazy" alt="">
+							<span>Войти через Google</span>
+						</a>
+					</li>
+				</ul>
+				<div class="login__field">
+					<span>Никнейм</span>
+					<input type="text" name="nickname" placeholder="Alex" required>
+				</div>
+				<div class="login__field">
+					<span>Email</span>
+					<input type="email" name="email" placeholder="Твой email" required>
+				</div>
+				<div class="login__field">
+					<span>Пароль</span>
+					<input type="passowrd" name="new-password" placeholder="ds76sa8f9gha86s" required>
+					<input type="passowrd" name="new-password-2" placeholder="ds76sa8f9gha86s" required>
+					<label class="login__checkbox checkbox">
+						<input type="checkbox" name="privacy-policy" checked required class="checkbox__input">
+						<span class="checkbox__element">
+							<svg width="18" height="15">
+								<use href="img/sprites.svg#check-2"></use>
+							</svg>
+						</span>
+						<span class="checkbox__text">
+							Я подтверждаю <a href="#">условия использования</a> сервиса
+						</span>
+					</label>
+				</div>
+				<div class="login__footer">
+					<button class="button" type="submit">
+						Login
+					</button>
+					<h3>Еще нет аккаунта?</h3>
+					<a href="#" class="button is-accent-transparent">
+						Войти в существующий аккаунт?
+					</a>
+				</div>
+			</form>
+		</section>
+	</div>
+
+</body>
+
+</html>

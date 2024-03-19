@@ -1,0 +1,73 @@
+@@include("html/_account-header.html")
+
+	<section class="account_block tabs_wrapper">
+		<h2 class="account_block__title">
+			Купить сейчас
+		</h2>
+		<form class="account_block__balance account_balance">
+			<div class="account_balance__value">
+				<svg width="0" height="0" aria-hidden="true">
+					<use href="img/sprites.svg#balance-3"></use>
+				</svg>
+				<strong>5 $</strong>
+				<span>Твой баланс</span>
+			</div>
+			<label class="account_balance__label">
+				<input type="text" name="price" inputmode="numeric" placeholder="Пожалуйста, укажите сумму ($)" required>
+			</label>
+			<ul class="account_balance__paymethod">
+				<li>
+					<img src="img/paymethods/visa.svg" width="124" height="80" loading="lazy" alt="">
+				</li>
+				<li>
+					<img src="img/paymethods/mastercard.svg" width="124" height="80" loading="lazy" alt="">
+				</li>
+				<li>
+					<img src="img/paymethods/apple-pay.svg" width="124" height="80" loading="lazy" alt="">
+				</li>
+				<li>
+					<img src="img/paymethods/google-pay.svg" width="124" height="80" loading="lazy" alt="">
+				</li>
+				<li>
+					<img src="img/paymethods/paypal.svg" width="124" height="80" loading="lazy" alt="">
+				</li>
+			</ul>
+			<buttom class="account_balance__button button" type="submit">
+				Get Started
+			</buttom>
+		</form>
+		<div class="account_transactions">
+			<h3 class="account_transactions__title account_block__min_title">
+				Транзакции (последние 10)
+			</h3>
+			<table class="account_transactions__table">
+				<colgroup>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Дата</th>
+						<th>Статус</th>
+						<th>Валюта платежа</th>
+						<th>Метод платежа</th>
+						<th>Сумма</th>
+					</tr>
+				</thead>
+				<tbody>
+					@@loop("html/_account-transaction-item.html", [
+						{},
+						{},
+						{},
+					])
+				</tbody>
+			</table>
+		</div>
+	</section>
+
+@@include("html/_account-footer.html")

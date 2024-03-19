@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#2D6AFF">
+	<title>Proxy</title>
+	<link rel="stylesheet" href="css/account-style.min.css">
+</head>
+
+<body>
+
+	<div class="account_wrapper">
+		<aside class="account_aside">
+			<div class="account_aside__body">
+				<div class="account_aside__decor decor-circle is-mode-3" aria-hidden="true"></div>
+				<div class="account_aside__logo">
+					LOGO
+				</div>
+				<nav class="account_aside__nav">
+					<ul>
+						<li>
+							<a href="#" aria-label="Динамические прокси" class="is-current">
+								<svg width="29" height="29">
+									<use href="img/sprites.svg#dynamic-proxies"></use>
+								</svg>
+								<span>Динамические прокси</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" aria-label="Купить сейчас">
+								<svg width="35" height="35">
+									<use href="img/sprites.svg#cart"></use>
+								</svg>
+								<span>Купить сейчас</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" aria-label="Баланс">
+								<svg width="35" height="35">
+									<use href="img/sprites.svg#balance"></use>
+								</svg>
+								<span>Баланс</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" aria-label="Партнерская программа">
+								<svg width="38" height="38">
+									<use href="img/sprites.svg#affiliate-program"></use>
+								</svg>
+								<span>Партнерская программа</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" aria-label="Профиль">
+								<svg width="36" height="36">
+									<use href="img/sprites.svg#profile"></use>
+								</svg>
+								<span>Профиль</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" aria-label="FAQ">
+								<svg width="32" height="32">
+									<use href="img/sprites.svg#faq"></use>
+								</svg>
+								<span>FAQ</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" aria-label="Документы">
+								<svg width="33" height="33">
+									<use href="img/sprites.svg#documents"></use>
+								</svg>
+								<span>Документы</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</aside>
+		<main class="account_main">
+			<header class="account_header">
+				<div class="account_header__col">
+					<div class="account_header__api_key">
+						<span>API KEY:</span><mark>IcbyJo18S2aKiutl</mark>
+					</div>
+					<ul class="account_header__nav">
+						<li>
+							<a href="#" aria-label="Документация">
+								<svg width="23" height="23">
+									<use href="img/sprites.svg#documents-2"></use>
+								</svg>
+								<span>
+									Документация
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="account_header__col">
+					<ul class="account_header__info">
+						<li>
+							<svg width="24" height="24">
+								<use href="img/sprites.svg#balance-2"></use>
+							</svg>
+							<span>
+								Баланс: $5
+							</span>
+						</li>
+					</ul>
+					<a href="#" class="account_header__logout">
+						<span>User name</span>
+						<svg width="24" height="24">
+							<use href="img/sprites.svg#logout"></use>
+						</svg>
+					</a>
+				</div>
+			</header>
+
+			<section class="account_block tabs_wrapper">
+				<h2 class="account_block__title">
+					Купить сейчас
+				</h2>
+				<form class="account_block__balance account_balance">
+					<div class="account_balance__value">
+						<svg width="0" height="0" aria-hidden="true">
+							<use href="img/sprites.svg#balance-3"></use>
+						</svg>
+						<strong>5 $</strong>
+						<span>Твой баланс</span>
+					</div>
+					<label class="account_balance__label">
+						<input type="text" name="price" inputmode="numeric" placeholder="Пожалуйста, укажите сумму ($)" required>
+					</label>
+					<ul class="account_balance__paymethod">
+						<li>
+							<img src="img/paymethods/visa.svg" width="124" height="80" loading="lazy" alt="">
+						</li>
+						<li>
+							<img src="img/paymethods/mastercard.svg" width="124" height="80" loading="lazy" alt="">
+						</li>
+						<li>
+							<img src="img/paymethods/apple-pay.svg" width="124" height="80" loading="lazy" alt="">
+						</li>
+						<li>
+							<img src="img/paymethods/google-pay.svg" width="124" height="80" loading="lazy" alt="">
+						</li>
+						<li>
+							<img src="img/paymethods/paypal.svg" width="124" height="80" loading="lazy" alt="">
+						</li>
+					</ul>
+					<buttom class="account_balance__button button" type="submit">
+						Get Started
+					</buttom>
+				</form>
+				<div class="account_transactions">
+					<h3 class="account_transactions__title account_block__min_title">
+						Транзакции (последние 10)
+					</h3>
+					<table class="account_transactions__table">
+						<colgroup>
+							<col>
+							<col>
+							<col>
+							<col>
+							<col>
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Дата</th>
+								<th>Статус</th>
+								<th>Валюта платежа</th>
+								<th>Метод платежа</th>
+								<th>Сумма</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<span>ID</span>
+									<span>343455</span>
+								</td>
+								<td>
+									<span>Дата</span>
+									<span>8.03.2024</span>
+								</td>
+								<td>
+									<span>Статус</span>
+									<span>В обработке</span>
+								</td>
+								<td>
+									<span>Валюта платежа</span>
+									<span>$</span>
+								</td>
+								<td>
+									<span>Метод платежа</span>
+									<span class="account_transactions__table_paymethod">
+										<img src="img/paymethods/mastercard.svg" width="72" height="46" loading="lazy" alt="">
+									</span>
+								</td>
+								<td>
+									<span>Сумма</span>
+									<span>12</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span>ID</span>
+									<span>343455</span>
+								</td>
+								<td>
+									<span>Дата</span>
+									<span>8.03.2024</span>
+								</td>
+								<td>
+									<span>Статус</span>
+									<span>В обработке</span>
+								</td>
+								<td>
+									<span>Валюта платежа</span>
+									<span>$</span>
+								</td>
+								<td>
+									<span>Метод платежа</span>
+									<span class="account_transactions__table_paymethod">
+										<img src="img/paymethods/mastercard.svg" width="72" height="46" loading="lazy" alt="">
+									</span>
+								</td>
+								<td>
+									<span>Сумма</span>
+									<span>12</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span>ID</span>
+									<span>343455</span>
+								</td>
+								<td>
+									<span>Дата</span>
+									<span>8.03.2024</span>
+								</td>
+								<td>
+									<span>Статус</span>
+									<span>В обработке</span>
+								</td>
+								<td>
+									<span>Валюта платежа</span>
+									<span>$</span>
+								</td>
+								<td>
+									<span>Метод платежа</span>
+									<span class="account_transactions__table_paymethod">
+										<img src="img/paymethods/mastercard.svg" width="72" height="46" loading="lazy" alt="">
+									</span>
+								</td>
+								<td>
+									<span>Сумма</span>
+									<span>12</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+		</main>
+
+	</div>
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/account.js"></script>
+
+</body>
+
+</html>

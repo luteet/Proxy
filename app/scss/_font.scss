@@ -60,6 +60,17 @@
 	line-height: 2.1875rem;
 	text-align: center;
 
+	&:has(b) {
+		font-weight: 400;
+		b {
+			font-weight: 600;
+		}
+	}
+
+	&.is-light {
+		color: var(--white);
+	}
+
 	font-size: 1.5rem; // 24px
 
 	@include _550 {
@@ -71,4 +82,78 @@
 		line-height: 3.4375rem;
 	}
 
+}
+
+.content_block {
+	h2 {
+		font-weight: 600;
+		
+		font-size: 1.5rem;
+		line-height: 142%;
+
+		@include _992 {
+			font-size: 2.25rem;
+			line-height: 153%;
+		}
+	}
+
+	h3 {
+		font-weight: 700;
+		font-size: 1.25rem;
+		line-height: 153%;
+	}
+
+	&.is-mode-2 h3 {
+		font-size: 1rem;
+		@include _550 {
+			font-size: 1.25rem;
+		}
+	}
+
+	&.is-mode-2 p {
+		@include _992 {
+			margin-right: 0;
+		}
+	}
+
+	p {
+		padding-top: 0.75rem;
+
+		font-size: 0.875rem;
+		line-height: 164.285714%;
+		color: var(--text-color-3);
+
+		@include _992 {
+			font-size: 1rem;
+			line-height: 194%;
+			margin-right: -2rem;
+		}
+	}
+
+	ul {
+		padding-top: 0.8125rem;
+
+		li {
+			&:not(:first-child) {
+				margin-top: 0.625rem;
+			}
+
+			display: flex;
+			gap: 0.6875rem;
+
+			font-size: 0.875rem;
+			line-height: 164.285714%;
+			color: var(--text-color-3);
+
+			@include _992 {
+				font-size: 1rem;
+				line-height: 194%;
+			}
+
+			svg {
+				color: var(--accent);
+				margin-top: 0.3ch;
+			}
+		}
+	}
 }

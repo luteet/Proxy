@@ -1,0 +1,92 @@
+.account_transactions {
+
+	margin-top: 1.375rem;
+
+	background: #F3F5FB;
+	border-radius: 0.875rem;
+
+	// .account_transactions__title
+
+	&__title {
+		padding: 0.6875rem 1.75rem;
+	}
+
+	// .account_transactions__table
+
+	&__table {
+		width: 100%;
+
+		th {
+
+			border-top: 0.0625rem solid rgba(138,139,160,0.16);
+			border-bottom: 0.0625rem solid rgba(138,139,160,0.16);
+
+			font-weight: 400;
+			padding: 1.0625rem 1.75rem;
+			font-size: 1.125rem;
+			line-height: 150%;
+			color: #8A8BA0;
+
+			&:first-child {
+				text-align: start;
+			}
+
+			&:last-child {
+				text-align: center;
+			}
+		}
+
+		td {
+			
+			color: #8A8BA0;
+
+			&:first-child {
+				text-align: start;
+			}
+
+			&:last-child {
+				text-align: center;
+			}
+		}
+
+		col {
+			&:nth-child(5) {
+				width: 25%;
+			}
+
+			&:last-child {
+				min-width: 6.25rem;
+			}
+		}
+
+		tbody tr:not(:first-child) td {
+			border-top: 0.0625rem solid rgba(138,139,160,0.16);
+		}
+
+		td {
+			text-align: center;
+			padding: 0.7813rem 1.75rem;
+			font-size: 1.125rem;
+			color: #8A8BA0;
+
+			> span:first-child {
+				@include _992 {
+					display: none;
+				}
+			}
+		}
+	}
+
+	// .account_transactions__table_paymethod
+
+	&__table_paymethod {
+		display: inline-block;
+		background: var(--white);
+
+		border-radius: 0.6875rem;
+
+		img {
+			width: 4.5rem; height: 2.875rem;
+		}
+	}
+}

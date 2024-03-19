@@ -1,0 +1,40 @@
+.account_documents {
+
+	// .account_documents__title
+
+	&__title {
+	}
+
+	// .account_documents__nav
+
+	&__nav {
+		padding-top: 0.9375rem;
+	}
+
+	// .account_documents__inner
+
+	&__inner {
+	}
+
+	// .account_documents__block
+
+	&__block {
+		h3 {
+			padding-top: 3rem;
+
+			font-weight: 700;
+			font-size: 2rem;
+			line-height: 134%;
+			color: #121A2F;
+		}
+
+		p {
+			padding-top: 1rem;
+
+			color: #828282;
+			line-height: 197%;
+
+		}
+	}
+}
+

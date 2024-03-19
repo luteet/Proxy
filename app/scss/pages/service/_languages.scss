@@ -1,0 +1,68 @@
+.languages {
+
+	padding-top: 2.25rem; padding-bottom: 3rem;
+	background: var(--accent);
+
+	@include _992 {
+		padding-top: 5.25rem; padding-bottom: 5.25rem;
+	}
+
+	// .languages__title
+
+	&__title {
+	}
+
+	// .languages__list
+
+	&__list {
+		padding-top: 2.0625rem;
+
+		display: flex;
+		flex-wrap: wrap;
+		
+		@include _768 {
+			gap: 1.5rem;
+			justify-content: center;
+		}
+
+		gap: 1.0625rem 1.5rem;
+
+		li {
+			//flex: 1 1;
+			background: rgba(255, 255, 255, 0.05);
+			border: 0.0625rem solid #FFFFFF;
+			border-radius: 0.5rem;
+
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5rem;
+
+			padding: 0.5625rem 1.25rem 0.5625rem 0.75rem;
+
+			line-height: 150%;
+			color: var(--white);
+
+			@include _768 {
+				padding: 0.75rem 1.25rem 0.75rem 0.75rem;
+			}
+		}
+	}
+
+	// .languages__note
+
+	&__note {
+		padding-top: 1.75rem;
+		text-align: center;
+		color: var(--white);
+		font-size: 0.75rem;
+		line-height: 191.666667%;
+
+		@include _768 {
+			font-size: 1rem;
+			line-height: 1.5rem;
+		}
+
+		max-width: 71.9375rem;
+		margin: 0 auto;
+	}
+}

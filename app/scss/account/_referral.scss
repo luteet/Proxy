@@ -1,0 +1,234 @@
+.account_referral_link {
+
+	background: #F3F5FB;
+	border-radius: 0.875rem;
+
+	padding: 1.4375rem 1.75rem;
+
+	flex: 0 1 calc(50% - 0.5rem);
+
+	// .account_referral_link__title
+
+	&__title {
+	}
+
+	// .account_referral_link__label
+
+	&__label {
+		margin-top: 1rem;
+		max-width: 28.75rem; width: 100%;
+		position: relative;
+
+		input {
+			width: 100%;
+			padding: 0.625rem 1.1875rem;
+
+			min-height: 3.5rem;
+			font-weight: 500;
+			color: #838383;
+
+			border-radius: 0.4375rem;
+		}
+
+		button {
+			position: absolute;
+			right: 0; top: 50%;
+			transform: translate(0,-50%);
+			padding: 0 1rem; height: 100%;
+			color: var(--accent);
+
+			background: transparent;
+
+			svg {
+				width: 1.1875rem; height: 1.1875rem;
+			}
+		}
+	}
+
+	// .account_referral_link__note
+
+	&__note {
+		padding-top: 1.5rem;
+
+		font-weight: 400;
+		line-height: 150%;
+	}
+}
+
+.account_referral_profit {
+
+	background: #F3F5FB;
+	border-radius: 0.875rem;
+
+	padding: 1.4375rem 0;
+
+	flex: 0 1 calc(50% - 0.5rem);
+
+	// .account_referral_profit__title
+
+	&__title {
+		padding: 0 1.75rem;
+		b {
+			color: var(--accent);
+		}
+	}
+
+	// .account_referral_profit__info
+
+	&__info {
+		li {
+			padding: 1.25rem 1.75rem;
+
+			display: inline-flex;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 0.4375rem;
+
+			b {
+				color: var(--accent);
+				font-size: 1.5rem;
+				line-height: 100%;
+				font-weight: 700;
+			}
+		}
+	}
+
+	// .account_referral_profit__footer
+
+	&__footer {
+		border-top: 0.0625rem solid #E2E4EC;
+		padding: 1.25rem 1.75rem 0;
+	}
+}
+
+.account_referral_users {
+	position: relative;
+	background: #F3F5FB;
+	border-radius: 0.875rem;
+
+	padding: 1.4375rem;
+	min-height: 10.9375rem; min-width: 22.1875rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	svg {
+		position: absolute;
+		left: 50%; top: 50%;
+		height: 85%; aspect-ratio: 1/1; width: auto; max-width: 80%;
+		transform: translate(-50%,-50%);
+		color: rgba(174,182,205,0.36);
+	}
+
+	b {
+		z-index: 2;
+
+		color: var(--accent);
+		font-weight: 700;
+		font-size: 6rem;
+		line-height: 1;
+	}
+
+	span {
+		z-index: 2;
+
+		font-weight: 700;
+		font-size: 1.5rem;
+		line-height: 179%;
+	}
+}
+
+.account_referral_best {
+
+	position: relative;
+	background: #F3F5FB;
+	border-radius: 0.875rem;
+
+	flex: 1 1;
+
+	padding: 1.4375rem 0;
+
+	// .account_referral_best__title
+
+	&__title {
+		padding: 0 1.3125rem;
+	}
+
+	// .account_referral_best__table
+
+	&__table {
+		width: 100%; padding-top: 0.875rem;
+
+		th {
+
+			border-top: 0.0625rem solid rgba(138,139,160,0.16);
+			border-bottom: 0.0625rem solid rgba(138,139,160,0.16);
+
+			font-weight: 400;
+			padding: 1.0625rem 1.75rem;
+			font-size: 1.125rem;
+			line-height: 150%;
+			color: #8A8BA0;
+
+			&:first-child {
+				text-align: start;
+			}
+
+			&:last-child {
+				text-align: center;
+			}
+		}
+
+		td {
+			
+			color: #8A8BA0;
+
+			&:first-child {
+				text-align: start;
+			}
+
+			&:last-child {
+				text-align: center;
+			}
+		}
+
+		/* col {
+			&:nth-child(5) {
+				width: 25%;
+			}
+
+			&:last-child {
+				min-width: 6.25rem;
+			}
+		} */
+
+		tbody tr:not(:first-child) td {
+			border-top: 0.0625rem solid rgba(138,139,160,0.16);
+		}
+
+		td {
+			text-align: center;
+			padding: 0.7813rem 1.75rem;
+			font-size: 1.125rem;
+			color: #8A8BA0;
+
+			> span:first-child {
+				@include _992 {
+					display: none;
+				}
+			}
+		}
+	}
+
+	// .account_referral_best__footer
+
+	&__footer {
+		padding: 1.5rem 0 1rem;
+
+		text-align: center;
+		font-size: 1.125rem;
+		color: #393939;
+	}
+}

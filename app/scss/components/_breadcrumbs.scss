@@ -23,8 +23,14 @@
 
 		gap: 0.75rem;
 
-		letter-spacing: 0.015rem;
+		letter-spacing: -0.015rem;
 		color: #333333;
+		font-size: 0.875rem;
+
+		@include _992 {
+			letter-spacing: 0.015rem;
+			font-size: 1rem;
+		}
 
 		svg {
 			width: 1.25rem; height: 1.25rem;
@@ -49,11 +55,24 @@
 
 	&__separator {
 		letter-spacing: 0.015rem;
+
+		color: #333333;
+		font-size: 0.875rem;
+
+		@include _992 {
+			font-size: 1rem;
+		}
 	}
 
 	// .breadcrumbs__current
 
 	&__current {
 		letter-spacing: 0.015rem;
+		color: #333333;
+		font-size: 0.875rem;
+
+		@include _992 {
+			font-size: 1rem;
+		}
 	}
 }
