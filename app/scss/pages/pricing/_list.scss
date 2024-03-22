@@ -233,8 +233,11 @@
 		margin-top: 2rem;
 		width: 100%;
 
+		font-size: 1rem;
+
 		@include _550 {
 			padding-left: 1rem; padding-right: 1rem;
+			font-size: 1.1875rem;
 		}
 
 		@include _550 {

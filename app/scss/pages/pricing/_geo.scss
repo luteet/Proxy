@@ -4,9 +4,8 @@
 
 	@include _992 {
 		padding-top: 6.0625rem;
+		background: rgba(197,205,237,0.21);
 	}
-
-	background: rgba(197,205,237,0.21);
 
 	// .geo__title
 
@@ -37,6 +36,8 @@
 			display: table;
 		}
 
+		
+
 		col {
 			&:nth-child(1) {
 				width: 13.5%;
@@ -58,6 +59,21 @@
 				width: 7%;
 			}
 		}
+
+		@media (max-width: 991px) {
+			tbody tr.is-active td:not(:first-child) {
+				display: flex;
+			}
+
+			tbody tr.is-active .geo__drop_down_arrow {
+				transform: scaleY(-1);
+			}
+	
+			tbody tr:not(.is-active) td:not(:first-child) {
+				display: none;
+			}
+		}
+		
 
 		th {
 			padding-top: 1.3125rem; padding-bottom: 1.3125rem;
@@ -87,34 +103,40 @@
 			display: flex;
 			flex-direction: column;
 
-			border-bottom: 1px solid #c3c3c3;
+			border-bottom: 1px solid rgba(220, 224, 236, 1);
 
 			@include _992 {
 				display: table-row;
-
 			}
 		}
 
 		td {
-			padding-top: 1rem; padding-bottom: 1rem;
+			padding-top: 0.75rem; padding-bottom: 0.75rem;
 
 			color: #4E4E4E;
+
 			span:first-child {
 				font-weight: 600;
 				text-align: start;
 			}
 			
-			text-align: end;
 			line-height: 125%;
 
-			border-bottom: 1px solid #DCE0EC;
 			&:last-child {
 				border-bottom: 0;
+				padding-bottom: 1.22rem;
 			}
 
 			display: flex;
-			justify-content: space-between;
-			align-items: center;
+			flex-direction: column;
+
+			&:first-child {
+				cursor: pointer;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+			}
+
 			gap: 1rem;
 
 			width: 100%;
@@ -122,8 +144,6 @@
 			@include _992 {
 
 				padding-top: 1.22rem; padding-bottom: 1.22rem;
-
-				text-align: start;
 			
 				width: auto;
 				display: table-cell;
@@ -132,9 +152,13 @@
 
 				&:nth-child(1) {
 					padding-left: 3.75rem;
+					cursor: default;
 				}
 
+				border-bottom: 1px solid #DCE0EC;
+
 				&:last-child {
+					padding-bottom: 1.22rem;
 					border-bottom: 1px solid #DCE0EC;
 				}
 
@@ -147,14 +171,26 @@
 	&__country {
 		display: grid;
 		align-items: center;
-		grid-template-columns: 2rem auto;
+		grid-template-columns: 3rem auto;
 		gap: 1rem;
 
 		font-weight: 600;
+	}
 
+	&__drop_down_arrow {
 		@include _992 {
-			grid-template-columns: 3rem auto;
+			display: none;
 		}
+
+		flex: 0 0 2rem; height: 2rem; width: 2rem;
+		background: var(--accent);
+		border-radius: 0.125rem;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		color: var(--white);
 	}
 
 	// .geo__country_flag
@@ -162,10 +198,7 @@
 	&__country_flag {
 		img {
 			object-fit: contain;
-			width: 2rem; height: 1.5rem;
-			@include _992 {
-				width: 3rem; height: 2rem;
-			}
+			width: 3rem; height: 2rem;
 		}
 	}
 

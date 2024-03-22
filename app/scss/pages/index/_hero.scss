@@ -58,6 +58,10 @@
 		}
 	}
 
+	&.is-mode-2 &__content, &.is-mode-2 &__image {
+		grid-row: 1;
+	}
+
 	&__breadcrumbs {
 		grid-column: 1; grid-row: 1;
 

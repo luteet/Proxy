@@ -40,6 +40,10 @@
 		<path fill-rule="evenodd" clip-rule="evenodd" d="M0.232178 3.76796L3.76771 0.232422L11.4999 7.96465L19.2322 0.232422L22.7677 3.76796L11.4999 15.0357L0.232178 3.76796Z" fill="currentColor"/>
 	</symbol>
 
+	<symbol viewBox="0 0 14 8" id="drop-down-arrow-2">
+		<path d="M1 1L6.5 6L12 1" stroke="currentColor" fill="none" stroke-width="2"/>
+	</symbol>
+
 	<symbol viewBox="0 0 10 16" id="next-arrow">
 		<path fill-rule="evenodd" clip-rule="evenodd" d="M1.70718 0.292969L9.41429 8.00008L1.70718 15.7072L0.292969 14.293L6.58586 8.00008L0.292969 1.70718L1.70718 0.292969Z" fill="currentColor"/>	
 	</symbol>

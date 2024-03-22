@@ -77,6 +77,23 @@ body.addEventListener('click', function (event) {
 	
 	// =-=-=-=-=-=-=-=-=-=-=-=- </faq> -=-=-=-=-=-=-=-=-=-=-=-=
 
+
+	// =-=-=-=-=-=-=-=-=-=-=-=- <get-table> -=-=-=-=-=-=-=-=-=-=-=-=
+	
+	const geoTableItemTarget = $(".geo__table tbody td:first-child");
+	if(geoTableItemTarget) {
+	
+		if(geoTableItemTarget.closest("tr").classList.contains("is-active")) {
+			document.querySelectorAll(".geo__table tbody tr.is-active").forEach(tr => tr.classList.remove("is-active"));
+		} else {
+			document.querySelectorAll(".geo__table tbody tr.is-active").forEach(tr => tr.classList.remove("is-active"));
+			geoTableItemTarget.closest("tr").classList.add("is-active")
+		}
+	
+	}
+	
+	// =-=-=-=-=-=-=-=-=-=-=-=- </get-table> -=-=-=-=-=-=-=-=-=-=-=-=
+
 })
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </click-events> -=-=-=-=-=-=-=-=-=-=-=-=
