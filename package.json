@@ -36,6 +36,7 @@
     "@splidejs/splide": "^4.1.4",
     "@splidejs/splide-extension-grid": "^0.4.1",
     "clipboard": "^2.0.11",
+    "simplebar": "^6.2.5",
     "slim-select": "^2.8.2"
   }
 }

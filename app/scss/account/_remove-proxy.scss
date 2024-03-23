@@ -2,3 +2,10 @@
 	min-width: 20.0625rem;
 	margin-top: 1.5rem;
 }
+
+.remove_proxy_wrapper {
+	padding: 1.5rem;
+	@include _992 {
+		padding: 0;
+	}
+}

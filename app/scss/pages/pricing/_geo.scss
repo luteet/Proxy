@@ -2,6 +2,11 @@
 
 	padding-top: 4.5rem;
 
+	&__decor {
+		left: 0; bottom: 0;
+		transform: translate(-50%,50%);
+	}
+
 	@include _992 {
 		padding-top: 6.0625rem;
 		background: rgba(197,205,237,0.21);

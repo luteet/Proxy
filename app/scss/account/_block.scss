@@ -1,6 +1,9 @@
 .account_block {
 
-	padding-left: 0; padding-right: 0;
+	padding-left: 1rem; padding-right: 1rem;
+	@include _992 {
+		padding-left: 0; padding-right: 0;
+	}
 
 	&.is-fill-height {
 		flex: 1 1 auto;
@@ -12,20 +15,29 @@
 	// .account_block__title
 
 	&__title {
-		margin-bottom: 1.375rem; margin-top: 3.6875rem;
+		margin-bottom: 1.375rem; margin-top: 1.1875rem;
 
 		font-weight: 700;
-		font-size: 2rem;
+		font-size: 1.5rem;
 		line-height: 134%;
 		color: var(--text-color-4);
+
+		@include _992 {
+			font-size: 2rem;
+			margin-bottom: 1.5rem; margin-top: 3.6875rem;
+		}
 	}
 	
 	// .account_block__min_title
 
 	&__min_title {
 		font-weight: 700;
-		font-size: 1.5rem;
+		font-size: 1rem;
 		line-height: 179%;
+
+		@include _992 {
+			font-size: 1.5rem;
+		}
 
 		color: #121A2F;
 	}
@@ -55,13 +67,19 @@
 	&__body {
 		flex: 1 1 auto;
 
-		padding: 2.0625rem;
-
 		border-radius: 0.875rem;
 		background: #F3F5FB;
 
+		@include _992 {
+			padding: 2.0625rem;
+			padding: 1rem 1.5rem;
+		}
+
 		&:not(:nth-child(2)) {
-			margin-top: 1.375rem;
+			margin-top: 0.75rem;
+			@include _992 {
+				margin-top: 1.375rem;
+			}
 		}
 	}
 
@@ -73,6 +91,12 @@
 	&__row {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 1rem;
+		flex-direction: column;
+		gap: 0.6875rem;
+
+		@include _992 {
+			flex-direction: row;
+			gap: 1rem;
+		}
 	}
 }

@@ -1,5 +1,11 @@
 .statistic {
 
+	padding: 1.5rem;
+
+	@include _992 {
+		padding: 0;
+	}
+
 	// .statistic__expires
 
 	&__expires {

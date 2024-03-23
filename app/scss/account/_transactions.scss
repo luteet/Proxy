@@ -1,20 +1,76 @@
 .account_transactions {
 
-	margin-top: 1.375rem;
+	overflow-x: auto;
+	width: 100vw;
 
-	background: #F3F5FB;
-	border-radius: 0.875rem;
+	margin: 1.375rem -1rem;
+	padding: 0 1rem;
+	
+	/* .simplebar-content {
+		display: flex;
+	}
+
+	.simplebar-content::after {
+		width: 5rem; height: 4rem;
+		display: block;
+	} */
+
+	@include _992 {
+		width: auto;
+		margin: 1.375rem 0 0;
+		padding: 0;
+	}
+
+	&__inner {
+
+		min-width: 55rem;
+
+		display: flex;
+		
+		&::after {
+			content: '';
+			display: block;
+			width: 1rem;
+		}
+	}
+
+	&__body {
+		background: #F3F5FB;
+		border-radius: 0.875rem;
+
+		margin-bottom: 2rem; //margin-right: 1rem;
+
+		width: 100%;
+
+		@include _992 {
+			width: auto;
+		}
+	}
 
 	// .account_transactions__title
 
 	&__title {
 		padding: 0.6875rem 1.75rem;
+		
+		min-width: 45rem;
+
+		@include _992 {
+			min-width: auto;
+		}
 	}
 
 	// .account_transactions__table
 
 	&__table {
+
 		width: 100%;
+		/* min-width: 55rem;
+
+		padding-right: 10rem; */
+
+		@include _992 {
+			min-width: auto;
+		}
 
 		th {
 
@@ -23,9 +79,13 @@
 
 			font-weight: 400;
 			padding: 1.0625rem 1.75rem;
-			font-size: 1.125rem;
+			font-size: 0.875rem;
 			line-height: 150%;
 			color: #8A8BA0;
+
+			@include _992 {
+				font-size: 1.125rem;
+			}
 
 			&:first-child {
 				text-align: start;
@@ -65,14 +125,13 @@
 
 		td {
 			text-align: center;
-			padding: 0.7813rem 1.75rem;
-			font-size: 1.125rem;
+			padding: 0.5rem 1.75rem;
+			font-size: 0.875rem;
 			color: #8A8BA0;
 
-			> span:first-child {
-				@include _992 {
-					display: none;
-				}
+			@include _992 {
+				padding: 0.7813rem 1.75rem;
+				font-size: 1.125rem;
 			}
 		}
 	}

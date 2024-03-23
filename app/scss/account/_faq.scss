@@ -1,6 +1,10 @@
 .account_faq {
 
-	padding-left: 0; padding-right: 0;
+	@include _992 {
+		padding-left: 0; padding-right: 0;
+	}
+
+	//padding-bottom: 0 !important;
 
 	// .account_faq__title
 
@@ -21,8 +25,11 @@
 		padding-top: 1.25rem;
 
 		display: grid;
-		grid-template-columns: 1fr 1fr;
 		gap: 1.875rem;
+
+		@include _992 {
+			grid-template-columns: 1fr 1fr;
+		}
 	}
 
 	// .account_faq__item

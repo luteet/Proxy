@@ -12,8 +12,7 @@
 <body>
 
 	<div class="account_wrapper">
-		<div class="account_decor decor-circle is-mode-2"></div>
-		<aside class="account_aside">
+		<aside class="account_aside visible-on-desktop">
 			<div class="account_aside__body">
 				<div class="account_aside__decor decor-circle is-mode-3" aria-hidden="true"></div>
 				<div class="account_aside__logo">
@@ -22,7 +21,7 @@
 				<nav class="account_aside__nav">
 					<ul>
 						<li>
-							<a href="#" aria-label="Динамические прокси" class="is-current">
+							<a href="account-dynamic-proxies.html" aria-label="Динамические прокси" class="is-current">
 								<svg width="29" height="29">
 									<use href="img/sprites.svg#dynamic-proxies"></use>
 								</svg>
@@ -30,7 +29,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="#" aria-label="Купить сейчас">
+							<a href="account-tariffs.html" aria-label="Купить сейчас">
 								<svg width="35" height="35">
 									<use href="img/sprites.svg#cart"></use>
 								</svg>
@@ -38,7 +37,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="#" aria-label="Баланс">
+							<a href="account-balance.html" aria-label="Баланс">
 								<svg width="35" height="35">
 									<use href="img/sprites.svg#balance"></use>
 								</svg>
@@ -46,7 +45,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="#" aria-label="Партнерская программа">
+							<a href="account-referral.html" aria-label="Партнерская программа">
 								<svg width="38" height="38">
 									<use href="img/sprites.svg#affiliate-program"></use>
 								</svg>
@@ -54,7 +53,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="#" aria-label="Профиль">
+							<a href="account-profile.html" aria-label="Профиль">
 								<svg width="36" height="36">
 									<use href="img/sprites.svg#profile"></use>
 								</svg>
@@ -62,7 +61,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="#" aria-label="FAQ">
+							<a href="account-faq.html" aria-label="FAQ">
 								<svg width="32" height="32">
 									<use href="img/sprites.svg#faq"></use>
 								</svg>
@@ -70,7 +69,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="#" aria-label="Документы">
+							<a href="account-documents.html" aria-label="Документы">
 								<svg width="33" height="33">
 									<use href="img/sprites.svg#documents"></use>
 								</svg>
@@ -83,7 +82,7 @@
 		</aside>
 		<main class="account_main">
 			<header class="account_header">
-				<div class="account_header__col">
+				<div class="account_header__col visible-on-desktop">
 					<div class="account_header__api_key">
 						<span>API KEY:</span><mark>IcbyJo18S2aKiutl</mark>
 					</div>
@@ -101,6 +100,12 @@
 					</ul>
 				</div>
 				<div class="account_header__col">
+					<a href="#" class="account_header__logout">
+						<span>User name</span>
+						<svg width="24" height="24">
+							<use href="img/sprites.svg#logout"></use>
+						</svg>
+					</a>
 					<ul class="account_header__info">
 						<li>
 							<svg width="24" height="24">
@@ -111,13 +116,92 @@
 							</span>
 						</li>
 					</ul>
-					<a href="#" class="account_header__logout">
-						<span>User name</span>
-						<svg width="24" height="24">
-							<use href="img/sprites.svg#logout"></use>
-						</svg>
-					</a>
+					<button class="account_header__burger visible-on-mob" type="button">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
 				</div>
+				<nav class="account_header__mob_nav visible-on-mob">
+					<div class="account_header__logo">
+						LOGO
+					</div>
+					<ul class="account_header__mob_nav_list">
+						<li>
+							<a href="account-dynamic-proxies.html" aria-label="Динамические прокси" class="is-current">
+								<svg width="29" height="29">
+									<use href="img/sprites.svg#dynamic-proxies"></use>
+								</svg>
+								<span>Динамические прокси</span>
+							</a>
+						</li>
+						<li>
+							<a href="account-referral.html" aria-label="Купить сейчас">
+								<svg width="35" height="35">
+									<use href="img/sprites.svg#cart"></use>
+								</svg>
+								<span>Купить сейчас</span>
+							</a>
+						</li>
+						<li>
+							<a href="account-balance.html" aria-label="Баланс">
+								<svg width="35" height="35">
+									<use href="img/sprites.svg#balance"></use>
+								</svg>
+								<span>Баланс</span>
+							</a>
+						</li>
+						<li>
+							<a href="account-referral.html" aria-label="Партнерская программа">
+								<svg width="38" height="38">
+									<use href="img/sprites.svg#affiliate-program"></use>
+								</svg>
+								<span>Партнерская программа</span>
+							</a>
+						</li>
+						<li>
+							<a href="account-profile.html" aria-label="Профиль">
+								<svg width="36" height="36">
+									<use href="img/sprites.svg#profile"></use>
+								</svg>
+								<span>Профиль</span>
+							</a>
+						</li>
+						<li>
+							<a href="account-faq.html" aria-label="FAQ">
+								<svg width="32" height="32">
+									<use href="img/sprites.svg#faq"></use>
+								</svg>
+								<span>FAQ</span>
+							</a>
+						</li>
+						<li>
+							<a href="account-documents.html" aria-label="Документы">
+								<svg width="33" height="33">
+									<use href="img/sprites.svg#documents"></use>
+								</svg>
+								<span>Документы</span>
+							</a>
+						</li>
+					</ul>
+					<div class="account_header__mob_nav_add">
+						<div class="account_header__api_key">
+							<span>API KEY:</span><mark>IcbyJo18S2aKiutl</mark>
+						</div>
+						<ul class="account_header__nav">
+							<li>
+								<a href="#" aria-label="Документация">
+									<svg width="23" height="23">
+										<use href="img/sprites.svg#documents-2"></use>
+									</svg>
+									<span>
+										Документация
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
 			</header>
 
 			<section class="account_faq">

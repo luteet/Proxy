@@ -22,6 +22,24 @@
 	--container-padding: 1.25rem;
 }
 
+@keyframes fadeIn {
+	from {
+		opacity: 0; visibility: hidden;
+	}
+	to {
+		opacity: 1; visibility: visible;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1; visibility: visible;
+	}
+	to {
+		opacity: 0; visibility: hidden;
+	}
+}
+
 html {
 
 	font-size: 16px;
@@ -63,6 +81,8 @@ body {
 	&.is-mobile-menu-active {
 		overflow: hidden;
 	}
+
+	--anim-speed: 0s;
 	
 }
 
@@ -82,6 +102,17 @@ section {
 		
 		@include _992 {
 			padding-bottom: 8rem;
+		}
+	}
+}
+
+.account_wrapper section {
+
+	&:last-child {
+		padding-bottom: 0;
+		
+		@include _992 {
+			padding-bottom: 0;
 		}
 	}
 }

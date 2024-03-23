@@ -1,9 +1,16 @@
 .account_wrapper {
-	display: grid;
-	grid-template-columns: 17.875rem auto;
-
 	position: relative;
-	overflow: hidden;
+
+	display: grid;
+	min-height: 100%;
+
+	overflow-x: hidden;
+
+	@include _992 {
+
+		display: grid;
+		grid-template-columns: 17.875rem auto;
+	}
 }
 
 .account_decor {
@@ -13,15 +20,47 @@
 }
 
 .account_main {
-	height: 100vh; height: 100svh;
-	overflow-y: auto;
-	padding: 2.625rem 3.375rem 2.625rem 3.3125rem;
+	padding: 0 0 2.1875rem;
 
 	display: flex;
 	flex-direction: column;
+	
+	@include _992 {
+		height: 100vh; height: 100svh;
+		overflow-y: auto;
+		padding: 2.625rem 1rem 2.625rem 1rem;
+	}
+
+	@media (min-width: 1200px) {
+		padding: 2.625rem 3.375rem 2.625rem 3.3125rem;
+	}
+}
+
+.horizontal-scrollbar {
+	.simplebar-track.simplebar-horizontal {
+		width: calc(100vw - 2rem);
+		margin: 0 1rem;
+
+		@include _992 {
+			width: auto;
+		}
+
+		background: #F3F5FB;
+	}
+}
+
+.horizontal-scrollbar .simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+	&::before {
+		left: 0; top: 0;
+		right: 0; bottom: 0;
+		
+		background: var(--accent);
+		opacity: 1;
+	}
 }
 
 .form_field {
+	
 	display: flex;
 	flex-direction: column;
 	gap: 0.75rem;

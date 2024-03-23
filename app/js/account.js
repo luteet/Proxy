@@ -74,7 +74,7 @@ document.body.addEventListener('click', function (event) {
 	
 		event.preventDefault();
 
-		const wrapper = tabsNavLink.closest(".tabs_wrapper");
+		const wrapper = tabsNavLink.closest(".tabs_wrapper"), target = wrapper.querySelector(".tabs_nav__target span");
 		if(!wrapper.classList.contains("is-working") && tabsNavLink.getAttribute("href") !== "#" && !tabsNavLink.classList.contains("is-active")) {
 			wrapper.classList.add("is-working");
 
@@ -82,6 +82,12 @@ document.body.addEventListener('click', function (event) {
 			targetBlock = wrapper.querySelector(tabsNavLink.getAttribute("href"));
 
 			if(activeBlock && targetBlock) {
+
+				document.querySelectorAll(".tabs_nav__block.is-active").forEach(block => {
+					block.classList.remove("is-active")
+				})
+
+				target.textContent = tabsNavLink.textContent;
 
 				wrapper.querySelectorAll(".tabs_nav a.is-active").forEach(activeLink => activeLink.classList.remove("is-active"));
 				tabsNavLink.classList.add("is-active");
@@ -102,8 +108,31 @@ document.body.addEventListener('click', function (event) {
 		}
 	
 	}
+
+	const tabsNavTarget = $(".tabs_nav__target")
+	if(tabsNavTarget) {
+	
+		tabsNavTarget.closest(".tabs_nav__block").classList.toggle("is-active");
+	
+	} else if(!$(".tabs_nav__block")) {
+		document.querySelectorAll(".tabs_nav__block.is-active").forEach(block => {
+			block.classList.remove("is-active")
+		})
+	}
 	
 	// =-=-=-=-=-=-=-=-=-=-=-=- </tabs> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+	// =-=-=-=-=-=-=-=-=-=-=-=- <account-header-burger> -=-=-=-=-=-=-=-=-=-=-=-=
+	
+	const accountHeaderBurger = $(".account_header__burger")
+	if(accountHeaderBurger) {
+	
+		accountHeaderBurger.closest(".account_header").classList.toggle("is-nav-active");
+	
+	}
+	
+	// =-=-=-=-=-=-=-=-=-=-=-=- </account-header-burger> -=-=-=-=-=-=-=-=-=-=-=-=
 
 })
 
@@ -112,4 +141,11 @@ document.body.addEventListener('click', function (event) {
 
 document.querySelectorAll(".copy_target").forEach(copyTarget => {
 	new ClipboardJS(copyTarget);
+})
+
+
+document.addEventListener("DOMContentLoaded", () => {
+	setTimeout(() => {
+		document.body.style.setProperty("--anim-speed", "0.3s");
+	},500)
 })

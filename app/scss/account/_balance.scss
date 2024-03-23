@@ -3,6 +3,11 @@
 	margin-top: 1.375rem;
 
 	display: flex;
+	flex-direction: column;
+
+	@include _992 {
+		flex-direction: row;
+	}
 
 	background: #F3F5FB;
 	border-radius: 0.875rem;
@@ -10,18 +15,27 @@
 	// .account_balance__value
 
 	&__value {
-		width: 11.375rem; min-height: 9.3125rem;
+		width: 100%;
+		padding: 0.9375rem 2.0625rem;
+
 		position: relative;
+
+		@include _992 {
+			width: 11.375rem; min-height: 9.3125rem;
+			border-radius: 0.875rem 0px 0px 0.875rem;
+
+			text-align: center;
+		}
 
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 
-		text-align: center;
+		text-align: start;
 
 		background: var(--accent);
 		box-shadow: 0px 0.25rem 0.9063rem rgba(45, 60, 138, 0.16);
-		border-radius: 0.875rem 0px 0px 0.875rem;
+		border-radius: 0.875rem 0.875rem 0 0;
 		color: var(--white);
 
 		strong {
@@ -35,11 +49,17 @@
 
 		svg {
 			position: absolute;
-			left: 50%; top: 50%;
-			transform: translate(-50%,-65%);
-			width: 75%; height: 75%;
+			left: 100%; top: 50%;
+			transform: translate(-125%,-50%);
+			width: 7.1875rem; height: 7.1875rem;
 			color: var(--white);
 			opacity: .17;
+
+			@include _992 {
+				left: 50%;
+				width: 75%; height: 75%;
+				transform: translate(-50%,-65%);
+			}
 		}
 	}
 
@@ -49,14 +69,20 @@
 		display: flex;
 		align-items: center;
 		
-		//flex: 1 1;
+		padding: 0.875rem;
 
-		padding: 1.9375rem;
+		@include _992 {
+			padding: 1.9375rem;
+		}
 
 		input {
-			min-width: 20.375rem; min-height: 3.5rem;
+			min-width: 100%; min-height: 3.5rem;
 			padding: 1.1875rem;
 			border-radius: 0.4375rem;
+
+			@include _992 {
+				min-width: 20.375rem;
+			}
 
 			font-weight: 500;
 			&::placeholder {
@@ -73,13 +99,26 @@
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
-		justify-content: center;
+		text-align: center;
+		
 		gap: 0.5rem;
 
-		padding-right: 2.4375rem;
+		padding: 0 0.875rem;
+		
+		@include _992 {
+			padding-right: 2.4375rem;
+			padding: 0;
+			justify-content: center;
+		}
+
+		
 
 		li {
-			width: 7.75rem; height: 5rem;
+			width: calc(50% - 0.5rem); height: 5rem;
+			@include _992 {
+				width: 7.75rem;
+			}
+
 			background: var(--white);
 			border-radius: 0.6875rem;
 
@@ -92,8 +131,13 @@
 	// .account_balance__button
 
 	&__button {
-		align-self: center;
-		margin-right: 2.0625rem;
+		
+		margin: 0.9375rem 0.875rem 2rem;
+
+		@include _992 {
+			align-self: center;
+			margin: 0 2.0625rem 0 0;
+		}
 	}
 }
 

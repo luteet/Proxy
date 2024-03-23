@@ -3,9 +3,16 @@
 	background: #F3F5FB;
 	border-radius: 0.875rem;
 
-	padding: 1.4375rem 1.75rem;
+	padding: 0.6875rem 1.1875rem;
 
-	flex: 0 1 calc(50% - 0.5rem);
+	margin-bottom: 0.5625rem;
+	
+	@include _992 {
+		flex: 0 1 calc(50% - 0.5rem);
+		margin-bottom: 0;
+
+		padding: 1.4375rem 1.75rem;
+	}
 
 	// .account_referral_link__title
 
@@ -19,9 +26,12 @@
 		max-width: 28.75rem; width: 100%;
 		position: relative;
 
+		display: flex;
+
 		input {
-			width: 100%;
-			padding: 0.625rem 1.1875rem;
+			//width: 100%;
+			flex: 1 1;
+			padding: 0.625rem 3rem 0.625rem 1.1875rem;
 
 			min-height: 3.5rem;
 			font-weight: 500;
@@ -48,8 +58,14 @@
 	// .account_referral_link__note
 
 	&__note {
-		padding-top: 1.5rem;
+		padding-top: 1rem; padding-bottom: 0.6875rem;
+		
+		@include _992 {
+			padding-top: 1.5rem; padding-bottom: 0;
+			font-size: 1rem;
+		}
 
+		font-size: 0.875rem;
 		font-weight: 400;
 		line-height: 150%;
 	}
@@ -60,14 +76,23 @@
 	background: #F3F5FB;
 	border-radius: 0.875rem;
 
-	padding: 1.4375rem 0;
+	padding: 1.0625rem 0;
 
-	flex: 0 1 calc(50% - 0.5rem);
+	@include _992 {
+		padding: 1.4375rem 0;
+		flex: 0 1 calc(50% - 0.5rem);
+	}
 
 	// .account_referral_profit__title
 
 	&__title {
-		padding: 0 1.75rem;
+
+		padding: 0 1.3125rem;
+
+		@include _992 {
+			padding: 0 1.75rem;
+		}
+
 		b {
 			color: var(--accent);
 		}
@@ -77,7 +102,12 @@
 
 	&__info {
 		li {
-			padding: 1.25rem 1.75rem;
+			
+			padding: 1rem 1.3125rem;
+
+			@include _992 {
+				padding: 1.25rem 1.75rem;
+			}
 
 			display: inline-flex;
 			align-items: center;
@@ -97,7 +127,10 @@
 
 	&__footer {
 		border-top: 0.0625rem solid #E2E4EC;
-		padding: 1.25rem 1.75rem 0;
+		padding: 1rem 1.3125rem 0;
+		@include _992 {
+			padding: 1.25rem 1.75rem 0;
+		}
 	}
 }
 
@@ -107,12 +140,17 @@
 	border-radius: 0.875rem;
 
 	padding: 1.4375rem;
-	min-height: 10.9375rem; min-width: 22.1875rem;
+	min-height: 9.3125rem; min-width: 100%;
+	@include _992 {
+		min-height: 10.9375rem; min-width: 22.1875rem;
+	}
 
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+
+	overflow: hidden;
 
 	svg {
 		position: absolute;
@@ -127,28 +165,76 @@
 
 		color: var(--accent);
 		font-weight: 700;
-		font-size: 6rem;
+		font-size: 3rem;
 		line-height: 1;
+
+		@include _992 {
+			font-size: 6rem;
+		}
 	}
 
 	span {
 		z-index: 2;
 
 		font-weight: 700;
-		font-size: 1.5rem;
+		font-size: 1rem;
 		line-height: 179%;
+
+		@include _992 {
+			font-size: 1.5rem;
+		}
 	}
 }
 
 .account_referral_best {
 
-	position: relative;
-	background: #F3F5FB;
-	border-radius: 0.875rem;
-
 	flex: 1 1;
 
-	padding: 1.4375rem 0;
+	overflow-x: auto;
+	width: 100vw;
+
+	margin: 0.6875rem -1rem 0;
+	padding: 0 1rem;
+
+	@include _992 {
+		width: auto;
+		margin: 1.375rem 0 0;
+		padding: 0;
+	}
+
+	&__inner {
+
+		min-width: 46rem;
+		display: flex;
+		&::after {
+			content: '';
+			display: block;
+			width: 1rem;
+		}
+
+		@include _992 {
+			min-width: auto;
+		}
+	}
+
+	&__body {
+		position: relative;
+		background: #F3F5FB;
+		border-radius: 0.875rem;
+
+		padding: 1.4375rem 0;
+
+		margin-bottom: 2rem;
+
+
+		width: 100%;
+		//max-width: 45rem;
+
+		@include _992 {
+			width: auto; 
+			margin-bottom: 0;
+		}
+	}
 
 	// .account_referral_best__title
 
@@ -167,10 +253,15 @@
 			border-bottom: 0.0625rem solid rgba(138,139,160,0.16);
 
 			font-weight: 400;
-			padding: 1.0625rem 1.75rem;
-			font-size: 1.125rem;
+			padding: 1.0625rem 1.1875rem;
+			font-size: 0.875rem;
 			line-height: 150%;
 			color: #8A8BA0;
+
+			@include _550 {
+				font-size: 1.125rem;
+				padding: 1.0625rem 1.75rem;
+			}
 
 			&:first-child {
 				text-align: start;
@@ -210,9 +301,14 @@
 
 		td {
 			text-align: center;
-			padding: 0.7813rem 1.75rem;
-			font-size: 1.125rem;
+			padding: 0.7813rem 1.1875rem;
+			font-size: 1rem;
 			color: #8A8BA0;
+
+			@include _550 {
+				font-size: 1.125rem;
+				padding: 0.7813rem 1.75rem;
+			}
 
 			> span:first-child {
 				@include _992 {
@@ -225,10 +321,15 @@
 	// .account_referral_best__footer
 
 	&__footer {
-		padding: 1.5rem 0 1rem;
+		padding: 1.25rem 0 0.5rem;
+
+		@include _550 {
+			padding: 1.5rem 0 1rem;
+			font-size: 1.125rem;
+		}
 
 		text-align: center;
-		font-size: 1.125rem;
+		font-size: 0.875rem;
 		color: #393939;
 	}
 }
