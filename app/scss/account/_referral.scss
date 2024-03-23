@@ -206,10 +206,14 @@
 
 		min-width: 46rem;
 		display: flex;
+
 		&::after {
 			content: '';
 			display: block;
 			width: 1rem;
+			@include _992 {
+				display: none;
+			}
 		}
 
 		@include _992 {
@@ -231,7 +235,6 @@
 		//max-width: 45rem;
 
 		@include _992 {
-			width: auto; 
 			margin-bottom: 0;
 		}
 	}

@@ -4,7 +4,7 @@
 	display: grid;
 	min-height: 100%;
 
-	overflow-x: hidden;
+	overflow: hidden;
 
 	@include _992 {
 
@@ -24,10 +24,13 @@
 
 	display: flex;
 	flex-direction: column;
+
+	height: 100vh;
+	overflow-y: auto;
 	
 	@include _992 {
 		height: 100vh; height: 100svh;
-		overflow-y: auto;
+		
 		padding: 2.625rem 1rem 2.625rem 1rem;
 	}
 

@@ -10,7 +10,7 @@
 	@include _992 {
 		align-items: center;
 		flex-direction: row;
-		flex-wrap: wrap;
+		//flex-wrap: wrap;
 	}
 
 	&__block {
@@ -18,7 +18,9 @@
 		width: 100%;
 		display: flex;
 		flex-direction: column;
+
 		@include _992 {
+			width: auto;
 			flex-direction: row;
 		}
 	}
@@ -46,7 +48,7 @@
 
 		border: 0.1875rem solid var(--accent);
 
-		transition: color .2s ease, border-color .2s ease;
+		transition: color .2s ease, border-color .2s ease, border-radius .2s ease;
 
 		svg {
 			position: absolute;
@@ -74,9 +76,13 @@
 
 		position: absolute;
 		left: 0; top: 100%;
+		transform: translate(0,-0.1875rem);
 		width: 100%;
 
 		z-index: 2;
+
+		border: 0.1875rem solid var(--accent);
+		border-top: 0;
 
 		@include _992 {
 			position: static;
@@ -86,6 +92,8 @@
 			gap: 1.6875rem;
 
 			padding: 0;
+			border: 0;
+			border-radius: 0;
 		}
 
 		display: flex;
@@ -96,21 +104,26 @@
 
 		@include _992 {
 			max-height: none;
+			flex-direction: row;
 		}
 
 		background: var(--white);
-		padding: 0.5rem 0 1.6875rem;
+		padding: 0.5rem 0 1.5rem;
 
-		
-
-		li:not(:first-child) {
-			
+		li {
+			padding: 0 1rem;
+			@include _992 {
+				padding: 0;
+			}
 		}
+
+		transition: border-radius .2s ease;
 
 		a {
 			margin-top: 1rem;
 			@include _992 {
 				margin-top: 0;
+				display: block;
 			}
 
 			font-size: 1rem;
@@ -151,10 +164,19 @@
 		}
 
 		animation: fadeOut var(--anim-speed,0.3s) ease 0s 1 normal forwards;
+		@include _992 {
+			animation-name: none;
+		}
 	}
 
 	&__block.is-active &__list {
 		animation: fadeIn var(--anim-speed,0.3s) ease 0s 1 normal forwards;
+		border-radius: 0 0 0.875rem 0.875rem;
+	}
+	
+	&__block.is-active &__target {
+		border-radius: 0.875rem 0.875rem 0 0;
+		border-bottom-color: transparent;
 	}
 }
 

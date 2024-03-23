@@ -31,6 +31,10 @@
 			content: '';
 			display: block;
 			width: 1rem;
+
+			@include _992 {
+				display: none;
+			}
 		}
 	}
 
@@ -41,10 +45,6 @@
 		margin-bottom: 2rem; //margin-right: 1rem;
 
 		width: 100%;
-
-		@include _992 {
-			width: auto;
-		}
 	}
 
 	// .account_transactions__title
