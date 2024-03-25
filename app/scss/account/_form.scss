@@ -1,9 +1,16 @@
 .account_form {
 
+	@include _992 {
+		padding: 0.6875rem 1.875rem 1.875rem;
+	}
+
 	// .account_form__title
 
 	&__title {
 		padding: 1rem 1.1875rem 0;
+		@include _992 {
+			padding: 0;
+		}
 	}
 
 	// .account_form__inner

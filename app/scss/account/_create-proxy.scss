@@ -9,6 +9,10 @@
 		}
 	}
 
+	@include _992 {
+		padding: 3.125rem;
+	}
+
 	// .create_proxy__fieldset
 
 	&__fieldset {
