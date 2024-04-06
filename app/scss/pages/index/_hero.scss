@@ -16,7 +16,7 @@
 	&.is-min-mode {
 		padding-top: 6.35rem;
 		@include _992 {
-			padding-top: var(--static-height-header, 9rem);
+			padding-top: var(--static-height-header, 10.125rem);
 		}
 	}
 
