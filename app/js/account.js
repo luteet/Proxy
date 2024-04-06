@@ -134,6 +134,64 @@ document.body.addEventListener('click', function (event) {
 	
 	// =-=-=-=-=-=-=-=-=-=-=-=- </account-header-burger> -=-=-=-=-=-=-=-=-=-=-=-=
 
+
+	// =-=-=-=-=-=-=-=-=-=-=-=- <list-proxies> -=-=-=-=-=-=-=-=-=-=-=-=
+
+	const listProxiesTableTarget = $(".list-proxies__table_target")
+	if(listProxiesTableTarget) {
+	
+		event.preventDefault();
+
+		listProxiesTableTarget.parentElement.classList.toggle("is-active")
+	
+	}
+	
+	const listProxiesTableMore = $(".list-proxies__table_more")
+	if(listProxiesTableMore) {
+	
+		event.preventDefault();
+
+		const main = listProxiesTableMore.closest(".list-proxies"),
+		table = main.querySelector(".list-proxies__main"),
+		targetBlock = main.querySelector(`${listProxiesTableMore.getAttribute("href")}`);
+
+		table.classList.add("is-hidden");
+
+		setTimeout(() => {
+			main.classList.add("is-active-block");
+			table.style.display = "none";
+			targetBlock.classList.add("is-active");
+			setTimeout(() => {
+				targetBlock.classList.add("is-visible");
+			},50)
+		},350)
+	
+	}
+
+	const listProxiesForward = $(".list-proxies__forward")
+	if(listProxiesForward) {
+	
+		event.preventDefault();
+
+		const main = listProxiesForward.closest(".list-proxies"),
+		table = main.querySelector(".list-proxies__main"),
+		activeBlock = main.querySelector(`.list-proxies__block.is-active`);
+
+		activeBlock.classList.remove("is-visible");
+
+		setTimeout(() => {
+			main.classList.remove("is-active-block");
+			table.style.removeProperty("display");
+			activeBlock.classList.remove("is-active");
+			setTimeout(() => {
+				table.classList.remove("is-hidden");
+			},50)
+		},350)
+	
+	}
+	
+	// =-=-=-=-=-=-=-=-=-=-=-=- </list-proxies> -=-=-=-=-=-=-=-=-=-=-=-=
+
 })
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </click-events> -=-=-=-=-=-=-=-=-=-=-=-=
@@ -143,6 +201,80 @@ document.querySelectorAll(".copy_target").forEach(copyTarget => {
 	new ClipboardJS(copyTarget);
 })
 
+document.querySelectorAll(".list-proxies__block_copy").forEach(copyTarget => {
+	const clipboard = new ClipboardJS(copyTarget);
+
+	let timeout;
+	clipboard.on('success', function(event) {
+		copyTarget.classList.remove("is-copied");
+		setTimeout(() => {
+			copyTarget.classList.add("is-copied")
+			clearTimeout(timeout);
+			timeout = setTimeout(() => {
+				copyTarget.classList.remove("is-copied")
+			},1500)
+		},100)
+	});
+})
+
+document.querySelectorAll(".list-proxies__block_check_all").forEach(checkAll => {
+
+	const checkbox = checkAll.querySelector("input"),
+	main = checkAll.closest(".list-proxies__block"),
+	list = main.querySelector(".list-proxies__block_list"),
+	copyTarget = main.querySelector(".list-proxies__block_copy"),
+	checkboxes = list.querySelectorAll("input");
+
+	let checkedString = "";
+
+	checkboxes.forEach(checkbox => {
+		checkbox.addEventListener("change", () => {
+			checkboxes.forEach(checkbox => {
+				if(checkbox.checked) {
+					if(checkedString == "") {
+						checkedString += checkbox.nextElementSibling.nextElementSibling.textContent.trim()
+					} else {
+						checkedString += `, ${checkbox.nextElementSibling.nextElementSibling.textContent.trim()}`;
+					}
+				}
+			})
+			
+			copyTarget.setAttribute("data-clipboard-text", checkedString);
+			checkedString = "";
+		})
+	})
+
+	checkbox.addEventListener("change", () => {
+
+		if(checkbox.checked) {
+			checkboxes.forEach(checkbox => {
+				if(!checkbox.checked) checkbox.classList.add("all-checked");
+				checkbox.checked = true;
+			})
+		} else {
+			checkboxes.forEach(checkbox => {
+				if(checkbox.classList.contains("all-checked")) {
+					checkbox.classList.remove("all-checked");
+					checkbox.checked = false;
+				}
+			})
+		}
+
+		checkboxes.forEach(checkbox => {
+			if(checkbox.checked) {
+				if(checkedString == "") {
+					checkedString += checkbox.nextElementSibling.nextElementSibling.textContent.trim()
+				} else {
+					checkedString += `, ${checkbox.nextElementSibling.nextElementSibling.textContent.trim()}`;
+				}
+			}
+		})
+
+		copyTarget.setAttribute("data-clipboard-text", checkedString);
+		checkedString = "";
+	})
+
+})
 
 document.addEventListener("DOMContentLoaded", () => {
 	setTimeout(() => {

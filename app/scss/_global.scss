@@ -62,6 +62,8 @@ html {
 
 	min-height: 100%;
 	min-width: 320px;
+
+	scrollbar-color: var(--secondary-2) #FFF;
 }
 
 body {
@@ -83,6 +85,22 @@ body {
 	}
 
 	--anim-speed: 0s;
+
+	@media (any-hover: hover) {
+		&::-webkit-scrollbar {
+			background: var(--white);
+		}
+	
+		&::-webkit-scrollbar-track {
+			padding: 2px;
+		}
+	
+		&::-webkit-scrollbar-thumb {
+			background: var(--secondary-2);
+			border-radius: 10px;
+			border: 4px solid var(--white);
+		}
+	}
 	
 }
 
