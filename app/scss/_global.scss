@@ -162,6 +162,20 @@ section {
 			right: 0; left: auto; top: 14.25rem;
 			transform: translate(20%,0%);
 		}
+
+		&:nth-child(3) {
+			left: 0; bottom: 0;
+			transform: translate(-70%,0%);
+			z-index: -1;
+			@include _992 {
+				width: min(32.25rem, 28vw);
+				&::before {
+					@include _992 {
+						border: min(5rem, 5vw) solid transparent;
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -392,6 +406,7 @@ header, section, footer {
 			}
 			background: linear-gradient(200deg, rgba(255, 255, 255, 1) 9%, rgba(255, 255, 255, 0) 100%) border-box;
 		}
+
 	}
 	
 }

@@ -186,5 +186,7 @@ sliders();
 
 
 
-
+Fancybox.bind("[data-fancybox]", {
+	
+});
 
