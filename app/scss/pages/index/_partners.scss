@@ -61,24 +61,9 @@
 
 			text-align: center;
 
-			/* @media (min-width: 1520px) {
-				
-				&:not(:nth-child(6n + 7)), &:not(:nth-child(6)), &:not(:nth-child(6n)) {
-					text-align: center;
-				}
-
-				&:first-child, &:nth-child(6n + 7) {
-					text-align: start;
-				}
-
-				&:nth-child(6) {
-					text-align: end;
-				}
-			} */
-
 			img {
 				object-fit: contain;
-				max-width: 100%;
+				max-width: 100%; width: auto;
 				height: 2.3125rem;
 				@include _550 {
 					height: 3rem;

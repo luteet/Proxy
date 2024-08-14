@@ -43,7 +43,7 @@
 
 		
 
-		col {
+		/* col {
 			&:nth-child(1) {
 				width: 13.5%;
 			}
@@ -63,7 +63,7 @@
 			&:nth-child(5) {
 				width: 7%;
 			}
-		}
+		} */
 
 		@media (max-width: 991px) {
 			tbody tr.is-active td:not(:first-child) {

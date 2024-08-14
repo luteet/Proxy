@@ -72,6 +72,9 @@
 
 	&__button {
 		max-width: 15.625rem; width: 100%;
+		@include _550 {
+			min-width: 20rem;
+		}
 	}
 }
 

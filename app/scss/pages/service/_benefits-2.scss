@@ -130,7 +130,10 @@
 			padding-top: 1rem;
 			max-width: 30.625rem;
 
-			p {
+		}
+
+		&.content_block p {
+			@include _992 {
 				margin-right: 0;
 			}
 		}

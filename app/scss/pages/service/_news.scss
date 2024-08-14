@@ -109,7 +109,11 @@
 	// .news_card__image
 
 	&__image {
+		
 		img {
+			max-width: 100%; height: auto;
+			aspect-ratio: 16/9;
+			object-fit: cover;
 			border-radius: 0.3125rem 0.3125rem 0px 0px;
 		}
 	}

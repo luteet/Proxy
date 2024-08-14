@@ -7,8 +7,25 @@ const
 	header = document.querySelector('.header');
 
 
-
 const getDeviceType = () => {
+
+	const ua = navigator.userAgent;
+	if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+		return "tablet";
+	}
+
+	if (
+		/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+		ua
+		)
+	) {
+		return "mobile";
+	}
+	return "desktop";
+
+};
+
+/* const getDeviceType = () => {
 
 	const ua = navigator.userAgent;
 	if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
@@ -53,6 +70,30 @@ document.querySelectorAll(".header__nav_sub_list").forEach(subList => {
 		if(getDeviceType() == "desktop") {
 			parent.classList.remove("is-active");
 			cloneSubList.classList.remove("is-active");
+		}
+	})
+
+}) */
+
+document.querySelectorAll(".header__nav_sub_list").forEach(subList => {
+	const parent = subList.parentElement.parentElement;
+
+	parent.querySelector("a").addEventListener("click", (event) => {
+		if(!parent.classList.contains("is-active-sub-list")) {
+			event.preventDefault();
+			parent.classList.add("is-active-sub-list");
+		}
+	})
+
+	parent.addEventListener("pointerenter", () => {
+		if(getDeviceType() == "desktop") {
+			parent.classList.add("is-active-sub-list");
+		}
+	})
+
+	parent.addEventListener("pointerleave", () => {
+		if(getDeviceType() == "desktop") {
+			parent.classList.remove("is-active-sub-list");
 		}
 	})
 
@@ -146,9 +187,9 @@ body.addEventListener('click', function (event) {
 	// =-=-=-=-=-=-=-=-=-=-=-=- </get-table> -=-=-=-=-=-=-=-=-=-=-=-=
 
 
-	if(!$(".header__nav_list > li.drop-down")) {
+	/* if(!$(".header__nav_list > li.drop-down")) {
 		document.querySelectorAll(".header__nav_list > li.drop-down.is-active").forEach(activeItem => activeItem.classList.remove("is-active"))
-	}
+	} */
 	
 
 })
@@ -225,7 +266,7 @@ function scrollPage() {
 	
 }
 	
-scrollPage();
+//scrollPage();
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </scroll> -=-=-=-=-=-=-=-=-=-=-=-=
 

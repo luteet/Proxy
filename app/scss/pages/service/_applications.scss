@@ -41,7 +41,7 @@
 
 			display: grid;
 			grid-template-columns: repeat(12,1fr);
-			gap: 6rem 2.8125rem;
+			gap: 6rem 2rem;
 		}
 	}
 
@@ -91,7 +91,7 @@
 				}
 	
 				&:nth-last-child(2) {
-					grid-column: 4/6;
+					grid-column: 3/7;
 				}
 			}
 		}

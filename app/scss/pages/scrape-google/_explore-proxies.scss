@@ -103,7 +103,7 @@
 			&::after {
 				content: '';
 				position: absolute;
-				left: -3.75rem; top: calc(100% - 0.0938rem);
+				left: -3.75rem; top: calc(100% - 0.114rem);
 				width: 2.75rem; height: 62.5rem;
 				border-top: 0.125rem solid var(--accent);
 				border-left: 0.125rem solid var(--accent);
@@ -163,7 +163,7 @@
 		&::after {
 			content: '';
 			position: absolute;
-			left: calc(100% + 1.125rem); top: calc(100% - 0.0938rem);
+			left: calc(100% + 1.125rem); top: calc(100% - 0.114rem);
 			width: 2.75rem; height: 62.5rem;
 			border-top: 0.125rem solid var(--accent);
 			border-right: 0.125rem solid var(--accent);

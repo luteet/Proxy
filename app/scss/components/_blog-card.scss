@@ -6,9 +6,13 @@
 	// .blog-card__image
 
 	&__image {
+		
 		border-radius: 0.4375rem 0.4375rem 0 0;
 		overflow: hidden;
 		img {
+			aspect-ratio: 16/9;
+			height: auto; width: 100%;
+			object-fit: cover;
 			transition: transform .3s;
 		}
 

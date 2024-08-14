@@ -101,6 +101,39 @@
 	}
 }
 
+.custom_select_2 select {
+	-webkit-appearance: none;
+	border-radius: 0.3125rem;
+
+	padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+
+	cursor: pointer;
+}
+
+.custom_select_2 {
+
+	position: relative;
+	
+	display: block;
+
+	background: var(--white);
+	border-radius: 0.3125rem;
+
+	margin-bottom: 0.25rem;
+	padding-right: 0.5rem;
+
+	cursor: pointer;
+	
+	svg {
+		position: absolute;
+		right: 0; top: 50%;
+		transform: translate(-33%,-50%);
+
+		width: 0.85rem; height: auto;
+		user-select: none; pointer-events: none;
+	}
+}
+
 .custom_select {
 	min-height: 3.5rem;
 	padding: 0;

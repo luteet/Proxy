@@ -1,6 +1,7 @@
 .header {
-	position: absolute;
-	left: 0; top: 0;
+	/* position: absolute;
+	left: 0; top: 0; */
+	position: static;
 	width: 100%;
 
 	z-index: 3;
@@ -12,20 +13,32 @@
 	transition: opacity .3s ease;
 	opacity: var(--opacity,1);
 
-	&.is-scroll {
+	margin-bottom: -10.1875rem;
+
+	/* &.is-scroll {
 		position: fixed;
 
 		padding-top: 0.625rem; padding-bottom: 0.625rem;
 		background: var(--white);
-	}
+	} */
 
 	@include _992 {
 		display: grid;
-		grid-template-columns: 9.375rem 2fr auto;
+		//grid-template-columns: 9.375rem 2fr auto;
+		grid-template-columns: 0.4fr auto min-content;
+		justify-content: stretch;
+
+		&.is-user {
+			grid-template-columns: 0.4fr auto min-content min-content;
+		}
 	}
 
 	@media (min-width: 1400px) {
-		grid-template-columns: 1fr 2fr 1fr;
+		//grid-template-columns: 1fr 2fr 1fr;
+		grid-template-columns: 200px auto min-content;
+		&.is-user {
+			grid-template-columns: 200px auto min-content min-content;
+		}
 	}
 
 	perspective: 400px;
@@ -33,6 +46,36 @@
 	padding-top: 1.5625rem; padding-bottom: 0.9375rem;
 	@include _992 {
 		padding-top: 3.4375rem; padding-bottom: 3.4375rem;
+	}
+
+	&-langs {
+
+		padding-right: 1rem;
+		
+		ul {
+			display: flex;
+			align-items: center;
+			margin-left: 0.4375rem;
+		}
+  
+		a {
+			color: var(--black);
+			padding: 0.4375rem 0.4375rem;
+			background: transparent;
+			text-transform: uppercase;
+
+			@media (hover: hover) {
+				transition: color .15s;
+
+				&:hover {
+					color: var(--accent);
+				}
+			
+				&:active {
+					color: var(--accent);
+				}
+			}
+		}
 	}
 
 	// .header__logo
@@ -72,10 +115,9 @@
 
 		background: var(--white);
 
-		overflow-y: auto; overflow-x: hidden;
+		//overflow-y: auto; overflow-x: hidden;
 
 		opacity: 0; visibility: hidden;
-		transform: translateZ(0.0001px);
 
 		&.is-mobile-menu-active {
 			opacity: 1; visibility: visible;
@@ -93,7 +135,7 @@
 			width: auto; height: auto;
 			background-color: transparent;
 			padding: 0;
-			overflow: visible;
+			//overflow-y: visible; overflow-x: visible;
 
 			opacity: 1; visibility: visible;
 
@@ -129,13 +171,15 @@
 				flex-direction: row;
 				justify-content: space-between;
 
+				position: static;
+
 				&::before {
 					display: none;
 				}
 			}
 		}
 
-		// .header__nav)list
+		// .header__nav_list
 
 		&_list {
 			display: flex;
@@ -152,7 +196,9 @@
 				flex-direction: row;
 				align-items: stretch;
 				flex-wrap: wrap;
-				justify-content: space-evenly;
+				justify-content: center;
+
+				position: static;
 			}
 
 			@media (min-width: 1100px) {
@@ -183,19 +229,23 @@
 
 		&_list > li {
 
-			position: relative;
+			position: static;
 
+			display: block;
 			width: 100%;
 			text-align: center;
+
+			padding: .5rem 0;
 			
 			@include _992 {
 				width: auto;
+				position: static;
 
-				&.drop-down::before {
+				&.has-sub-list a::after {
 					content: "";
 					position: absolute;
 					left: 50%; top: 100%;
-					transform: translate(-50%,2.25rem);
+					transform: translate(-50%,2.55rem);
 					
 					border-left: 1.875rem solid transparent;
 					border-right: 1.875rem solid transparent;
@@ -204,10 +254,6 @@
 					transition: opacity .3s, visibility .3s;
 					opacity: 0; visibility: hidden;
 				}
-	
-				&.drop-down.is-active::before {
-					opacity: 1; visibility: visible;
-				}
 			}
 
 			
@@ -215,6 +261,8 @@
 		}
 
 		&_list > li > a {
+
+			position: relative;
 
 			width: 100%;
 			display: block;
@@ -273,33 +321,84 @@
 
 		}
 
-		&_list &_sub_list {
+		&_list > li.has-sub-list.is-active-sub-list > a {
+			&::after {
+				opacity: 1; visibility: visible;
+			}
+		}
+
+		&_list > li.has-sub-list.is-active-sub-list > div &_sub_list {
+			opacity: 1; visibility: visible;
+		}
+
+		/* &_list &_sub_list {
 			display: block;
 			@include _992 {
 				display: none;
 			}
-		}
+		} */
 
 		&_list > li > div {
-			display: grid;
-			grid-template-rows: 0fr;
+			/* position: absolute;
+			left: 0; top: 0;
 
-			transition: grid-template-rows .4s;
+			width: 100vw; */
+			@media (max-width: 991px) {
+				display: grid;
+				grid-template-rows: 0fr;
+
+				transition: grid-template-rows .4s;
+			}
 		}
 
-		&_list > li.is-active > div {
+		&_list > li.is-active-sub-list > div {
 			
-			grid-template-rows: 1fr;
+			/* grid-template-rows: 1fr;
 
 			ul {
 				padding-top: 1rem; padding-bottom: 1rem;
+			} */
+			@media (max-width: 991px) {
+				grid-template-rows: 1fr;
+
+				ul {
+					padding-top: 1rem; padding-bottom: 1rem;
+				}
 			}
 		}
 
 		
 	}
 
-	
+	.have-user {
+		a {
+		  display: flex;
+		  align-items: center;
+		  gap: 0.25rem;
+		  color: #000;
+		  text-transform: uppercase;
+		  border: 0.0625rem solid grey;
+		  padding: 0.3125rem 0.625rem;
+		  border-radius: 0.4375rem;
+
+		  @media (hover: hover) {
+
+			transition: color .15s, border-color .2s, background .2s;
+
+			&:hover {
+				color: var(--white);
+				background: var(--accent);
+				border-color: var(--accent);
+			}
+		  
+			&:active {
+				color: var(--white);
+				background: var(--accent-active);
+				border-color: var(--accent-active);
+			}
+		  }
+		}
+	  }
 
 	// .header__burger
 
@@ -365,6 +464,87 @@
 				transform: translate3d(0, -50%, 0.0001px) rotate(-45deg);
 			}
 	
+		}
+	}
+}
+
+.header__nav_add_list {
+	white-space: nowrap;
+}
+
+.header__nav_sub_list {
+	display: none;
+	@include _992 {
+		display: block;
+
+		position: absolute;
+		left: 0; top: 9rem;
+
+		padding-top: 3.75rem; padding-bottom: 3.75rem;
+		padding-left: max(50% - 47.5rem); padding-right: max(50% - 47.5rem);
+
+		overflow: visible;
+
+		opacity: 0; visibility: hidden;
+		transition: opacity .3s, visibility .3s, padding-top .3s, padding-bottom .3s;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0; top: 0;
+			width: 100%; height: 2.95rem;
+			transform: translate(0,-100%);
+		}
+
+		@media (hover: hover) {
+			&:hover {
+				opacity: 1; visibility: visible;
+			}
+		}
+	}			
+
+	background: #F2F2F2;
+
+	width: 100%;
+
+	padding-top: 0; padding-bottom: 0;
+	padding-left: 1rem; padding-right: 1rem;
+
+	overflow: hidden;
+
+	z-index: 4;
+
+	&.is-active {
+		opacity: 1; visibility: visible;
+	}
+
+	a {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+
+		font-weight: 600;
+		font-size: 1rem;
+		line-height: 150%;
+		color: var(--black);
+
+		padding-top: 0.4688rem; padding-bottom: 0.4688rem;
+
+		@media (any-hover: hover) {
+
+			transition: color .15s;
+
+			&:hover {
+				color: var(--accent);
+			}
+		
+			&:active {
+				color: var(--accent-active);
+			}
+		}
+
+		img {
+			width: 2.8125rem; height: 2.8125rem;
 		}
 	}
 }
