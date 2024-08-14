@@ -1,0 +1,54 @@
+.proxy-partner {
+
+	color: var(--white);
+	text-align: center;
+	background: #152346;
+
+	margin-top: 6.5625rem;
+	padding-top: 3.125rem; padding-bottom: 4.8125rem;
+
+	// .proxy-partner__decor
+
+	&__decor {
+		width: 7.5rem; height: 4.6875rem;
+	}
+
+	// .proxy-partner__title
+
+	&__title {
+		
+		padding-top: 1rem;
+		@include _992 {
+			padding-top: 0.125rem;
+		}
+	}
+
+	// .proxy-partner__text
+
+	&__text {
+		padding-top: 0.9375rem;
+
+		p:not(:first-child) {
+			padding-top: 2rem;
+		}
+
+		mark {
+			display: inline-block;
+
+			color: var(--white);
+			font-size: 0.875rem;
+			line-height: 157%;
+			background: #67459E;
+			border-radius: 0.4375rem;
+
+			padding: 0.1875rem 0.4375rem;
+			margin-bottom: 0.875rem;
+		}
+	}
+
+	// .proxy-partner__button
+
+	&__button {
+		margin-top: 2.25rem;
+	}
+}

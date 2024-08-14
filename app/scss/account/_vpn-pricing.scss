@@ -1,0 +1,70 @@
+.account_vpn_pricing {
+
+	// .account_vpn_pricing__title
+
+	&__title {
+	}
+
+	// .account_vpn_pricing__period
+
+	&__period {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+
+		p {
+			font-weight: 500;
+			font-size: 1rem;
+			line-height: 200%;
+			color: #000000;
+
+			flex: 1 1 100%;
+
+			@include _550 {
+				flex: none;
+			}
+		}
+
+		button {
+			cursor: pointer;
+			padding: 0.1875rem 1rem;
+			min-width: 8.25rem; min-height: 2.125rem;
+
+			border-radius: 0.4375rem;
+
+			background: #F3F5FB;
+			line-height: 175%;
+			letter-spacing: 0.0112rem;
+			color: #686868;
+
+			transition: background .2s, color .2s;
+		}
+
+		button:hover {
+			color: var(--accent);
+		}
+
+		button.is-active {
+			background: var(--accent);
+			color: var(--white);
+		}
+	}
+
+	// .account_vpn_pricing__list
+
+	&__list {
+		.pricing__list {
+			align-items: flex-start;
+		}
+
+		.pricing__card_body {
+			background: linear-gradient(190.25deg, #FFFFFF -12.07%, rgba(255, 255, 255, 0) 92.34%), #F3F5FB;
+			border: 0.0625rem solid rgba(45,106,255,0.22);
+		}
+
+		.pricing__card_params li {
+			border-color: #C9D7FA;
+		}
+	}
+}

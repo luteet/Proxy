@@ -112,6 +112,14 @@
 		overflow-y: auto;
 	}
 
+	&.is-min {
+		min-height: 2.125rem;
+		.ss-values {
+			height: 2.125rem;
+			padding: 0 0.5rem 0 0.125rem;
+		}
+	}
+
 	&__wrapper {
 		position: relative;
 	}
@@ -140,6 +148,15 @@
 	--ss-spacing-m: 0.4375rem;
 	--ss-focus-color: transparent;
 	--ss-primary-color: var(--accent);
+
+	&.is-min {
+		--ss-spacing-s: 0.35rem;
+		--ss-spacing-m: 0.125rem;
+
+		.ss-single {
+			color: #000;
+		}
+	}
 
 	&.ss-main .ss-values .ss-placeholder {
 		padding: 0 1.1875rem;

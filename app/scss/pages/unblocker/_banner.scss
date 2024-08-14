@@ -1,0 +1,82 @@
+.unblocker-banner {
+
+	position: relative;
+
+	text-align: center;
+	background: #152346;
+
+	padding-top: 3.125rem; padding-bottom: 3.125rem;
+
+	overflow: hidden;
+
+	@include _992 {
+		padding-top: 5.4375rem; padding-bottom: 5.125rem;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: max(-10rem, calc(50% - 82.5rem)); bottom: 0;
+		transform: translate(0,25%);
+
+		background: radial-gradient(circle, rgba(180,39,230,.35) 0%, rgba(180,39,230,0.3) 10%, rgba(180,39,230,0.2) 20%, rgba(180,39,230,0.1) 30%, rgba(180,39,230,0) 40%, rgba(180,39,230,0) 50%);
+		border-radius: 50%;
+		opacity: .4;
+
+		width: 130vw; aspect-ratio: 1/1;
+
+		@include _992 {
+			width: 43.75rem;
+		}
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		right: max(-10rem, calc(50% - 82.5rem)); top: 0;
+		transform: translate(0,-15%);
+
+		background: radial-gradient(circle, rgba(39,128,230,0.4) 0%, rgba(39,128,230,0.35) 15%, rgba(39,128,230,0.2) 30%, rgba(39,128,230,0) 50%);
+		border-radius: 50%;
+		opacity: .35;
+
+		width: 130vw; aspect-ratio: 1/1;
+
+		z-index: 2;
+
+		@include _992 {
+			width: 43.75rem;
+		}
+	}
+
+	// .unblocker-banner__title
+
+	&__title {
+		position: relative;
+
+		color: var(--white);
+		
+		padding: 0 1rem;
+
+		z-index: 2;
+	}
+
+	// .unblocker-banner__button
+
+	&__button {
+		position: relative;
+
+		font-weight: 700;
+		font-size: 1rem;
+
+		max-width: 14.625rem;
+		width: 100%;
+		margin-top: 1.9375rem;
+
+		z-index: 2;
+
+		@include _550 {
+			max-width: none; width: auto;
+		}
+	}
+}

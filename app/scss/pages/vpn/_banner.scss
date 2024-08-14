@@ -1,0 +1,75 @@
+.banner-vpn {
+
+	margin-top: -5rem;
+	@include _992 {
+		margin-top: -9.375rem;
+	}
+
+	// .banner-vpn__inner
+
+	&__inner {
+		background: var(--accent);
+		border-radius: 1.5rem;
+
+		display: grid;
+		align-items: center;
+		gap: 1rem;
+
+		@include _550 {
+			grid-template-columns: 10.625rem auto;
+			border-radius: 3.5rem;
+		}
+
+		@include _992 {
+			grid-template-columns: 19.375rem auto 21.875rem;
+			gap: 1.75rem;
+			padding: 0 4.5625rem;
+		}
+
+		padding: 0 1.5rem;
+	}
+
+	// .banner-vpn__image
+
+	&__image {
+		justify-self: center;
+		
+		img {
+			width: 10.625rem; height: 10.625rem;
+			object-fit: contain;
+
+			@include _992 {
+				width: 19.375rem; height: 19.375rem;
+			}
+		}
+	}
+
+	// .banner-vpn__title
+
+	&__title {
+		@include _550 {
+			text-align: start;
+		}
+	}
+
+	// .banner-vpn__footer
+
+	&__footer {
+		
+		justify-self: center;
+		padding-bottom: 2.5rem; padding-top: 2.5rem;
+		@include _550 {
+			padding-top: 0;
+			grid-column: 2 span;
+		}
+		@include _992 {
+			grid-column: auto;
+			padding-bottom: 0;
+		}
+	}
+
+	// .banner-vpn__button
+
+	&__button {
+	}
+}

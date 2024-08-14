@@ -1,0 +1,145 @@
+.industry-leading {
+
+	padding-top: 3.5rem; padding-bottom: 4.5rem;
+	margin-bottom: 3rem;
+	@include _992 {
+		padding-top: 5.4375rem; padding-bottom: 5.5rem;
+		margin-bottom: 0;
+	}
+
+	background: var(--accent);
+	color: var(--white);
+
+	// .industry-leading__title
+
+	&__title {
+	}
+
+	// .industry-leading__list
+
+	&__list {
+		margin-top: 2.5rem;
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		flex-direction: column;
+		align-items: center;
+		gap: 4rem 1.625rem;
+
+		@include _550 {
+			flex-direction: row;
+			align-items: stretch;
+		}
+
+		@include _992 {
+			margin-top: 4.125rem;
+
+			display: grid;
+			grid-template-columns: repeat(3,1fr);
+			gap: 0;
+		}
+	}
+
+	// .industry-leading__card
+
+	&__card {
+		width: 100%;
+		@include _550 {
+			max-width: 50%;
+			justify-self: center;
+			width: auto;
+		}
+		@include _992 {
+			max-width: 100%;
+		}
+		&:last-child:not(:nth-child(even)) {
+			flex: 1 1;
+			max-width: 100%;
+		}
+	}
+
+	// .industry-leading__footer
+
+	&__footer {
+		margin-top: 2.5rem; padding-top: 1.5rem;
+		@include _992 {
+			margin-top: 2.875rem; padding-top: 3.125rem;
+		}
+		border-top: 0.0625rem solid var(--white);
+	}
+}
+
+.industry-leading-card {
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	// .industry-leading-card__logo
+
+	&__logo {
+		width: 15.875rem; height: 6.8125rem;
+		@include _550 {
+			width: 12.5rem; height: 4.6875rem;
+			aspect-ratio: auto;
+		}
+		@include _992 {
+			width: 15.875rem; height: 6.8125rem;
+		}
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		background: var(--white);
+		border-radius: 1rem;
+
+		padding: 1.25rem;
+
+		img {
+			height: 70%; width: auto;
+			max-width: 100%;
+			object-fit: contain;
+
+			@include _550 {
+				height: 100%;
+			}
+
+			@include _992 {
+				height: 70%;
+			}
+		}
+	}
+
+	// .industry-leading-card__values
+
+	&__values {
+		padding-top: 2.0625rem;
+
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		text-align: center;
+		gap: 1.625rem;
+
+		li {
+			strong {
+				display: block;
+
+				font-weight: 700;
+				font-size: 1.625rem;
+				line-height: 100%;
+
+				@include _992 {
+					font-size: 2.25rem;
+				}
+			}
+
+			span {
+				display: block;
+				margin-top: 1.1875rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+<section class="proxy-plans">
+	<div class="proxy-plans__hero">
+		<h2 class="proxy-plans__title section-title is-large">Looking for Premium Proxy Plans?</h2>
+		<div class="proxy-plans__text">
+			<p>
+				Try Webshare premium proxies designed to fit to your use-case.
+			</p>
+		</div>
+	</div>
+	<ul class="proxy-plans__list">
+		@@loop("_proxy-plans-item.html", [
+			{
+				"title": "Private Proxy",
+				"text": "Dedicated proxy server quality combined with affordability.",
+				"price": "$0.18",
+			},
+			{
+				"title": "Dedicated Proxy",
+				"text": "Ultimate privacy combined with performance.",
+				"price": "$0.55",
+			},
+			{
+				"title": "Static Residential",
+				"text": "Dedicated fast residential proxies with unlimited bandwidth.",
+				"price": "$0.22",
+			},
+		])
+	</ul>
+</section>

@@ -56,6 +56,9 @@
 	// .pricing__list
 
 	&__list {
+
+		margin-top: 2.75rem;
+
 		&.splide__list {
 			display: flex;
 			align-items: center;
@@ -81,6 +84,9 @@
 		}
 
 		&.is-accent {
+			@include _992 {
+				transform: translate(0,-2.75rem);
+			}
 			z-index: 2;
 			box-shadow: 0px 21px 40.5px rgba(10, 48, 84, 0.25);
 		}
@@ -193,6 +199,24 @@
 		}
 	}
 
+	&__card_accent {
+		color: var(--accent);
+
+		padding-top: 0.625rem;
+
+		font-weight: 600;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0.3125rem;
+
+		svg {
+			width: 1.1875rem; height: 1.1875rem;
+			flex: 0 0 1.1875rem;
+		}
+	}
+
 	// .pricing__card_params
 
 	&__card_params {
@@ -200,12 +224,24 @@
 		padding-top: 0.75rem;
 		min-height: 18.75rem;
 
+		&.is-center {
+			text-align: center;
+			li {
+				padding: 0.75rem 0;
+			}
+		}
+
 		li {
 			padding: 0.7rem 0;
+			min-height: 2.75rem;
 
-			display: flex;
-			align-items: center;
 			gap: 0.5rem;
+
+			a {
+				color: #0D0D0D;
+				text-decoration: underline;
+				text-underline-offset: 0.35ch;
+			}
 
 			border-bottom: 0.125rem solid var(--white);
 

@@ -7,6 +7,57 @@ const
 	header = document.querySelector('.header');
 
 
+
+const getDeviceType = () => {
+
+	const ua = navigator.userAgent;
+	if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+		return "tablet";
+	}
+
+	if (
+		/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+		ua
+		)
+	) {
+		return "mobile";
+	}
+	return "desktop";
+
+};
+
+
+document.querySelectorAll(".header__nav_sub_list").forEach(subList => {
+	const parent = subList.parentElement.parentElement;
+	parent.classList.add("drop-down");
+
+	parent.querySelector("a").addEventListener("click", (event) => {
+		if(!parent.classList.contains("is-active")) {
+			event.preventDefault();
+			parent.classList.add("is-active");
+		}
+	})
+
+	const cloneSubList = subList.cloneNode(true,true);
+
+	body.append(cloneSubList);
+
+	parent.addEventListener("pointerenter", () => {
+		if(getDeviceType() == "desktop") {
+			parent.classList.add("is-active");
+			cloneSubList.classList.add("is-active");
+		}
+	})
+
+	cloneSubList.addEventListener("pointerleave", () => {
+		if(getDeviceType() == "desktop") {
+			parent.classList.remove("is-active");
+			cloneSubList.classList.remove("is-active");
+		}
+	})
+
+})
+
 // =-=-=-=-=-=-=-=-=-=- <image-aspect-ratio> -=-=-=-=-=-=-=-=-=-=-
 
 const imageAspectRatio = document.querySelectorAll('.image-aspect-ratio, figure');
@@ -95,7 +146,9 @@ body.addEventListener('click', function (event) {
 	// =-=-=-=-=-=-=-=-=-=-=-=- </get-table> -=-=-=-=-=-=-=-=-=-=-=-=
 
 
-
+	if(!$(".header__nav_list > li.drop-down")) {
+		document.querySelectorAll(".header__nav_list > li.drop-down.is-active").forEach(activeItem => activeItem.classList.remove("is-active"))
+	}
 	
 
 })

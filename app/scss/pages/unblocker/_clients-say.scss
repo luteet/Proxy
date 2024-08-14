@@ -1,0 +1,90 @@
+.clients-say {
+
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+
+	padding-top: 5.5625rem;
+
+	@include _992 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	// .clients-say__content
+
+	&__content {
+		padding-top: 1.25rem;
+		@include _992 {
+			padding-top: 0;
+		}
+	}
+
+	// .clients-say__title
+
+	&__title {
+		@include _992 {
+			text-align: start;
+		}
+	}
+
+	// .clients-say__text
+
+	&__text {
+		font-size: 0.875rem;
+		line-height: 160%;
+		color: #4F5C65;
+		border-bottom: 0.0625rem solid #E7E9F1;
+
+		padding-top: 0.6875rem; padding-bottom: 1.125rem;
+
+		@include _992 {
+			max-width: 30.1875rem;
+		}
+
+	}
+
+	// .clients-say__by
+
+	&__by {
+		font-size: 0.875rem;
+		line-height: 160%;
+		color: #4F5C65;
+
+		padding-top: 1.1875rem;
+	}
+
+	// .clients-say__image
+
+	&__image {
+		position: relative;
+
+		max-width: 38.4375rem;
+
+		@include _992 {
+			margin: 0 4.25rem 0 0;
+		}
+
+		img {
+			clip-path: url(#clients-mask);
+		}
+	}
+
+	// .clients-say__decor
+
+	&__decor {
+		position: absolute;
+		left: 50%; top: 50%;
+		transform: translate(-70%,-60%);
+
+		border-radius: 50%;
+		background: var(--accent-gradient);
+
+		width: 60%; aspect-ratio: 1/1;
+	}
+
+	// .clients-say__mask
+
+	&__mask {
+	}
+}

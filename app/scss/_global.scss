@@ -7,6 +7,7 @@
 	--accent: #2D6AFF;
 	--accent-hover: #4377fb;
 	--accent-active: #1e5cfa;
+	--accent-gradient: linear-gradient(86.8deg, #2780E6 -38.13%, #781896 102.9%);
 
 	--white: #FFF;
 	--text-color: #000;
@@ -286,9 +287,49 @@ header, section, footer {
 		padding: 0.8438rem 1.4375rem;
 	}
 
+	&.is-min-2 {
+		gap: 0.375rem;
+		font-size: 1rem;
+		padding: 0.6781rem 1.4375rem;
+	}
+
+	&.is-min-3 {
+		gap: 0.375rem;
+		font-size: 0.875rem;
+		padding: 0.5rem 0.3125rem;
+		@include _992 {
+			font-size: 1rem;
+			padding: 0.8438rem 1.4375rem;
+		}
+	}
+
 	&.is-light {
 		background: var(--white);
 		color: var(--accent);
+
+		@media (any-hover: hover) {
+
+			&:hover {
+				color: var(--accent);
+				background: #ededed;
+				border-color: #ededed;
+			}
+			
+			&:active {
+				transition: background .3s ease, color .3s ease, border-color .3s ease;
+	
+				color: var(--accent);
+				background: #dcdcdc;
+				border-color: #dcdcdc;
+			}
+		}
+	}
+
+	&.is-light-2 {
+		background: var(--white);
+		color: var(--accent);
+
+		box-shadow: 0px 0.25rem 2.4688rem rgba(0, 0, 0, 0.25);
 
 		@media (any-hover: hover) {
 

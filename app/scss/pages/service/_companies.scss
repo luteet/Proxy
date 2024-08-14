@@ -1,13 +1,13 @@
 .companies {
 
-	padding-top: 2.0625rem; //padding-bottom: 8.5rem;
+	padding-top: 2.0625rem; padding-bottom: 2.0625rem;
 
 	@include _550 {
-		padding-top: 5rem;
+		padding-top: 5rem; padding-bottom: 5rem;
 	}
 
 	@include _992 {
-		padding-top: 8.5rem;
+		padding-top: 8.5rem; padding-bottom: 8.5rem;
 	}
 
 	// .companies__decor
@@ -32,6 +32,10 @@
 		line-height: 142%;
 
 		max-width: 44.25rem; margin: 0 auto;
+
+		b {
+			font-weight: 600;
+		}
 
 		@include _550 {
 			font-size: 2rem;
@@ -110,4 +114,8 @@
 	&__icon {
 		margin-bottom: 1.25rem;
 	}
+}
+
+.companies + .reviews {
+	margin-top: 0;
 }

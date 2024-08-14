@@ -1,0 +1,160 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="main__decor decor-circle"></div>
+		<div class="main__decor decor-circle is-mode-2 visible-on-desktop"></div>
+		<section class="index_hero is-mode-5">
+			<div class="index_hero__breadcrumbs breadcrumbs">
+				<a href="index.html" class="breadcrumbs__link">
+					<svg width="20" height="20">
+						<use href="img/sprites.svg#home"></use>
+					</svg>
+					Home  
+				</a>
+				<span class="breadcrumbs__separator">|</span>
+				<span class="breadcrumbs__current">Residential Proxies</span>
+			</div>
+			<div class="index_hero__image">
+				<picture>
+					<source srcset="img/best-proxy/hero/best-proxy-hero-image.avif" type="image/avif">
+					<source srcset="img/best-proxy/hero/best-proxy-hero-image.webp" type="image/webp">
+					<img src="img/best-proxy/hero/best-proxy-hero-image.png" class="image-aspect-ratio" alt="" width="970" height="611" loading="lazy" style="--aspect-ratio: 970/611;">
+				</picture>
+			</div>
+			<div class="index_hero__content">
+				<h1 class="index_hero__title main-title">
+					Improve Your Purchasing Experience With the Best Sneaker Proxies
+				</h1>
+				<div class="index_hero__text">
+					<p>
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+					</p>
+				</div>
+				<div class="index_hero__buttons">
+					<a href="#" class="index_hero__button button is-accent-transparent">
+						View Pricing
+					</a>
+					<a href="#" class="index_hero__button button">
+						Start $1.99 Trial
+					</a>
+				</div>
+				<ul class="index_hero__advantages">
+					<li>
+						<svg width="21" height="21">
+							<use href="img/sprites.svg#check"></use>
+						</svg>
+						3 day trial
+					</li>
+					<li>
+						<svg width="21" height="21">
+							<use href="img/sprites.svg#check"></use>
+						</svg>
+						No set-up costs
+					</li>
+					<li>
+						<svg width="21" height="21">
+							<use href="img/sprites.svg#check"></use>
+						</svg>
+						Cancel anytime
+					</li>
+				</ul>
+			</div>
+		</section>
+		@@include("html/_partners_section.html")
+		<section class="industry-leading">
+			<h2 class="industry-leading__title section-title">
+				Industry-Leading ProSOX
+			</h2>
+			<ul class="industry-leading__list">
+				<li class="industry-leading__card industry-leading-card">
+					<div class="industry-leading-card__logo">
+						<img src="img/index/partners/partners-logo-4.svg" width="154" height="48" loading="lazy" alt="">
+					</div>
+					<ul class="industry-leading-card__values">
+						<li>
+							<strong>96.30%</strong>
+							<span>Success rate</span>
+						</li>
+						<li>
+							<strong>3.24 sec</strong>
+							<span>Response time</span>
+						</li>
+					</ul>
+				</li>
+				<li class="industry-leading__card industry-leading-card">
+					<div class="industry-leading-card__logo">
+						<img src="img/index/partners/partners-logo-4.svg" width="154" height="48" loading="lazy" alt="">
+					</div>
+					<ul class="industry-leading-card__values">
+						<li>
+							<strong>99.00%</strong>
+							<span>Success rate</span>
+						</li>
+						<li>
+							<strong>3.24 sec</strong>
+							<span>Response time</span>
+						</li>
+					</ul>
+				</li>
+				<li class="industry-leading__card industry-leading-card">
+					<div class="industry-leading-card__logo">
+						<img src="img/index/partners/partners-logo-4.svg" width="154" height="48" loading="lazy" alt="">
+					</div>
+					<ul class="industry-leading-card__values">
+						<li>
+							<strong>98.56%</strong>
+							<span>Success rate</span>
+						</li>
+						<li>
+							<strong>3.28 sec</strong>
+							<span>Response time</span>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<div class="industry-leading__footer">
+				<ul class="industry-leading-card__values">
+					<li>
+						<strong>98.56%</strong>
+						<span>Success rate</span>
+					</li>
+					<li>
+						<strong>3.28 sec</strong>
+						<span>Response time</span>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="companies is-min">
+			<h2 class="companies__title"><b>Explore Popular Use Cases</b></h2>
+			<ul class="companies__list">
+				@@loop("html/_companies-card.html", [
+					{
+						"icon": "1",
+						"title": "Access to Accurate Data",
+						"text": "Crawl even the most complex online store websites in a few seconds.",
+					},
+					{
+						"icon": "2",
+						"title": "Fast Order Placement",
+						"text": "Place multiple orders in a few clicks.",
+					},
+					{
+						"icon": "3",
+						"title": "Easy Set-up Process",
+						"text": "Customize the proxy network without effort.",
+					},
+					{
+						"icon": "4",
+						"title": "Worldwide Coverage",
+						"text": "Buy sneakers from anywhere in the world (excluding the State of Texas, USA).",
+					},
+				])
+			</ul>
+		</section>
+		@@include("html/_reviews_section.html")
+		@@include("html/_pricing_section.html")
+		@@include("html/_faq_section.html")
+	</main>
+
+@@include("html/_footer.html")

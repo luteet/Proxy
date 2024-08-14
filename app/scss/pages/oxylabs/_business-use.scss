@@ -1,0 +1,62 @@
+.business-use {
+
+	padding-top: 2.5rem;
+
+	@include _992 {
+		padding-top: 7.4375rem;
+	}
+
+	// .business-use__title
+
+	&__title {
+		text-align: center;
+	}
+
+	// .business-use__list
+
+	&__list {
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 4rem 1.25rem;
+
+		padding-top: 3.4375rem;
+
+		@include _550 {
+			gap: 7rem 1.25rem;
+		}
+
+		li {
+			display: block;
+
+			text-align: center;
+
+			flex: 0 0 calc(50% - 1.0938rem);
+
+			@include _550 {
+				flex: 0 0 calc(33.333% - 1.0938rem);
+			}
+
+			@include _992 {
+				flex: 0 0 calc(25% - 1.0938rem);
+			}
+
+			@media (min-width: 1200px) {
+				flex: 0 0 calc(20% - 1.0938rem);
+			}
+
+			img {
+				width: 3.625rem; height: 3.625rem;
+			}
+
+			p {
+				font-weight: 700;
+				line-height: 150%;
+				color: #252525;
+
+				padding-top: 1rem;
+			}
+		}
+	}
+}

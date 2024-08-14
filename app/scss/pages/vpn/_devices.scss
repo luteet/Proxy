@@ -1,0 +1,90 @@
+.vpn-devices {
+
+	padding-top: 3.5rem; padding-bottom: 4rem;
+
+	@include _550 {
+		padding-top: 5rem; padding-bottom: 6.25rem;
+	}
+
+	// .vpn-devices__background
+
+	&__background {
+		position: absolute;
+		left: 0; top: 0;
+		width: 100%; height: 100%;
+
+		z-index: -1;
+
+		background: rgba(197, 205, 237, 0.21);
+	}
+
+	// .vpn-devices__background-item
+
+	&__background-item {
+		position: absolute;
+		&:nth-child(1) {
+			right: 0; top: 0;
+			width: 20vw; height: 30vw;
+			transform: translate(0,-40%);
+			@include _992 {
+				width: 12.5rem; height: 25rem;
+			}
+			img {
+				width: 100%; height: auto;
+			}
+		}
+
+		&:nth-child(2) {
+			left: 0; bottom: 0;
+			width: 15vw; height: 25vw;
+			transform: translate(0,55%);
+			@include _992 {
+				width: 10.625rem; height: 18.75rem;
+			}
+			img {
+				width: 100%; height: auto;
+			}
+		}
+	}
+
+	// .vpn-devices__title
+
+	&__title {
+	}
+
+	// .vpn-devices__text
+
+	&__text {
+		padding-top: 1.375rem;
+		color: var(--text-color-3);
+		margin: 0 auto;
+		text-align: center;
+		max-width: 50rem;
+	}
+
+	// .vpn-devices__os-list
+
+	&__os-list {
+
+		margin-top: 2.5rem;
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 4vw;
+
+		position: relative;
+		z-index: 2;
+
+		@include _992 {
+			gap: 3.4375rem;
+		}
+
+		img {
+			height: 10vw; width: auto;
+			@include _992 {
+				height: 5rem;
+			}
+		}
+	}
+}

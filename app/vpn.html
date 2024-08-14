@@ -1,0 +1,485 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="main__decor decor-circle"></div>
+		<section class="index_hero is-mode-3">
+			<!-- <div class="index_hero__decor decor-circle is-mode-2 visible-on-desktop"></div> -->
+			<div class="index_hero__image">
+				<picture>
+					<source srcset="img/vpn/hero/vpn-hero-image.avif" type="image/avif">
+					<source srcset="img/vpn/hero/vpn-hero-image.webp" type="image/webp">
+					<img src="img/vpn/hero/vpn-hero-image.png" class="image-aspect-ratio" alt="" width="966" height="645" loading="lazy" style="--aspect-ratio: 966/645;">
+				</picture>
+			</div>
+			<div class="index_hero__content">
+				<div class="index_hero__rating">
+					<img src="img/g2-rating.svg" width="181" height="70" loading="lazy" alt="">
+				</div>
+				<h1 class="index_hero__title main-title is-large">
+					The most anonymous VPN on this planet
+				</h1>
+				<div class="index_hero__text">
+					<p>
+						Super reliable and completely anonymous
+					</p>
+				</div>
+				<div class="index_hero__buttons">
+					<a href="#" class="index_hero__button button">
+						Get VPN
+					</a>
+				</div>
+				<ul class="index_hero__advantages">
+					<li>
+						<svg width="21" height="21">
+							<use href="img/sprites.svg#check"></use>
+						</svg>
+						3 day trial
+					</li>
+					<li>
+						<svg width="21" height="21">
+							<use href="img/sprites.svg#check"></use>
+						</svg>
+						No set-up costs
+					</li>
+					<li>
+						<svg width="21" height="21">
+							<use href="img/sprites.svg#check"></use>
+						</svg>
+						Cancel anytime
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="advantages-vpn">
+			<h2 class="advantages-vpn__title section-title">
+				Advantages of VPN
+			</h2>
+			<ol class="advantages-vpn__list">
+				@@loop("html/_advantages-vpn-item.html", [
+					{
+						"icon": "1",
+						"title": "Anonymous VPN without logs",
+						"text": "VPN uses the latest secure encryption algorithms. Logs on the servers are disabled, including the operating system logs. The servers there is no data on the use of VPN.",
+					},
+					{
+						"icon": "2",
+						"title": "Hiding indirect parameters",
+						"text": "Change consequential parameters by which possible to determine your location. For example, setting the TTL (time to live) helps determine how many hosts you are from. Connection is made to the IP address of the VPN server instead of a domain name, because the Internet Service Provider, all requests are logged.",
+					},
+					{
+						"icon": "3",
+						"title": "Using a VPN securely masked",
+						"text": 'No one will know that you are using a VPN. Our technologies provide masking traffic from the ISP. Traffic on signatures is no different from visiting the HTTPS Web site. Many websites have already learned how to determine whether a VPN. Our VPN connection is not detected in the VPN Fingerprints section.<br> Go to page of <a href="#">checking IP address</a>.',
+					},
+					{
+						"icon": "4",
+						"title": "You will love Secure Kit",
+						"text": "Easy to use Secure Kit program automatically configures the VPN connections and protect against DNS leak. <br> Secure Kit is able to mimic the normal SSL connection. Thus, you can hide the fact the use of VPN and your ISP will assume that you visit a website via https.",
+					},
+					{
+						"icon": "5",
+						"title": "Protection against DNS leak",
+						"text": "DNS query can be run on your real ISP DNS server. Any website can discover that the country of origin of your IP address and DNS server are different. It talks about using VPN. <br> We protect against DNS leak leak.",
+					},
+				])
+			</ol>
+		</section>
+		<section class="banner-vpn">
+			<div class="banner-vpn__inner">
+				<div class="banner-vpn__image">
+					<picture>
+						<source srcset="img/vpn/banner/vpn-banner-image.avif" type="image/avif">
+						<source srcset="img/vpn/banner/vpn-banner-image.webp" type="image/webp">
+						<img src="img/vpn/banner/vpn-banner-image.png" alt="" width="310" height="310" loading="lazy">
+					</picture>
+				</div>
+				<h2 class="banner-vpn__title section-title is-light">
+					Service without logs and also tells <br> Why we do not keep logs
+				</h2>
+				<div class="banner-vpn__footer">
+					<a href="#" class="banner-vpn__button button is-light">
+						Prices for anonymous VPN
+					</a>
+				</div>
+			</div>
+		</section>
+		<section class="vpn-servers">
+			<h2 class="vpn-servers__title section-title">
+				VPN servers in 26+ countries
+			</h2>
+			<div class="vpn-servers__text">
+				<p>
+					We pay much attention to the geographical location of the VPN servers. All countries have different laws in the field of information security. Due to this, we provide our customers with the highest level of security.
+				</p>
+			</div>
+			<ul class="vpn-servers__list">
+				@@loop("html/_vpn-servers-flag.html", [
+					{"flag": "1"},
+					{"flag": "2"},
+					{"flag": "3"},
+					{"flag": "4"},
+					{"flag": "5"},
+					{"flag": "6"},
+					{"flag": "7"},
+					{"flag": "8"},
+					{"flag": "9"},
+					{"flag": "10"},
+					{"flag": "11"},
+
+					{"flag": "12"},
+					{"flag": "13"},
+					{"flag": "14"},
+					{"flag": "15"},
+					{"flag": "16"},
+					{"flag": "17"},
+					{"flag": "18"},
+					{"flag": "19"},
+					{"flag": "20"},
+					{"flag": "21"},
+					{"flag": "22"},
+
+					{"flag": "23"},
+					{"flag": "24"},
+					{"flag": "25"},
+					{"flag": "26"},
+					{"flag": "27"},
+					{"flag": "28"},
+					{"flag": "29"},
+					{"flag": "30"},
+					{"flag": "31"},
+					{"flag": "32"},
+					{"flag": "33"},
+					
+					{"flag": "34"},
+					{"flag": "35"},
+					{"flag": "36"},
+					{"flag": "37"},
+					{"flag": "38"},
+					{"flag": "39"},
+					{"flag": "40"},
+					{"flag": "41"},
+					{"flag": "42"},
+					{"flag": "43"},
+					{"flag": "44"},
+				])
+			</ul>
+			<div class="vpn-servers__footer">
+				<a href="#" class="vpn-servers__button button">See more</a>
+				<div class="vpn-servers__text">
+					<p>
+						And also Double VPN with entry points in Australia, Canada, Chile, Germany, Israel, Malaysia, Netherlands, Panama, South Africa, Switzerland, Turkey, Ukraine, United Kingdom, United States. Exit points in all represented countries.
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="vpn-devices">
+			<div class="vpn-devices__background" aria-hidden="true">
+				<div class="vpn-devices__background-item">
+					<picture>
+						<source srcset="img/vpn/devices/vpn-devices-decor-1.avif" type="image/avif">
+						<source srcset="img/vpn/devices/vpn-devices-decor-1.webp" type="image/webp">
+						<img src="img/vpn/devices/vpn-devices-decor-1.png" alt="" width="0" height="0" loading="lazy">
+					</picture>
+				</div>
+				<div class="vpn-devices__background-item">
+					<picture>
+						<source srcset="img/vpn/devices/vpn-devices-decor-2.avif" type="image/avif">
+						<source srcset="img/vpn/devices/vpn-devices-decor-2.webp" type="image/webp">
+						<img src="img/vpn/devices/vpn-devices-decor-2.png" alt="" width="0" height="0" loading="lazy">
+					</picture>
+				</div>
+			</div>
+			<h2 class="vpn-devices__title section-title">
+				VPN WORKS ON ALL DEVICES
+			</h2>
+			<div class="vpn-devices__text">
+				<p>
+					Use VPN everywhere. On your computer, tablet, smartphone and even routers <br> Connection configured on operating systems Windows, Mac OS, IOS, Android, Linux.
+				</p>
+			</div>
+			<ul class="vpn-devices__os-list">
+				<li>
+					<img src="img/vpn/devices/vpn-devices-os-1.svg" width="72" height="73" alt="">
+				</li>
+				<li>
+					<img src="img/vpn/devices/vpn-devices-os-2.svg" width="72" height="73" alt="">
+				</li>
+				<li>
+					<img src="img/vpn/devices/vpn-devices-os-3.svg" width="72" height="73" alt="">
+				</li>
+				<li>
+					<img src="img/vpn/devices/vpn-devices-os-4.svg" width="72" height="73" alt="">
+				</li>
+				<li>
+					<img src="img/vpn/devices/vpn-devices-os-5.svg" width="72" height="73" alt="">
+				</li>
+			</ul>
+		</section>
+		<section class="truly-vpn">
+			<div class="truly-vpn__image visible-on-desktop">
+				<picture>
+					<source srcset="img/vpn/truly/vpn-truly-image.avif" type="image/avif">
+					<source srcset="img/vpn/truly/vpn-truly-image.webp" type="image/webp">
+					<img src="img/vpn/truly/vpn-truly-image.png" alt="" width="567" height="567" class="image-aspect-ratio" loading="lazy">
+				</picture>
+			</div>
+			<div class="truly-vpn__content">
+				<h2 class="truly-vpn__title section-title">A truly global VPN server network</h2>
+				<div class="truly-vpn__text">
+					<p>Choose among thousands of ultra-fast VPN servers worldwide. Enjoy a stable connection wherever you are.</p>
+				</div>
+				<ul class="truly-vpn__cards">
+					<li>
+						<span>VPN servers</span>
+						<strong>6400+</strong>
+					</li>
+					<li>
+						<span>Countries</span>
+						<strong>111</strong>
+					</li>
+					<li>
+						<span>Blazing speeds</span>
+						<img src="img/vpn/truly/vpn-truly-icon-1.svg" width="60" height="60" loading="lazy" alt="">
+					</li>
+					<li>
+						<span>Unlimited bandwidth</span>
+						<img src="img/vpn/truly/vpn-truly-icon-2.svg" width="60" height="60" loading="lazy" alt="">
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="why-choose">
+			<h2 class="why-choose__title section-title">
+				Why choose PROSOX?
+			</h2>
+			<div class="why-choose__table">
+				<div class="why-choose__table-inner">
+					<div class="why-choose__table-head">
+						<div class="why-choose__table-head-cell"></div>
+						<div class="why-choose__table-head-cell">Connection speed*</div>
+						<div class="why-choose__table-head-cell">VPN servers</div>
+						<div class="why-choose__table-head-cell">Malware scan for downloads</div>
+						<div class="why-choose__table-head-cell">Alerts about leaked credentials</div>
+						<div class="why-choose__table-head-cell">Tracker and ad blocker</div>
+					</div>
+					<div class="why-choose__table-row">
+						<div class="why-choose__table-item">
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-logo">
+									<img src="img/logo.svg" alt="" width="140" height="30" loading="lazy">
+								</div>
+							</div>
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-name">Connection speed*</div>
+								<div class="why-choose__table-cell-value"><b>6730+ Mbps</b></div>
+							</div>
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-name">VPN servers</div>
+								<div class="why-choose__table-cell-value"><b>6400+</b></div>
+							</div>
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-name">Malware scan for downloads</div>
+								<div class="why-choose__table-cell-value is-true">
+									<svg width="24" height="24">
+										<use href="img/sprites.svg#check"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-name">Alerts about leaked credentials</div>
+								<div class="why-choose__table-cell-value is-true">
+									<svg width="24" height="24">
+										<use href="img/sprites.svg#check"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-name">Tracker and ad blocker</div>
+								<div class="why-choose__table-cell-value is-true">
+									<svg width="24" height="24">
+										<use href="img/sprites.svg#check"></use>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="why-choose__table-item">
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-logo">
+									<picture>
+										<source srcset="img/vpn/why-choose/vpn-why-choose-logo-1.avif" type="image/avif">
+										<source srcset="img/vpn/why-choose/vpn-why-choose-logo-1.webp" type="image/webp">
+										<img src="img/vpn/why-choose/vpn-why-choose-logo-1.png" alt="" width="150" height="40" loading="lazy">
+									</picture>
+								</div>
+							</div>
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-name">Connection speed*</div>
+								<div class="why-choose__table-cell-value">6730+ Mbps</div>
+							</div>
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-name">VPN servers</div>
+								<div class="why-choose__table-cell-value">6400+</div>
+							</div>
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-name">Malware scan for downloads</div>
+								<div class="why-choose__table-cell-value is-false">
+									<svg width="24" height="24">
+										<use href="img/sprites.svg?v=1#none"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-name">Alerts about leaked credentials</div>
+								<div class="why-choose__table-cell-value is-true">
+									<svg width="24" height="24">
+										<use href="img/sprites.svg#check"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-name">Tracker and ad blocker</div>
+								<div class="why-choose__table-cell-value is-true">
+									<svg width="24" height="24">
+										<use href="img/sprites.svg#check"></use>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="why-choose__table-item">
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-logo">
+									<picture>
+										<source srcset="img/vpn/why-choose/vpn-why-choose-logo-2.avif" type="image/avif">
+										<source srcset="img/vpn/why-choose/vpn-why-choose-logo-2.webp" type="image/webp">
+										<img src="img/vpn/why-choose/vpn-why-choose-logo-2.png" alt="" width="150" height="40" loading="lazy">
+									</picture>
+								</div>
+							</div>
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-name">Connection speed*</div>
+								<div class="why-choose__table-cell-value">6730+ Mbps</div>
+							</div>
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-name">VPN servers</div>
+								<div class="why-choose__table-cell-value">6400+</div>
+							</div>
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-name">Malware scan for downloads</div>
+								<div class="why-choose__table-cell-value is-false">
+									<svg width="24" height="24">
+										<use href="img/sprites.svg?v=1#none"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-name">Alerts about leaked credentials</div>
+								<div class="why-choose__table-cell-value is-false">
+									<svg width="24" height="24">
+										<use href="img/sprites.svg?v=1#none"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-name">Tracker and ad blocker</div>
+								<div class="why-choose__table-cell-value is-false">
+									<svg width="24" height="24">
+										<use href="img/sprites.svg?v=1#none"></use>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="why-choose__table-item">
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-logo">
+									<picture>
+										<source srcset="img/vpn/why-choose/vpn-why-choose-logo-3.avif" type="image/avif">
+										<source srcset="img/vpn/why-choose/vpn-why-choose-logo-3.webp" type="image/webp">
+										<img src="img/vpn/why-choose/vpn-why-choose-logo-3.png" alt="" width="150" height="40" loading="lazy">
+									</picture>
+								</div>
+							</div>
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-name">Connection speed*</div>
+								<div class="why-choose__table-cell-value">6730+ Mbps</div>
+							</div>
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-name">VPN servers</div>
+								<div class="why-choose__table-cell-value">6400+</div>
+							</div>
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-name">Malware scan for downloads</div>
+								<div class="why-choose__table-cell-value is-false">
+									<svg width="24" height="24">
+										<use href="img/sprites.svg?v=1#none"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-name">Alerts about leaked credentials</div>
+								<div class="why-choose__table-cell-value is-false">
+									<svg width="24" height="24">
+										<use href="img/sprites.svg?v=1#none"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-name">Tracker and ad blocker</div>
+								<div class="why-choose__table-cell-value is-true">
+									<svg width="24" height="24">
+										<use href="img/sprites.svg#check"></use>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="why-choose__table-item">
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-logo">
+									<picture>
+										<source srcset="img/vpn/why-choose/vpn-why-choose-logo-4.avif" type="image/avif">
+										<source srcset="img/vpn/why-choose/vpn-why-choose-logo-4.webp" type="image/webp">
+										<img src="img/vpn/why-choose/vpn-why-choose-logo-4.png" alt="" width="150" height="40" loading="lazy">
+									</picture>
+								</div>
+							</div>
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-name">Connection speed*</div>
+								<div class="why-choose__table-cell-value">6730+ Mbps</div>
+							</div>
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-name">VPN servers</div>
+								<div class="why-choose__table-cell-value">6400+</div>
+							</div>
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-name">Malware scan for downloads</div>
+								<div class="why-choose__table-cell-value is-true">
+									<svg width="24" height="24">
+										<use href="img/sprites.svg#check"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-name">Alerts about leaked credentials</div>
+								<div class="why-choose__table-cell-value is-false">
+									<svg width="24" height="24">
+										<use href="img/sprites.svg?v=1#none"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="why-choose__table-cell">
+								<div class="why-choose__table-cell-name">Tracker and ad blocker</div>
+								<div class="why-choose__table-cell-value is-true">
+									<svg width="24" height="24">
+										<use href="img/sprites.svg#check"></use>
+									</svg>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		@@include("html/_reviews_section.html")
+		@@include("html/_faq_section.html")
+	</main>
+
+@@include("html/_footer.html")

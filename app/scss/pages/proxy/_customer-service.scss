@@ -1,0 +1,135 @@
+.customer-service {
+
+	margin-top: 5rem;
+
+	@include _992 {
+		margin-top: 7.5rem;
+	}
+
+	// .customer-service__inner
+
+	&__inner {
+
+		position: relative;
+
+		display: grid;
+		align-items: center;
+
+		background: rgba(21, 35, 70, 0.06);
+		border-radius: 2rem;
+
+		padding: 2rem 1rem;
+
+		overflow: hidden;
+
+		@include _992 {
+			grid-template-columns: 1fr 1fr;
+
+			padding: 3.4375rem 10.9375rem 5.625rem 8.125rem;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			right: 0%; top: 4.5rem;
+			transform: translate(20%,8%);
+
+			border: 5.040323vw solid var(--accent);
+			border-radius: 50%;
+
+			width: 105vw; aspect-ratio: 1/1;
+
+			opacity: .05;
+			-webkit-mask: linear-gradient(0deg, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 100%);
+
+			z-index: -1;
+
+			@include _992 {
+				top: 0%;
+
+				width: 65.625rem;
+				border: 3.125rem solid var(--accent);
+			}
+		}
+	}
+
+	// .customer-service__content
+
+	&__content {
+		text-align: center;
+		justify-self: center;
+		@include _992 {
+			text-align: start;
+			justify-self: stretch;
+		}
+	}
+
+	// .customer-service__title
+
+	&__title {
+		@include _992 {
+			text-align: start;
+		}
+	}
+
+	// .customer-service__text
+
+	&__text {
+		font-size: 0.875rem;
+		line-height: 160%;
+		color: #4F5C65;
+
+		max-width: 25.25rem;
+
+		p {
+			padding-top: 0.875rem;
+		}
+	}
+
+	// .customer-service__button
+
+	&__button {
+		margin-top: 1.375rem;
+	}
+
+	// .customer-service__image
+
+	&__image {
+		position: relative;
+		justify-self: end;
+
+		max-width: 24.5625rem;
+		margin-top: 1.5rem;
+
+		@include _992 {
+			margin-top: 0;
+		}
+	}
+
+	// .customer-service__image-decor
+
+	&__image-decor {
+		position: absolute;
+
+		width: 2.8125rem; height: 2.8125rem;
+
+		&:nth-child(1) {
+			left: 0; top: 50%;
+			transform: translate(-150%,-200%) scaleX(-1);
+
+			@include _992 {
+				top: 50%;
+				transform: translate(-250%,-50%) scaleX(-1);
+			}
+		}
+		
+		&:nth-child(2) {
+			right: 0; top: 0%;
+			transform: translate(150%,50%);
+
+			@include _992 {
+				transform: translate(200%,0%);
+			}
+		}
+	}
+}

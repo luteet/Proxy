@@ -1,0 +1,195 @@
+.oxylabs-section {
+
+	background: #152346;
+
+	&:nth-child(even) {
+		background: #11192E;
+	}
+
+	padding-top: 2.9375rem; padding-bottom: 2.9375rem;
+
+	@include _992 {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+
+		padding-top: 8.4375rem; padding-bottom: 10rem;
+
+		&:nth-child(even) {
+			grid-template-columns: 1fr 2fr;
+			gap: 0 7.5625rem;
+		}
+	}
+
+	// .oxylabs-section__content
+
+	&__content {
+		position: relative;
+		z-index: 2;
+
+		color: var(--white);
+
+		&[data-decor-letter]::before {
+			content: attr(data-decor-letter);
+
+			position: absolute;
+			left: 0; top: 0;
+			transform: translate(-40%,-15%);
+
+			font-size: 30rem;
+			line-height: 1;
+			font-weight: 700;
+			-webkit-text-stroke-width: 0.0625rem;
+			-webkit-text-stroke-color: var(--white);
+			color: transparent;
+
+			opacity: .12;
+			z-index: -1;
+
+			@include _992 {
+				font-size: 32.5rem;
+				transform: translate(-40%,-30%);
+			}
+		}
+	}
+
+	&:nth-child(even) & {
+		&__content {
+			grid-column: 2; grid-row: 1;
+
+			&[data-decor-letter]::before {
+				@include _992 {
+
+					right: 0; left: auto;
+					transform: translate(0%,-15%);
+
+					@include _992 {
+						transform: translate(0%,-30%);
+					}
+				}
+			}
+		}
+
+		&__image {
+			grid-column: 1; grid-row: 1;
+			
+			img {
+				@include _992 {
+					transform: none;
+				}
+	
+				@media (min-width: 1200px) {
+					transform: none;
+				}
+			}
+		}
+	}
+
+	// .oxylabs-section__title
+
+	&__title {
+		text-align: start;
+	}
+
+	// .oxylabs-section__text
+
+	&__text {
+		max-width: 52.125rem;
+	}
+
+	// .oxylabs-section__list
+
+	&__list {
+		display: grid;
+		gap: 1.5625rem;
+
+		margin-top: 1.5rem;
+
+		@include _768 {
+			grid-template-columns: 1fr 1.35fr;
+			gap: 4.375rem 3.875rem;
+
+			margin-top: 4.5rem;
+		}
+	}
+
+	// .oxylabs-section__item
+
+	&__item {
+	}
+
+	// .oxylabs-section__image
+
+	&__image {
+		img {
+
+			@include _992 {
+				transform: scale(1.35) translate(-5%,0);
+			}
+
+			@media (min-width: 1200px) {
+				transform: scale(1.5);
+			}
+		}
+	}
+}
+
+.oxylabs-section-item {
+
+	display: grid;
+	grid-template-columns: 4.1875rem auto;
+	gap: 0 0.9375rem;
+
+	// .oxylabs-section-item__icon
+
+	&__icon {
+
+		align-self: self-start;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		min-height: 4.1875rem;
+
+		background: rgba(255, 255, 255, 0.15);
+		border-radius: 0.75rem;
+
+		img {
+			width: 45%; height: 45%;
+			object-fit: contain;
+		}
+	}
+
+	// .oxylabs-section-item__content
+
+	&__content {
+		h3 {
+			font-weight: 600;
+			font-size: 1.25rem;
+			line-height: 150%;
+			color: #D09FFF;
+		}
+
+		b {
+			display: block;
+
+			padding-top: 0.1875rem;
+
+			font-weight: 600;
+			font-size: 0.875rem;
+			line-height: 150%;
+			color: var(--white);
+		}
+
+		p {
+
+			font-size: 0.75rem;
+			line-height: 150%;
+			color: rgba(255, 255, 255, 0.78);
+
+			max-width: 16.5rem;
+
+			padding-top: 0.5rem;
+		}
+	}
+}

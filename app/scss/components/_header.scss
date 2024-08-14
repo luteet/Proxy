@@ -182,12 +182,35 @@
 		}
 
 		&_list > li {
+
+			position: relative;
+
 			width: 100%;
 			text-align: center;
 			
 			@include _992 {
 				width: auto;
+
+				&.drop-down::before {
+					content: "";
+					position: absolute;
+					left: 50%; top: 100%;
+					transform: translate(-50%,2.25rem);
+					
+					border-left: 1.875rem solid transparent;
+					border-right: 1.875rem solid transparent;
+					border-bottom: 1.25rem solid #F2F2F2;
+	
+					transition: opacity .3s, visibility .3s;
+					opacity: 0; visibility: hidden;
+				}
+	
+				&.drop-down.is-active::before {
+					opacity: 1; visibility: visible;
+				}
 			}
+
+			
 
 		}
 
@@ -249,7 +272,34 @@
 			}
 
 		}
+
+		&_list &_sub_list {
+			display: block;
+			@include _992 {
+				display: none;
+			}
+		}
+
+		&_list > li > div {
+			display: grid;
+			grid-template-rows: 0fr;
+
+			transition: grid-template-rows .4s;
+		}
+
+		&_list > li.is-active > div {
+			
+			grid-template-rows: 1fr;
+
+			ul {
+				padding-top: 1rem; padding-bottom: 1rem;
+			}
+		}
+
+		
 	}
+
+	
 
 	// .header__burger
 

@@ -1,0 +1,29 @@
+.accent-banner {
+
+	background: var(--accent-gradient);
+	text-align: center;
+	color: var(--white);
+
+	margin-top: 5rem;
+	padding-top: 3.875rem; padding-bottom: 3.875rem;
+
+	@include _992 {
+		margin-top: 7.5rem;
+	}
+
+	// .accent-banner__title
+
+	&__title {
+	}
+
+	// .accent-banner__button
+
+	&__button {
+		font-weight: 600;
+
+		max-width: 20.4375rem;
+		width: 100%;
+
+		margin-top: 1rem;
+	}
+}

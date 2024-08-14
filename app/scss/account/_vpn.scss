@@ -1,0 +1,375 @@
+.account_vpn {
+
+	// .account_vpn__title
+
+	&__title {
+	}
+
+	// .account_vpn__block
+
+	&__block {
+
+		padding-left: 0; padding-right: 0;
+		
+		> * {
+			width: 100%;
+
+			@include _992 {
+				display: grid;
+				grid-template-columns: 1fr 1.25fr;
+			}
+
+			padding: 1rem;
+		}
+	}
+
+	// .account_vpn__current
+
+	&__current {
+		@include _992 {
+			grid-column: 2 span;
+		}
+	}
+
+	// .account_vpn__settings
+
+	&__settings {
+		@include _992 {
+			grid-column: 2 span;
+		}
+
+		margin-top: 1.875rem;
+
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 0.3125rem;
+
+		padding-bottom: 1.625rem; margin-bottom: 1.125rem;
+		border-bottom: 0.0625rem solid #CECECE;
+	}
+
+	// .account_vpn__settings_param
+
+	&__settings_param {
+		display: inline-flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 0.3125rem;
+
+		> span {
+			padding-right: 0.5rem;
+		}
+	}
+
+	// .account_vpn__checkbox
+
+	&__checkbox {
+		width: 1.6875rem; height: 1.6875rem; flex: 0 0 1.6875rem;
+		background: var(--white);
+		border-radius: 0.3125rem;
+
+		margin-left: 0.25rem; margin-right: 1.125rem;
+		
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		cursor: pointer;
+
+		svg {
+			width: 75%; height: 75%;
+			color: transparent;
+			transition: color .2s;
+		}
+
+		input {
+			position: absolute;
+			width: 1px; height: 1px;
+			margin: -1px; padding: 0;
+			border: 0;
+			
+			white-space: nowrap;
+			clip-path: inset(100%);
+			clip: rect(0 0 0 0);
+			overflow: hidden;
+		}
+
+		input:checked + svg {
+			color: var(--accent);
+		}
+		
+	}
+
+	// .account_vpn__select
+
+	&__select {
+		
+	}
+
+	// .account_vpn__number
+
+	&__number {
+
+		padding: 1rem 1rem 1rem 0;
+		
+		@include _550 {
+			padding: 2.4375rem 2.8125rem 2.4375rem 0;
+		}
+
+		list-style-type: none;
+		counter-reset: number;
+
+		background: var(--white);
+		border-radius: 0.875rem;
+
+		display: flex;
+		flex-direction: column;
+		gap: 0.625rem;
+
+		li {
+			list-style-type: none;
+			padding: 0 0 0 3rem;
+			position: relative;
+
+			font-size: 0.875rem;
+
+			@include _550 {
+				padding: 0 0 0 3.6875rem;
+				font-size: 1rem;
+				line-height: 200%;
+			}
+
+			line-height: 170%;
+
+			a {
+				color: var(--accent);
+				text-decoration: underline;
+				text-underline-offset: 0.35ch;
+
+				@media (any-hover: hover) {
+					transition: color .15s;
+					&:hover {
+						color: var(--accent-hover);
+					}
+				
+					&:active {
+						color: var(--accent-active);
+					}
+				}
+			}
+			
+			&::before {
+				counter-increment: number;
+				content: counter(number);
+			
+				position: absolute;
+				left: 0.75rem; top: 0.1875rem;
+				width: 1.5625rem; height: 1.5625rem;
+				background: var(--accent);
+				color: var(--white);
+				border-radius: 50%;
+				text-align: center;
+
+				font-weight: 700;
+				font-size: 0.875rem;
+				line-height: 150%;
+
+				padding: 0.125rem 0.5rem;
+				@include _550 {
+					left: 1.5625rem; top: 0.1875rem;
+				}
+			}
+			
+		}
+	}
+
+	// .account_vpn__lite
+
+	&__lite {
+		padding: 1.875rem 0 0;
+		@include _992 {
+			padding: 0 0 0 1.875rem;
+		}
+	}
+
+	// .account_vpn__lite_title
+
+	&__lite_title {
+		color: var(--accent);
+		font-weight: 700;
+		line-height: 188%;
+	}
+
+	// .account_vpn__lite_list
+
+	&__lite_list {
+		
+		@include _768 {
+			columns: 2;
+			column-gap: 1rem;
+		}
+
+		padding-top: 0.3125rem;
+
+		li {
+			display: grid;
+			grid-template-columns: 1fr 1.125fr;
+
+			line-height: 175%;
+			font-size: 0.875rem;
+
+			@include _550 {
+				letter-spacing: 0.0112rem;
+				font-size: 1rem;
+
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+	}
+}
+
+.account_vpn_current {
+
+	box-shadow: 0px 0.5625rem 1.3062rem rgba(24, 50, 111, 0.12);
+	border-radius: 0.875rem;
+
+	// .account_vpn_current__inner
+
+	&__inner {
+		position: relative;
+		overflow: hidden;
+
+		background: var(--white);
+		border-radius: 0.875rem;
+
+		padding: 1.625rem;
+
+		display: grid;
+		@include _992 {
+			padding: 1.625rem 1.625rem 1.625rem 4.375rem;
+			grid-template-columns: 0.9fr 2fr 1fr;
+		}
+	}
+
+	// .account_vpn_current__label
+
+	&__label {
+		position: absolute;
+		left: 0; top: 0;
+		background: #BC2DFF;
+
+		font-size: 0.875rem;
+		line-height: 142.857143%;
+		font-weight: 700;
+		color: var(--white);
+
+		transform: rotate(-42deg) translate(-27%,-80%);
+
+		padding: 0.3125rem 3rem;
+
+		@include _992 {
+			transform: rotate(-42deg) translate(-27%,-50%);
+		}
+	}
+
+	// .account_vpn_current__descr
+
+	&__descr {
+		padding-bottom: 1rem; padding-left: 2rem;
+		border-bottom: 0.0625rem solid rgba(45, 106, 255, 0.27);
+
+		@include _992 {
+			padding-right: 1rem; padding-bottom: 0;
+			border-bottom: 0;
+			border-right: 0.0625rem solid rgba(45, 106, 255, 0.27);
+		}
+	}
+
+	// .account_vpn_current__name
+
+	&__name {
+		font-weight: 700;
+		font-size: 1.25rem;
+		line-height: 108%;
+		letter-spacing: 0.0325rem;
+		color: #020202;
+
+		@include _550 {
+			font-size: 1.5rem;
+		}
+	}
+
+	// .account_vpn_current__date
+
+	&__date {
+		font-size: 1.125rem;
+		line-height: 156%;
+		letter-spacing: 0.0112rem;
+		color: #0D0D0D;
+	}
+
+	// .account_vpn_current__info
+
+	&__info {
+		padding: 1rem 0;
+		justify-content: center;
+
+		@include _992 {
+			padding: 0 2rem;
+			justify-content: stretch;
+		}
+
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 1rem 2.6875rem;
+	}
+
+	// .account_vpn_current__info_param
+
+	&__info_param {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.3125rem;
+
+		b {
+			font-weight: 600;
+		}
+
+		a {
+			color: var(--accent);
+
+			@media (any-hover: hover) {
+
+				transition: color .15s;
+
+				&:hover {
+					color: var(--accent-hover);
+				}
+			
+				&:active {
+					color: var(--accent-active);
+				}
+			}
+
+			svg {
+				width: 1.25rem; height: 1.25rem;
+			}
+		}
+	}
+
+	// .account_vpn_current__controls
+
+	&__controls {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	// .account_vpn_current__button
+
+	&__button {
+		flex: 1 1;
+	}
+}

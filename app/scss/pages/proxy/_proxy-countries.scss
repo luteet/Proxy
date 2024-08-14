@@ -1,0 +1,62 @@
+.proxy-countries {
+
+	padding-top: 5rem;
+
+	@include _992 {
+		padding-top: 8.6875rem;
+	}
+
+	// .proxy-countries__list
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 3rem 2rem;
+
+		@include _992 {
+			grid-template-columns: repeat(auto-fit, minmax(10rem,1fr));
+			gap: 4.0625rem 4.5rem;
+		}
+	}
+
+	// .proxy-countries__item
+
+	&__item {
+		
+	}
+}
+
+.proxy-countries-item {
+
+	text-align: center;
+
+	// .proxy-countries-item__flag
+
+	&__flag {
+		width: 4.5rem; height: 4.5rem;
+	}
+
+	// .proxy-countries-item__title
+
+	&__title {
+		font-weight: 600;
+		font-size: 1rem;
+		line-height: 140%;
+		color: #4F5C65;
+
+		padding-top: 1.375rem;
+	}
+
+	// .proxy-countries-item__button
+
+	&__button {
+		min-height: 3.3125rem;
+		min-width: 100%;
+
+		margin-top: 1.125rem;
+
+		@include _550 {
+			min-width: 11.5rem;
+		}
+	}
+}

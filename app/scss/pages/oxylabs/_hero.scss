@@ -1,0 +1,32 @@
+.oxylabs-hero {
+
+	// .oxylabs-hero__breadcrumbs
+
+	&__breadcrumbs {
+	}
+
+	// .oxylabs-hero__inner
+
+	&__inner {
+		text-align: center;
+
+		background: var(--accent-gradient);
+		color: var(--white);
+
+		padding-top: 3.25rem; padding-bottom: 3.125rem;
+
+		@include _992 {
+			padding-top: 4.375rem; padding-bottom: 4.6875rem;
+		}
+	}
+
+	// .oxylabs-hero__title
+
+	&__title {
+	}
+
+	// .oxylabs-hero__text
+
+	&__text {
+	}
+}

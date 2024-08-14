@@ -32,7 +32,8 @@ const scss			= require('gulp-sass')(require('sass')),
 	  ttf2woff2		= require('gulp-ttf2woff2'),
 	  zipArchive	= require('gulp-zip');
 
-
+const postcss = require('gulp-postcss');
+const combineMediaQuery = require('postcss-combine-media-query');
 
 
 
@@ -142,6 +143,9 @@ function styles() {
 	return src('app/scss/style.scss')
 		.pipe(scss({outputStyle: 'compressed'}))
 		.pipe(mediaGroup())
+		/* .pipe(postcss([
+            combineMediaQuery()
+        ])) */
 		.pipe(autoprefixer({
 			overrideBrowserslist: ['last 1 version'],
 			cascade: false
@@ -152,10 +156,38 @@ function styles() {
 		.pipe(browserSync.stream())
 }
 
+function stylesNewPages() {
+	return src('app/scss/style-new-pages.scss')
+		.pipe(scss({outputStyle: 'compressed'}))
+		.pipe(mediaGroup())
+		.pipe(autoprefixer({
+			overrideBrowserslist: ['last 1 version'],
+			cascade: false
+		}))
+		.pipe(minCSS())
+		.pipe(concat('new-pages.min.css'))
+		.pipe(dest('dist/css'))
+		.pipe(browserSync.stream())
+}
+
+function stylesGroup() {
+	return src('dist/css/style.css')
+		//.pipe(mediaGroup())
+		.pipe(postcss([
+            combineMediaQuery()
+        ]))
+		//.pipe(minCSS())
+		.pipe(concat('style.css'))
+		.pipe(dest('dist/css'))
+}
+
 function accountStyles() {
 	return src('app/scss/account-style.scss')
 		.pipe(scss({outputStyle: 'compressed'}))
 		.pipe(mediaGroup())
+		/* .pipe(postcss([
+            combineMediaQuery()
+        ])) */
 		.pipe(autoprefixer({
 			overrideBrowserslist: ['last 1 version'],
 			cascade: false
@@ -243,7 +275,7 @@ function sprites() {
 }
 
 function watching() {
-	watch(['app/scss/**/*.scss'], series(styles, accountStyles));
+	watch(['app/scss/**/*.scss'], series(styles, accountStyles, stylesNewPages));
 	watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
 	watch(['app/json/*.json'], json);
 	watch(['app/video/*.*'], video);
@@ -256,6 +288,7 @@ function watching() {
 exports.images = images;
 exports.styles = styles;
 exports.accountStyles = accountStyles;
+exports.stylesNewPages = stylesNewPages;
 exports.watching = watching;
 exports.browsersyncStart = browsersyncStart;
 exports.browsersync = browsersync;
@@ -271,9 +304,10 @@ exports.createFolder = createFolder;
 exports.delFolder = delFolder;
 exports.createZip = createZip;
 exports.zipDel = zipDel;
+exports.stylesGroup = stylesGroup;
 
 exports.fonts = series(ttf2woff2Convert, fonts);
 exports.folder = series(delFolder, createFolder);
 exports.zip = series(createFolder, createZip, zipDel);
-exports.start = parallel(stylesLib, styles, accountStyles, watching, scripts, scriptsLib, htmlCompilation, json, sprites, browsersyncStart);
-exports.default = parallel(stylesLib, styles, accountStyles, watching, scripts, scriptsLib, htmlCompilation, json, sprites, browsersync);
+exports.start = parallel(stylesLib, styles, accountStyles, stylesNewPages, watching, scripts, scriptsLib, htmlCompilation, json, sprites, browsersyncStart);
+exports.default = parallel(stylesLib, styles, accountStyles, stylesNewPages, watching, scripts, scriptsLib, htmlCompilation, json, sprites, browsersync);

@@ -1,0 +1,154 @@
+.isp-high-speed {
+
+	text-align: center;
+
+	padding-top: 5.0625rem;
+
+	@include _550 {
+		padding-top: 6.6875rem;
+	}
+
+	// .isp-high-speed__inner
+
+	&__inner {
+		position: relative;
+
+		background: rgba(21, 35, 70, 0.06);
+		border-radius: 2rem;
+
+		padding: 0 1rem 3.5625rem;
+
+		@include _550 {
+			padding: 0 1rem 4.875rem;
+		}
+	}
+
+	// .isp-high-speed__decor
+
+	&__decor {
+		position: absolute;
+		inset: 0;
+
+		border-radius: 2rem;
+
+		overflow: hidden;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 50%; top: 6.5625rem;
+			transform: translate(-50%,0%);
+
+			border: 0.5625rem solid var(--accent);
+			border-radius: 50%;
+
+			width: 105vw; aspect-ratio: 1/1;
+
+			opacity: .12;
+			-webkit-mask: linear-gradient(0deg, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 100%);
+
+			@include _992 {
+				top: 100%;
+				transform: translate(-50%,-50%);
+
+				width: 65.625rem;
+			}
+		}
+	}
+
+	// .isp-high-speed__image
+
+	&__image {
+
+		transform: translate(0,-0.9375rem);
+
+		img {
+			max-width: 25rem;
+		}
+	}
+
+	// .isp-high-speed__title
+
+	&__title {
+		font-weight: 700;
+	}
+
+	// .isp-high-speed__text
+
+	&__text {
+
+		font-size: 0.875rem;
+		line-height: 160%;
+		text-align: center;
+		color: #4F5C65;
+
+		max-width: 36.125rem;
+
+		padding-top: 1.25rem; margin: 0 auto;
+
+		mark, a {
+			background: transparent;
+			color: var(--accent);
+		}
+	}
+
+	// .isp-high-speed__button
+
+	&__button {
+		margin-top: 2.1875rem;
+	}
+
+	// .isp-high-speed__statistic
+
+	&__statistic {
+		display: grid;
+		gap: 0.875rem;
+
+		margin-top: 2.6875rem; padding: 0 2.1875rem;
+
+		@include _550 {
+			display: inline-grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			gap: 0.625rem;
+
+			padding: 0;
+		}
+
+		li {
+
+			position: relative;
+
+			display: block;
+
+			background: var(--white);
+			border-radius: 1rem;
+
+			padding: 0.8125rem;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 50%; bottom: 0.4375rem;
+				transform: translate(-50%,0);
+
+				background: var(--accent);
+				border-radius: 0.3125rem;
+
+				width: calc(100% - 1.875rem); height: 0.1875rem;
+			}
+
+			strong {
+				color: var(--accent);
+				font-size: 1.0625rem;
+				line-height: 141.176471%;
+				font-weight: 400;
+			}
+
+			p {
+				font-size: 0.9375rem;
+				line-height: 160%;
+				color: #041E39;
+			}
+		}
+	}
+}
