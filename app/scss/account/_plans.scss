@@ -123,13 +123,11 @@
 		flex: 1 1;
 
 		display: grid;
-		gap: 0.125rem 0;
 
 		padding: 1rem 1.125rem 1rem;
 
 		@include _992 {
 			padding: 0;
-			background: #F3F5FB;
 			grid-template-columns: repeat(3,1fr);
 		}
 
@@ -149,9 +147,9 @@
 			line-height: 117.647059%;
 			color: #0D0D0D;
 
-			/* &:nth-child(4n + 2) {
-				opacity: .1;
-			} */
+			&:nth-child(3n + 1):not(:nth-last-child(-n + 3)), &:nth-child(3n + 2):not(:nth-last-child(-n + 2)), &:nth-child(3n + 3):not(:nth-last-child(-n + 1)) {
+				border-bottom: 0.125rem solid #F3F5FB;
+			}
 
 			svg {
 				color: var(--accent);

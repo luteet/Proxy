@@ -218,7 +218,16 @@
 				</h2>
 				<div class="account_block__body create_proxy">
 					<form class="account_block__create_proxy">
-						<h3 class="account_block__min_title">Создать прокси</h3>
+						<div class="create_proxy__header">
+							<h3 class="account_block__min_title">Создать прокси</h3>
+							<div class="create_proxy__auto-renew">
+								<input type="checkbox" id="autorenew">
+								<label for="autorenew">
+									<span class="switcher"></span>
+									Автопродление
+								</label>
+							</div>
+						</div>
 						<fieldset class="create_proxy__fieldset">
 							<div class="create_proxy__field form_field">
 								<span>Название этого списка</span>
@@ -354,7 +363,8 @@
 						<div class="list-proxies__main">
 							<div class="list-proxies__table">
 								<div class="list-proxies__table_head visible-on-desktop">
-									<span>Название</span><span>Страна (Регион)</span><span>Кол-во портов</span><span>Тип авторизации</span><span>Действие</span>
+									<span>Название</span><span>Страна (Регион)</span><span>Кол-во портов</span><span>Тип
+										авторизации</span><span>Действие</span>
 								</div>
 								<div class="list-proxies__table_body">
 									<div class="list-proxies__table_item">

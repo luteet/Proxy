@@ -69,6 +69,29 @@
 		border-radius: 0.875rem;
 		background: #F3F5FB;
 
+		.account_vpn_current__inner {
+			cursor: pointer;
+		}
+
+		.body-to-open {
+			height: 100%;
+			max-height: 0px;
+			transition: all .3s;
+			opacity: 0;
+			padding: 0 1rem;
+			visibility: hidden;
+			overflow: hidden;
+
+			&.active {
+				opacity: 1;
+				padding: 1rem;
+				max-height: 1000px;
+				visibility: visible;
+				overflow: visible;
+				transition: all .5s;
+			}
+		}
+
 		@include _992 {
 			padding: 2.0625rem;
 			padding: 1rem 1.5rem;

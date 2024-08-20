@@ -98,6 +98,10 @@
 		&::placeholder {
 			color: #838383;
 		}
+
+		&:disabled {
+			background: #efefef;
+		}
 	}
 }
 

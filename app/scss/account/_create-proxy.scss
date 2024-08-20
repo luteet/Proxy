@@ -12,6 +12,74 @@
 	@include _992 {
 		padding: 3.125rem;
 	}
+	
+	&__header {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 1rem;
+	}
+
+	&__auto-renew {
+		input {
+			position: absolute;
+			width: 1px; height: 1px;
+			margin: -1px; padding: 0;
+			border: 0;
+			
+			white-space: nowrap;
+			clip-path: inset(100%);
+			clip: rect(0 0 0 0);
+			overflow: hidden;
+		}
+
+		label {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5rem;
+
+			font-size: 1.125rem;
+			line-height: 150%;
+			color: #393939;
+		}
+
+		.switcher {
+			position: relative;
+
+			background: var(--white);
+			border-radius: 1.5625rem;
+
+			width: 3.125rem; height: 1.5625rem;
+
+			cursor: pointer;
+			transition: background .3s;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0; top: 0;
+
+				background: var(--accent);
+				border-radius: 50%;
+				border: 0.1875rem solid var(--white);
+
+				width: 50%; aspect-ratio: 1/1;
+
+				transition: transform .3s, border-color .3s, background .3s;
+			}
+		}
+
+		input:checked + label .switcher {
+			background: var(--accent);
+
+			&::before {
+				transform: translate(100%,0);
+				background: var(--white);
+				border-color: var(--accent);
+			}
+		}
+	}
 
 	// .create_proxy__fieldset
 
